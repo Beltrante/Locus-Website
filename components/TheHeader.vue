@@ -56,16 +56,17 @@ export default {
 <style scoped>
 a{
   font-size: 25px;
+  font-weight: 300;
 }
 .nav-link{
   margin: 0 10px 5px 10px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 .nav-link:hover{
-  background: rgb(65, 182, 255);
+  background: rgba(128, 60, 64, 0.5);
 }
 .header {
-  background: rgb(135, 206, 250);
+  background: rgb(60 , 128, 125);
 }
 .logo {
   color: white;

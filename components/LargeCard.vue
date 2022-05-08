@@ -31,7 +31,6 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
-  width: 100%;
 }
 .box{
   height: 200px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="containert">
     <div class="row">
       <div class="col-md">
         <h1 class="header">Page title</h1>

@@ -1,16 +1,21 @@
 <template>
   <div class="page container mt-5">
     <TopPageGeneric />
-    <div class="row mt-3">
-      <LargeCard
+
+    <div class="row mt-4 g-0">
+      <LargeCard2
         v-for="category in poi"
         :key="category.id"
         :cat="category"
-        class="col-sm-2 m-2"
+        class="col-sm-6 p-2"
       />
     </div>
   </div>
 </template>
+
+
+
+
 
 <script>
 export default {
@@ -21,22 +26,22 @@ export default {
         cat1: {
           id: 1,
           name: 'Chiese',
-          img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Pisa_-_Chiesa_di_San_Paolo_a_Ripa_02.JPG/1920px-Pisa_-_Chiesa_di_San_Paolo_a_Ripa_02.JPG',
+          img: 'https://i.picsum.photos/id/853/700/300.jpg?hmac=83_-bFZdt6xuzY9fzc5Qy1Obfn9QcIbIW2c8JDnp0UE',
         },
         cat2: {
           id: 2,
           name: 'Edifici Storici',
-          img: 'https://www.visittivoli.eu/images/edifici-storici/rocca-pia.jpg',
+          img: 'https://i.picsum.photos/id/853/700/300.jpg?hmac=83_-bFZdt6xuzY9fzc5Qy1Obfn9QcIbIW2c8JDnp0UE',
         },
         cat3: {
           id: 3,
           name: 'Piazze',
-          img: 'https://static2-viaggi.corriereobjects.it/wp-content/uploads/2021/02/Siena_Piazza_del_Campo_iStock-1080x540.jpg?v=421473',
+          img: 'https://i.picsum.photos/id/387/700/500.jpg?hmac=W_ukdhNWG5VoRDhQKERMmkivjeSXnnZR0P-kLhxlsPM',
         },
         cat4: {
           id: 4,
           name: 'Parchi',
-          img: 'https://www.quibrescia.it/photogallery_new/images/2013/10/parcoducos-444451.660x368.jpg',
+          img: 'https://i.picsum.photos/id/929/500/300.jpg?hmac=r9ItvELFjxlV0PYNe9P84rk1YbruyuGgpUDSU0Y7sro',
         },
       },
     }
@@ -45,4 +50,11 @@ export default {
 </script>
 
 <style scoped>
+.page{
+    margin-top: 6rem;
+}
+.row {
+  justify-content: center;
+  
+}
 </style>
