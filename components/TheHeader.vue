@@ -67,6 +67,7 @@ a{
 }
 .header {
   background: rgb(60 , 128, 125);
+  height: 80px;
 }
 .logo {
   color: white;

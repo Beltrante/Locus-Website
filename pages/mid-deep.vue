@@ -3,7 +3,7 @@
     <TopPageGeneric />
 
     <div class="row mt-4 g-0">
-      <LargeCard2
+      <LargeCard
         v-for="category in poi"
         :key="category.id"
         :cat="category"
