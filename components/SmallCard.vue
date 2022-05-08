@@ -1,28 +1,25 @@
 <template>
-    <NuxtLink class="card-container">
-        <img src="https://picsum.photos/500/500" alt="" class="image">
-    </NuxtLink>
+<!-- per passare da small card a event/itinerary/poi un'idea
+potrebbe essere quella di usare i template literals per
+modificare dinamicamente il path passato a to="..." in 
+NuxtLink-->
+  <NuxtLink to="/event/_id" class="card-container">
+    <div class="external">
+      <div class="image">
+        <img :src="evento.img" class="card-image" alt="" />
+      </div>
+      <div class="description">{{evento.name}}</div>
+    </div>
+  </NuxtLink>
 </template>
 
 <script>
-    export default {
-        name: "SmallCard"
-    }
+export default {
+  name: 'SmallCard',
+  props: ['evento']
+}
 </script>
 
 <style scoped>
-
-.card-container {
-        width: 24%;
-        height: 12.5rem;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        margin-bottom: 1.5rem;
-        cursor: pointer;
-    }
-    .image {
-        width: 100%;
-        height: 100%
-    }
 
 </style>

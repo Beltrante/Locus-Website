@@ -1,5 +1,5 @@
 <template>
-  <div class="page container mt-5">
+  <div class="container mt-5">
     <TopPageGeneric />
 
     <div class="row mt-4 g-0">
@@ -12,10 +12,6 @@
     </div>
   </div>
 </template>
-
-
-
-
 
 <script>
 export default {
@@ -50,9 +46,7 @@ export default {
 </script>
 
 <style scoped>
-.page{
-    margin-top: 6rem;
-}
+
 .row {
   justify-content: center;
   
