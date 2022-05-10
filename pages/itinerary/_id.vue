@@ -60,10 +60,6 @@ export default {
 </script>
 
 <style scoped>
-.subtitle {
-  font-weight: 600;
-  font-size: 3em;
-}
 .involved-poi{
     margin-top: 3vw;
 }

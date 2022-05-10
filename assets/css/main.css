@@ -47,3 +47,16 @@ body {
     color: white;
   }
   /* FINE CSS condiviso CardComponent.vue +++++++++ */
+
+  
+  /* INIZIO stile sottotitoli per "hosting POI" & "involved POI" +++++ */
+  /* --> stile sottotitoli */
+  .subtitle {
+    font-weight: 600;
+    font-size: 3em;
+  }
+  /* --> stacco sottotitoli - contenuto */
+  .involved-poi{
+    margin-top: 3vw;
+  }
+  /* FINE stile sottotitoli per "hosting POI" & "involved POI" +++++ */

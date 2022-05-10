@@ -12,7 +12,6 @@
           doloremque repellat tempora?
         </p>
         <p class="tags"># TagDinamici</p>
-        
       </div>
     </div>
   </div>
@@ -25,12 +24,10 @@ export default {
 </script>
 
 <style scoped>
-
 .container {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-
 .tags {
     font-size: 1.8rem;
     font-weight: 800;
