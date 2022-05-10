@@ -3,7 +3,7 @@
     <TopPageGeneric />
     <div class="row mt-4 g-0">
       <SmallCard
-      v-for="evento in eventi"
+        v-for="evento in eventi"
         :key="evento.id"
         :evento="evento"
         class="col-sm-3 p-2"

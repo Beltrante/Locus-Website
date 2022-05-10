@@ -1,7 +1,6 @@
 <template>
   <div class="container mt-5">
     <TopPageGeneric />
-
     <div class="row mt-4 g-0">
       <LargeCard
         v-for="category in poi"
@@ -46,9 +45,7 @@ export default {
 </script>
 
 <style scoped>
-
 .row {
   justify-content: center;
-  
 }
 </style>

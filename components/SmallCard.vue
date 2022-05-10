@@ -6,9 +6,9 @@ NuxtLink-->
   <NuxtLink to="/event/_id" class="card-container">
     <div class="external">
       <div class="image">
-        <img :src="evento.img" class="card-image" alt="" />
+        <img :src="event.img" class="card-image" alt="" />
       </div>
-      <div class="description">{{evento.name}}</div>
+      <div class="description">{{event.name}}</div>
     </div>
   </NuxtLink>
 </template>
@@ -16,7 +16,7 @@ NuxtLink-->
 <script>
 export default {
   name: 'SmallCard',
-  props: ['evento']
+  props: ['event']
 }
 </script>
 

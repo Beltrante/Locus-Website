@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md text-container">
-        <h1 class="header">Locus</h1>
+        <h1 class="header-index">Locus</h1>
         <p class="snippet">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam
           in, eos tempora, molestias modi voluptatem totam quidem deleniti
@@ -39,9 +39,9 @@ export default {
   
   margin-top: 4rem;
 }
-.header {
+.header-index{
   font-weight: 900;
-  font-size:var(27.5rem);
+  font-size: 10vw
 }
 .image {
   width: 27.5rem;

@@ -4,7 +4,7 @@ body {
 /* header sta ad indicare il titolo principale di ogni pagina */
 .header {
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 5em;
 }
 /* CSS snippet che sta sotto o di fianco al titolo  */
 .snippet {
