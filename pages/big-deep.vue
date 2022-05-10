@@ -2,10 +2,12 @@
   <div class="page container mt-5">
     <TopPageGeneric />
     <div class="row mt-4 g-0">
-      <SmallCard
+      <!-- la classe di CardComponent detta la grandezza della stessa
+      tramite il numero "3" -->
+      <CardComponent
         v-for="evento in eventi"
         :key="evento.id"
-        :evento="evento"
+        :cat="evento"
         class="col-sm-3 p-2"
        />
     </div>

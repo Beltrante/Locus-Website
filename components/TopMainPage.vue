@@ -16,7 +16,7 @@
           src="https://assets5.lottiefiles.com/packages/lf20_rocodyl6.json"
           background="transparent"
           speed="1"
-          style="width: 500px; height: 500px"
+          style="width: 600px; height: 500px"
           loop
           autoplay
           class="image"
@@ -36,22 +36,18 @@ export default {
 <style scoped>
 
 .text-container {
-  
   margin-top: 4rem;
 }
 .header-index{
   font-weight: 900;
   font-size: 10vw
 }
-.image {
-  width: 27.5rem;
-  margin-top: 2rem;
-}
 .center-div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
 </style>

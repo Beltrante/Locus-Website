@@ -16,7 +16,7 @@
     </div>
     <div class="row involved-poi">
       <h2 class="subtitle">Involved points of interest</h2>
-      <SmallCard v-for="poi in pois" :key="poi.id" event="poi" class="col-sm-3 p-2" />
+      <CardComponent v-for="poi in pois" :key="poi.id" cat="poi" class="col-sm-3 p-2" />
     </div>
   </div>
 </template>

@@ -6,17 +6,18 @@ NuxtLink-->
   <NuxtLink to="/event/_id" class="card-container">
     <div class="external">
       <div class="image">
-        <img :src="event.img" class="card-image" alt="" />
+        <img :src="cat.img" class="card-image" alt="" />
       </div>
-      <div class="description">{{event.name}}</div>
+      <div class="description">{{cat.name}}</div>
     </div>
   </NuxtLink>
 </template>
 
 <script>
 export default {
-  name: 'SmallCard',
-  props: ['event']
+  name: 'CardComponent',
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['cat']
 }
 </script>
 

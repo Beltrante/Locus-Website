@@ -2,7 +2,9 @@
   <div class="container mt-5">
     <TopPageGeneric />
     <div class="row mt-4 g-0">
-      <LargeCard
+      <!-- la classe di CardComponent detta la grandezza della stessa
+      tramite il numero "6" -->
+      <CardComponent
         v-for="category in poi"
         :key="category.id"
         :cat="category"

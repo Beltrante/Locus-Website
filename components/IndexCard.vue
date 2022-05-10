@@ -16,14 +16,14 @@ export default {
 </script>
 
 <style scoped>
-/* INIZIO CSS condiviso SmallCard <--> BigCard +++++++++ */
+/* INIZIO CSS condiviso Component.vue +++++++++ */
 .image {
   padding: 8px;
   height: 400px;
 }
 
 
-/* FINE CSS condiviso SmallCard <--> BigCard +++++++++ */
+/* FINE CSS condiviso CardComponent.vue +++++++++ */
 .img-fluid {
   width: 100%;
   height: 100%;

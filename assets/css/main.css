@@ -13,7 +13,7 @@ body {
     text-align: justify;
 }
 
-/* INIZIO CSS condiviso SmallCard <--> BigCard +++++++++ */
+/* INIZIO CSS condiviso Component.vue +++++++++ */
 .external {
     padding: 8px;
     height: 400px;
@@ -46,4 +46,4 @@ body {
     text-decoration: none;
     color: white;
   }
-  /* FINE CSS condiviso SmallCard <--> BigCard +++++++++ */
+  /* FINE CSS condiviso CardComponent.vue +++++++++ */
