@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-    <div class="row involved-poi">
+    <div class="row stacco-subtitle">
       <h2 class="subtitle">Involved points of interest</h2>
       <CardComponent v-for="poi in pois" :key="poi.id" cat="poi" class="col-sm-3 p-2" />
     </div>
@@ -60,7 +60,5 @@ export default {
 </script>
 
 <style scoped>
-.involved-poi{
-    margin-top: 3vw;
-}
+
 </style>

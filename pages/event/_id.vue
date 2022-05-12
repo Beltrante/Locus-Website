@@ -16,7 +16,7 @@
         </p>
       </div>
     </div>
-    <div class="row involved-poi">
+    <div class="row stacco-subtitle">
       <h2 class="subtitle">Hosting Point of interest</h2>
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
