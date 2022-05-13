@@ -4,7 +4,9 @@ body {
 /* header sta ad indicare il titolo principale di ogni pagina */
 .header {
     font-weight: 900;
-    font-size: 5em;
+    font-size: 4.6em;
+}
+h1{
 }
 /* CSS snippet che sta sotto o di fianco al titolo  */
 .snippet {
@@ -54,9 +56,5 @@ body {
   .subtitle {
     font-weight: 600;
     font-size: 3em;
-  }
-  /* --> stacco sottotitoli - contenuto */
-  .stacco-subtitle{
-    margin-top: 3vw;
   }
   /* FINE stile sottotitoli per "hosting POI" & "involved POI" +++++ */

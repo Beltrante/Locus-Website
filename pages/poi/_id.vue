@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <TopMapDescription />
+    <TopMapDescription :section="poi" />
     <div class="row stacco-subtitle">
       <h2 class="subtitle">Hosted events</h2>
       <CardComponent
@@ -27,6 +27,35 @@ export default {
   name: 'SinglePoi',
   data() {
     return {
+      poi: {
+        name: 'Chiesa Agostino',
+        description:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque.',
+        type: 'POI',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/635BergamoSAgostino.jpg',
+        op_hours: {
+          lunedì: {
+            id: 0,
+            str: 'Lunedì: 8:00 - 21:00',
+          },
+          martedì: {
+            id: 2,
+            str: 'Martedì: 8:00 - 21:00',
+          },
+          mercoledì: {
+            id: 3,
+            str: 'Mercoledì: 8:00 - 21:00',
+          },
+          giovedì: {
+            id: 4,
+            str: 'Giovedì: 8:00 - 21:00',
+          },
+          venerdì: {
+            id: 5,
+            str: 'Venerdì: 8:00 - 21:00',
+          },
+        },
+      },
       h_events: {
         ev1: {
           id: 0,

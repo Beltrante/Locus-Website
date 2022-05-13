@@ -7,16 +7,12 @@
       <div class="col-md-6">
         <h1 class="header">{{ events.ev1.name }}</h1>
         <p class="snippet">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos
-          ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi
-          corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta
-          itaque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos
-          ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi
-          corrupti odit.
+          {{ events.ev1.description }}
         </p>
       </div>
     </div>
-    <div class="row stacco-subtitle">
+    <hr />
+    <div class="row">
       <h2 class="subtitle">Hosting Point of interest</h2>
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
@@ -40,6 +36,8 @@ export default {
           id: 0,
           name: 'Festa del paese',
           img: 'https://www.andelfood.it/images/sagre-paese.jpg',
+          description:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque.',
           HostingPoi: {
             id: 1,
             name: 'Parco della trucca',

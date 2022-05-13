@@ -54,19 +54,19 @@ export default {
 </script>
 
 <style scoped>
-a{
+a {
   font-size: 25px;
   font-weight: 300;
 }
-.nav-link{
+.nav-link {
   margin: 0 10px 5px 10px;
   border-radius: 10px;
 }
-.nav-link:hover{
+.nav-link:hover {
   background: rgba(128, 60, 64, 0.5);
 }
 .header {
-  background: rgb(60 , 128, 125);
+  background: rgb(60, 128, 125);
   height: 80px;
 }
 .logo {

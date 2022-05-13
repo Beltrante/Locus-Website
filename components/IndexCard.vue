@@ -1,8 +1,10 @@
 <template>
-  <NuxtLink to="/mid-deep">
+  <NuxtLink :to="`${section.where}`">
     <div class="image">
       <img :src="`${section.img}`" class="card-image img-fluid" alt="" />
-      <div class="middle"><h1>{{section.name}}</h1></div>
+      <div class="middle">
+        <h1>{{ section.name }}</h1>
+      </div>
     </div>
   </NuxtLink>
 </template>
@@ -21,7 +23,6 @@ export default {
   padding: 8px;
   height: 400px;
 }
-
 
 /* FINE CSS condiviso CardComponent.vue +++++++++ */
 .img-fluid {
@@ -43,7 +44,7 @@ export default {
   opacity: 0.3;
 }
 .middle {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;

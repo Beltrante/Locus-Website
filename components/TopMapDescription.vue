@@ -1,32 +1,52 @@
 <template>
-    <div class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <MapComponent />
       </div>
       <div class="col-md-6">
-        <h1 class="header">Nome Point of interest / Service</h1>
+        <h1 class="header">{{ section.name }}</h1>
         <p class="snippet">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos
-          ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi
-          corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta
-          itaque.
+          {{ section.description }}
         </p>
       </div>
     </div>
+    <hr />
     <div class="row">
-      <div class="col-md-6 slide-show">slide show immagini "POI"/"SERVICE"</div>
-      <div class="col-md-6 opening-hours">Orari di apertura "POI"/"SERVICE"</div>
+      <div class="col-md-6">
+        <h2 class="subtitle">{{ section.type }}-Photo</h2>
+        <IndexCard :section="section" />
+      </div>
+      <div class="col-md-6 opening-hours">
+        <div class="op-hours-style">
+          <h3 class="subtitle">Opening hours</h3>
+          <p v-for="day in section.op_hours" :key="day.id">{{ day.str }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "TopMapDescription"
-    }
+export default {
+  name: 'TopMapDescription',
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['section'],
+}
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.op-hours-style {
+  background: rgb(224, 220, 220);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  font-weight: 300;
+}
 </style>
