@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="`${section.where}`">
     <div class="image">
-      <img :src="`${section.img}`" class="card-image img-fluid" alt="" />
+      <img :src="`${section.img}`" class="card-image img-fluid" :style="`border: 3px solid ${section.color}`" alt="" />
       <div class="middle">
         <h1>{{ section.name }}</h1>
       </div>
