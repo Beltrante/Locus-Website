@@ -47,6 +47,10 @@ export default {
           name: 'Events',
           path: '/mid-deep',
         },
+        {
+          name: 'Services',
+          path: '/mid-deep',
+        },
       ],
     }
   },

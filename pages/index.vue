@@ -37,7 +37,7 @@ export default {
         },
         s4:{
           id: 3,
-          name: "People",
+          name: "Services",
           img: "https://img.freepik.com/vektoren-kostenlos/spiel-visuelle-effekte-und-gluehendes-funkeln_22350-716.jpg",
           col: 7,
           /* color: "#1982c4" */
