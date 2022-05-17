@@ -2,6 +2,7 @@
   <div class="container mt-5">
     <TopMapDescription :section="poi" />
     <div class="row stacco-subtitle">
+      <hr>
       <h2 class="subtitle">Hosted events</h2>
       <CardComponent
         v-for="event in h_events"
@@ -55,6 +56,10 @@ export default {
             str: 'Venerdì: 8:00 - 21:00',
           },
         },
+        map: {
+          bbox: '80.3807830810547%2C9.379882663276048%2C80.38974165916444%2C9.384762491698044',
+          marker: '9.382322586071064%2C80.38526237010956'
+        }
       },
       h_events: {
         ev1: {

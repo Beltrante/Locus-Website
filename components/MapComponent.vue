@@ -3,15 +3,23 @@
     <iframe
       id="inlineFrameExample"
       title="Inline Frame Example"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
+      :src="`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.bbox}&amp;layer=mapnik&amp;marker=${coordinates.marker}`"
+      
+    ></iframe
+    ><br /><small
+      ><a
+        href="https://www.openstreetmap.org/?mlat=6.91386&amp;mlon=79.85334#map=19/6.91386/79.85334&amp;layers=ND"
+        >Visualizza mappa ingrandita</a
+      ></small
     >
-    </iframe>
   </div>
 </template>
 
 <script>
 export default {
   name: 'MapComponent',
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['coordinates']
 }
 </script>
 
