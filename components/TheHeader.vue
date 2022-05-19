@@ -51,6 +51,10 @@ export default {
           name: 'Services',
           path: '/mid-deep',
         },
+        {
+          name: 'AboutUs',
+          path: '/about-us',
+        }
       ],
     }
   },
