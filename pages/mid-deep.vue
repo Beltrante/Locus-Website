@@ -23,7 +23,7 @@ export default {
         cat1: {
           id: 1,
           name: 'Chiese',
-          img: 'https://i.picsum.photos/id/853/700/300.jpg?hmac=83_-bFZdt6xuzY9fzc5Qy1Obfn9QcIbIW2c8JDnp0UE',
+          img: 'https://drive.google.com/uc?export=view&id=11BUPWHoWC_FTi7Ry4kw3S47R_Kq7yRRm',
         },
         cat2: {
           id: 2,
