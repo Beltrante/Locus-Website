@@ -26,6 +26,50 @@
 <script>
 export default {
   name: 'SinglePoi',
+    async asyncData({ route, $axios }) {
+    const { id } = route.params
+    const { data } = await $axios.get('/api/poi/' + id)
+    return {
+      poi: {
+      name: data.name,
+      description: data.description,
+      type: 'POI',
+      img: data.image,
+      map: {
+          bbox: data.bbox,
+          marker: data.marker
+        },
+      op_hours: {
+          lunedì: {
+            id: 0,
+            str: 'Lunedì: 8:00 - 21:00',
+          },
+          martedì: {
+            id: 2,
+            str: 'Martedì: 8:00 - 21:00',
+          },
+          mercoledì: {
+            id: 3,
+            str: 'Mercoledì: 8:00 - 21:00',
+          },
+          giovedì: {
+            id: 4,
+            str: 'Giovedì: 8:00 - 21:00',
+          },
+          venerdì: {
+            id: 5,
+            str: 'Venerdì: 8:00 - 21:00',
+          },
+        },
+      },
+      h_events: data.events,
+      in_itin: data.itineraries
+    }
+  }
+
+/*
+  
+
   data() {
     return {
       poi: {
@@ -115,6 +159,7 @@ export default {
       },
     }
   },
+  */
 }
 </script>
 
