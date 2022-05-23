@@ -17,9 +17,8 @@
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
       <CardComponent
-        v-for="event in events"
-        :key="event.id"
-        cat="event"
+        :cat="events.ev1.HostingPoi"
+        :type="type"
         class="col-sm p-2"
       />
     </div>
@@ -29,25 +28,27 @@
 <script>
 export default {
   name: 'SingleEvent',
-  data() {
+  
+  async asyncData({ route, $axios }) {
+    const { id } = route.params
+    const { data } = await $axios.get('/api/event/' + id)
     return {
       events: {
         ev1: {
-          id: 0,
-          name: 'Festa del paese',
-          img: 'https://www.andelfood.it/images/sagre-paese.jpg',
-          description:
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque.',
-          HostingPoi: {
-            id: 1,
-            name: 'Parco della trucca',
-            place: 'Bergamo',
-            img: 'https://storage.ecodibergamo.it/media/old_media/2012/10/cache/404901_859105_EcoBg_052__14631839_v3_xl_16_9.jpg',
-          },
+          id: data.id,
+          name: data.name,
+          img: data.image,
+          description: data.description,
+          HostingPoi: data.poi
         },
       },
     }
   },
+  data() {
+    return {
+      type: {name: "poi"}
+    }
+  }
 }
 </script>
 

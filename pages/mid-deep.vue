@@ -8,6 +8,7 @@
         v-for="category in poi"
         :key="category.id"
         :cat="category"
+        :type="type"
         class="col-sm-6 p-2"
       />
     </div>
@@ -19,26 +20,27 @@ export default {
   name: 'MidDeep',
   data() {
     return {
+      type: {name: "event"},
       poi: {
         cat1: {
           id: 1,
           name: 'Chiese',
-          img: 'https://drive.google.com/uc?export=view&id=11BUPWHoWC_FTi7Ry4kw3S47R_Kq7yRRm',
+          image: 'https://drive.google.com/uc?export=view&id=11BUPWHoWC_FTi7Ry4kw3S47R_Kq7yRRm',
         },
         cat2: {
           id: 2,
           name: 'Edifici Storici',
-          img: 'https://i.picsum.photos/id/853/700/300.jpg?hmac=83_-bFZdt6xuzY9fzc5Qy1Obfn9QcIbIW2c8JDnp0UE',
+          image: 'https://i.picsum.photos/id/853/700/300.jpg?hmac=83_-bFZdt6xuzY9fzc5Qy1Obfn9QcIbIW2c8JDnp0UE',
         },
         cat3: {
           id: 3,
           name: 'Piazze',
-          img: 'https://i.picsum.photos/id/387/700/500.jpg?hmac=W_ukdhNWG5VoRDhQKERMmkivjeSXnnZR0P-kLhxlsPM',
+          image: 'https://i.picsum.photos/id/387/700/500.jpg?hmac=W_ukdhNWG5VoRDhQKERMmkivjeSXnnZR0P-kLhxlsPM',
         },
         cat4: {
           id: 4,
           name: 'Parchi',
-          img: 'https://i.picsum.photos/id/929/500/300.jpg?hmac=r9ItvELFjxlV0PYNe9P84rk1YbruyuGgpUDSU0Y7sro',
+          image: 'https://i.picsum.photos/id/929/500/300.jpg?hmac=r9ItvELFjxlV0PYNe9P84rk1YbruyuGgpUDSU0Y7sro',
         },
       },
     }

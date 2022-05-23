@@ -120,7 +120,7 @@ app.get('/itineraries', async(req,res)=>{
     return res.json(result)
 })
 
-//1get poi_type full info and associated pois previews (from type id)
+//1 get poi_type full info and associated pois previews (from type id)
 app.get('/poiType/:id', async(req,res)=>{
     const id = +req.params.id
     const result = await models.Poi_Type.findOne({
@@ -132,34 +132,31 @@ app.get('/poiType/:id', async(req,res)=>{
     return res.json(result)
 })
 
-//2get poi full info and associated event and itinerary previews (from poi id)
+//2 get poi full info and associated event and itinerary previews (from poi id)
 app.get('/poi/:id', async(req,res)=>{
     const id = +req.params.id
     const result = await models.Poi.findOne({
         where:{id},
         include: [{
             model: models.Itinerary,
-            attributes: {
-                exclude: ['description']
-            },
+            attributes: ['id','name','image'],
             through: {attributes: ['order']}},{
             model: models.Event,
-            attributes: {
-                exclude: ['description']
-            }
+            attributes: ['id','name','image'],
             }]//leave only preview attributes
     })
     return res.json(result)
 })
 
-//3get event full info and associated poi preview (from event id)
+//3 get event full info and associated poi preview (from event id)
 app.get('/event/:id', async(req,res)=>{
     const id = +req.params.id
     const result = await models.Event.findOne({
         where:{id},
         include: [{
             model: models.Poi,
-            attributes: {exclude: ['description']}}]//leave only preview attributes
+            attributes: ['id','name','image'],
+        }]//leave only preview attributes
     })
     return res.json(result)
 })
@@ -183,7 +180,7 @@ app.get('/itinerary/:id', async(req,res)=>{
         where:{id},
         include: [{
             model: models.Poi,
-            attributes: {exclude: ['description']},
+            attributes: ['id','name','image'],
             through: {attributes: ['order']}}]//leave only preview attributes
     })
     return res.json(result)
