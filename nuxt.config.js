@@ -23,8 +23,7 @@ export default {
       { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" }
     ],
     script: [
-      /* Questo script serve per poter usare openlayer e quindi inserire le mappe interattive nella web app */
-      { src: "https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"}
+      { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"}
     ]
   },
 

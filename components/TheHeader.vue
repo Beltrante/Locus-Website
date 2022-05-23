@@ -52,8 +52,12 @@ export default {
           path: '/mid-deep',
         },
         {
-          name: 'AboutUs',
+          name: 'About-Us',
           path: '/about-us',
+        },
+        {
+          name: 'Contact-Us',
+          path: '/contact-us',
         }
       ],
     }
@@ -75,7 +79,7 @@ a {
 }
 .header {
   background: rgb(60, 128, 125);
-  height: 80px;
+  
 }
 .logo {
   color: white;
