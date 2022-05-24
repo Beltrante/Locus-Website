@@ -128,9 +128,6 @@ export default {
   font-weight: 700;
   text-align: left;
 }
-p {
-  text-align: justify;
-}
 .logo {
   text-align: left;
 }

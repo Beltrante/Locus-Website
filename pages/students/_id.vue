@@ -42,8 +42,5 @@ export default {
 </script>
 
 <style scoped>
-.event-image {
-  height: 100%;
-  width: 100%;
-}
+
 </style>
