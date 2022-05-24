@@ -7,7 +7,7 @@
             <div class="logo">
               <img
                 class="logo-img"
-                src="https://1000marche.net/wp-content/uploads/2021/10/meta-logo-1.png"
+                src="https://drive.google.com/uc?export=view&id=10PsHvYIL1H7_3zTNsNDPPCpW3XyZw2xa"
                 alt=""
               />
             </div>
@@ -134,7 +134,7 @@ export default {
   text-align: left;
 }
 .logo-img {
-  height: 50px;
+  height: 60px;
   margin-bottom: 5px;
 }
 .subtitle-footer {

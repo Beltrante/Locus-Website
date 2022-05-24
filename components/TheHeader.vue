@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light px-3 header">
-    <a class="navbar-brand" href="/">Locus</a>
+    <a class="navbar-brand" href="/"><img class="logo" src="https://drive.google.com/uc?export=view&id=10PsHvYIL1H7_3zTNsNDPPCpW3XyZw2xa" alt=""></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -82,7 +82,6 @@ a {
   
 }
 .logo {
-  color: white;
-  font-size: 40px;
+  height: 70px;
 }
 </style>
