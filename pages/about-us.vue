@@ -8,6 +8,7 @@
         v-for="category in student"
         :key="category.id"
         :cat="category"
+        :type="type"
         class="col-sm-6 p-2"
       />
     </div>
@@ -19,26 +20,27 @@ export default {
   name: 'AboutUs',
   data() {
     return {
+      type: {name: "students"},
       student: {
         student1: {
           id: 1,
           name: 'Alessandro Austoni',
-          img: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
+          image: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
         },
         student2: {
           id: 2,
           name: 'Matteo Beltrante',
-          img: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
+          image: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
         },
         student3: {
           id: 3,
           name: 'Francesco Bosso',
-          img: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
+          image: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
         },
         student4: {
           id: 4,
           name: 'Thomas Martinoli',
-          img: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
+          image: 'https://www.greenme.it/wp-content/uploads/2015/08/leonardo_di_caprio_ambiente.jpg',
         },
       },
     }

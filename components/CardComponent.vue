@@ -3,7 +3,7 @@
 potrebbe essere quella di usare i template literals per
 modificare dinamicamente il path passato a to="..." in 
 NuxtLink-->
-  <NuxtLink to="/event/_id" class="card-container">
+  <NuxtLink :to="`/${type.name}/${cat.id}`" class="card-container">
 <!-- NB: il to="..." è variabile!!! ora è statico solo come esempio -->
     <div class="external">
       <div class="image">
@@ -18,7 +18,7 @@ NuxtLink-->
 export default {
   name: 'CardComponent',
   // eslint-disable-next-line vue/require-prop-types
-  props: ['cat']
+  props: ['cat','type']
 }
 </script>
 

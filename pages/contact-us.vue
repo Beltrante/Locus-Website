@@ -5,6 +5,7 @@
       v-for="contact in contacts"
       :key="contact.id"
       :cat="contact"
+      :type="type"
       class="col-md-4"
     />
     </div>
@@ -16,6 +17,10 @@ export default {
   name: 'ContactUsPage',
   data() {
     return {
+      // type definisce quando si clicca la card dove ti manda, ma queste carte non dovrebbero essere non cliccabili? 
+      // per ora ho messo event giusto per non avere la pagina che da errore 
+
+      type: {name: "event"},
       contacts: {
         contact1: {
           id: 0,

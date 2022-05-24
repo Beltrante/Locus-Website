@@ -17,7 +17,8 @@
       <CardComponent
         v-for="poi in itinerary.pois"
         :key="poi.id"
-        cat="poi"
+        :cat="poi"
+        :type="type"
         class="col-sm-3 p-2"
       />
     </div>
@@ -29,6 +30,19 @@
 <script>
 export default {
   name: 'SingleItinerary',
+  async asyncData({ route, $axios }) {
+    const { id } = route.params
+    const { data } = await $axios.get('/api/itinerary/' + id)
+    return {
+      itinerary: data
+    }
+  },
+  data() {
+    return {
+      type: {name: "poi"},
+      }
+    }
+  /*
   data() {
     return {
       itinerary: {
@@ -64,6 +78,7 @@ export default {
       },
     }
   },
+  */
 }
 </script>
 

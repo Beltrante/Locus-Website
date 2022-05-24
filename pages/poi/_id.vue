@@ -8,6 +8,7 @@
         v-for="event in h_events"
         :key="event.id"
         :cat="event"
+        :type="types.event"
         class="col-sm-3 p-2"
       />
     </div>
@@ -17,6 +18,7 @@
         v-for="itinerary in in_itin"
         :key="itinerary.id"
         :cat="itinerary"
+        :type="types.itinerary"
         class="col-sm-3 p-2"
       />
     </div>
@@ -29,6 +31,16 @@ export default {
     async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('/api/poi/' + id)
+    // parsing of the opening hours string 
+    const splitted = data.openingHours.split(';')
+    const openingHours = []
+    splitted.forEach((x, i) => {
+      const day = {}
+      day.id = i;
+      day.str = x
+      openingHours.push(day)
+      });
+    
     return {
       poi: {
       name: data.name,
@@ -39,127 +51,20 @@ export default {
           bbox: data.bbox,
           marker: data.marker
         },
-      op_hours: {
-          lunedì: {
-            id: 0,
-            str: 'Lunedì: 8:00 - 21:00',
-          },
-          martedì: {
-            id: 2,
-            str: 'Martedì: 8:00 - 21:00',
-          },
-          mercoledì: {
-            id: 3,
-            str: 'Mercoledì: 8:00 - 21:00',
-          },
-          giovedì: {
-            id: 4,
-            str: 'Giovedì: 8:00 - 21:00',
-          },
-          venerdì: {
-            id: 5,
-            str: 'Venerdì: 8:00 - 21:00',
-          },
-        },
+      op_hours: openingHours,
       },
       h_events: data.events,
       in_itin: data.itineraries
     }
-  }
-
-/*
-  
-
+  },
   data() {
     return {
-      poi: {
-        name: 'Chiesa Agostino',
-        description:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque.',
-        type: 'POI',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/635BergamoSAgostino.jpg',
-        op_hours: {
-          lunedì: {
-            id: 0,
-            str: 'Lunedì: 8:00 - 21:00',
-          },
-          martedì: {
-            id: 2,
-            str: 'Martedì: 8:00 - 21:00',
-          },
-          mercoledì: {
-            id: 3,
-            str: 'Mercoledì: 8:00 - 21:00',
-          },
-          giovedì: {
-            id: 4,
-            str: 'Giovedì: 8:00 - 21:00',
-          },
-          venerdì: {
-            id: 5,
-            str: 'Venerdì: 8:00 - 21:00',
-          },
-        },
-        map: {
-          bbox: '80.3807830810547%2C9.379882663276048%2C80.38974165916444%2C9.384762491698044',
-          marker: '9.382322586071064%2C80.38526237010956'
-        }
-      },
-      h_events: {
-        ev1: {
-          id: 0,
-          name: 'Sagra della polpetta',
-          data: '09/09/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-        ev2: {
-          id: 1,
-          name: 'Sbirrando',
-          data: '20/09/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-        ev3: {
-          id: 2,
-          name: 'Festa della città',
-          data: '09/11/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-        ev4: {
-          id: 3,
-          name: 'Festa universitari',
-          data: '13/08/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-      },
-      in_itin: {
-        it1: {
-          id: 0,
-          name: 'Itinerario dei pioppi',
-          data: '09/09/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-        it2: {
-          id: 1,
-          name: 'Attraverso le Mura',
-          data: '20/09/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-        it3: {
-          id: 2,
-          name: 'La natura di Bergamo',
-          data: '09/11/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-        ev4: {
-          id: 3,
-          name: 'Bergamo storica',
-          data: '13/08/2022',
-          img: 'https://i.picsum.photos/id/408/700/500.jpg?hmac=emOh4NpqEksRvOrtzBhy8_zpqSGHhJFDjbzhPM4FoSo',
-        },
-      },
+      types: {
+        event: {name: "event"},
+        itinerary: {name: "itinerary"}
+      }
     }
-  },
-  */
+  }
 }
 </script>
 
