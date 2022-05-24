@@ -2,14 +2,11 @@
   <div class="containert">
     <div class="row">
       <div class="col-md">
-        <h1 class="header">Page title</h1>
+        <h1 class="header">{{info.name}}</h1>
       </div>
       <div class="col-md">
         <p class="snippet">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam
-          in, eos tempora, molestias modi voluptatem totam quidem deleniti
-          eveniet obcaecati, atque fugiat! Dolor incidunt excepturi, esse
-          doloremque repellat tempora?
+          {{info.description}}
         </p>
         <p class="tags"># TagDinamici</p>
       </div>
@@ -20,6 +17,8 @@
 <script>
 export default {
   name: 'TopPageGeneric',
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['info']
 }
 </script>
 

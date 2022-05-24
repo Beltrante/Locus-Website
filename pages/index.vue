@@ -19,6 +19,7 @@ export default {
           name: "Points of interest",
           img: "https://bonkaday.com/wp-content/uploads/2014/06/Immagini-casuali-del-giorno-22.jpg",
           col: 7,
+          where: "mid-deep/poi"
           /* color: "#ff595e" */
         },
         s2:{
@@ -26,6 +27,7 @@ export default {
           name: "Itineraries",
           img: "https://us.123rf.com/450wm/fisher4/fisher41908/fisher4190800168/127978666-sfere-luminose-al-neon-.jpg?ver=6",
           col: 5,
+          where: "big-deep/itinerary"
           /* color: "#ffca3a" */
         },
         s3:{
@@ -33,6 +35,7 @@ export default {
           name: "Events",
           img: "https://thumbs.dreamstime.com/b/influenza-della-particella-effetti-luce-luminosi-137015117.jpg",
           col: 5,
+          where: "mid-deep/event"
           /* color: "#8ac926" */
         },
         s4:{
@@ -40,6 +43,7 @@ export default {
           name: "Services",
           img: "https://img.freepik.com/vektoren-kostenlos/spiel-visuelle-effekte-und-gluehendes-funkeln_22350-716.jpg",
           col: 7,
+          where: "big-deep/service"
           /* color: "#1982c4" */
         },
       }
