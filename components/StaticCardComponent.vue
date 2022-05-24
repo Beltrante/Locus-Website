@@ -3,7 +3,7 @@
     <img
       :src="`${section.img}`"
       class="card-image img-fluid"
-      :style="`border: 3px solid ${section.color}`"
+      :style="`border: 2px solid ${section.color}`"
       alt=""
     />
     <div class="middle"></div>

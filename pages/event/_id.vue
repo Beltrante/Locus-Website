@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <StaticCardComponent v-for="event in events" :key="event.id" :section="event" class="noClick"/>
+        <StaticCardComponent v-for="event in events" :key="event.id" :section="event"/>
       </div>
       <div class="col-md-6">
         <h1 class="header">{{ events.ev1.name }}</h1>
