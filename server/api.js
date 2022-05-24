@@ -72,12 +72,12 @@ async function initializeDatabaseConnection() {
 
     //define entities relationships
     Poi.belongsTo(Poi_Type)
-    Poi_Type.hasMany(Poi)//needed to get poi_type and its associated pois preview
+    Poi_Type.hasMany(Poi,{as: "childrens"})//needed to get poi_type and its associated pois preview
     Poi.belongsTo(Point_Category)
     Event.belongsTo(Poi)
     Poi.hasMany(Event)//needed to get poi and its associated events previews
     Event.belongsTo(Event_Type)
-    Event_Type.hasMany(Event)//needed to get event_type and its associated events preview
+    Event_Type.hasMany(Event,{as: "childrens"})//needed to get event_type and its associated events preview
     Poi.belongsToMany(Itinerary,{ through: Stop })
     Itinerary.belongsToMany(Poi,{ through: Stop })
     Service.belongsTo(Service_Type)
@@ -102,24 +102,6 @@ async function initializeDatabaseConnection() {
 async function runMainApi(){
     const models = await initializeDatabaseConnection()
     
-//6 get all poi types previews
-app.get('/poiTypes', async(req,res)=>{
-    const result = await models.Poi_Type.findAll()
-    return res.json(result)
-}) 
-
-//7 get all event types previews
-app.get('/eventTypes', async(req,res)=>{
-    const result = await models.Event_Type.findAll()
-    return res.json(result)
-})
-
-//8 get all itineraries previews
-app.get('/itineraries', async(req,res)=>{
-    const result = await models.Itinerary.findAll()
-    return res.json(result)
-})
-
 //1 get poi_type full info and associated pois previews (from type id)
 app.get('/poiType/:id', async(req,res)=>{
     const id = +req.params.id
@@ -127,6 +109,7 @@ app.get('/poiType/:id', async(req,res)=>{
         where:{id},
         include: [{
             model: models.Poi,
+            as:"childrens",
             attributes: {exclude: ['description']}}]//leave only preview attributes
     })
     return res.json(result)
@@ -168,6 +151,7 @@ app.get('/eventType/:id', async(req,res)=>{
         where:{id},
         include: [{
             model: models.Event,
+            as:'childrens',
             attributes: {exclude: ['description']}}]//leave only preview attributes
     })
     return res.json(result)
@@ -183,6 +167,36 @@ app.get('/itinerary/:id', async(req,res)=>{
             attributes: ['id','name','image'],
             through: {attributes: ['order']}}]//leave only preview attributes
     })
+    return res.json(result)
+})
+
+//6 get all poi types previews
+app.get('/poiType', async(req,res)=>{
+    const result = await models.Poi_Type.findAll()
+    return res.json(result)
+}) 
+
+//7 get all event types previews
+app.get('/eventType', async(req,res)=>{
+    const result = await models.Event_Type.findAll()
+    return res.json(result)
+})
+
+//8 get all itineraries previews
+app.get('/itinerary', async(req,res)=>{
+    const result = await models.Itinerary.findAll()
+    return res.json(result)
+})
+
+//9 get all poi previews
+app.get('/poi', async(req,res)=>{
+    const result = await models.Poi.findAll()
+    return res.json(result)
+})
+
+//10 get all event previews
+app.get('/event', async(req,res)=>{
+    const result = await models.Event.findAll()
     return res.json(result)
 })
 }
