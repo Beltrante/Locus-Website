@@ -27,6 +27,7 @@ export default {
     }
   },
   // TODO getting all poiTypes/eventTypes does not give a description from db....what to do? 
+  // maybe use the store?
   data(){
     return{
       info: {

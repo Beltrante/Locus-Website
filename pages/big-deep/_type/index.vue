@@ -28,6 +28,7 @@ export default {
     }
   },
   // TODO all elements pages have no DB description...what to do?
+  // maybe use store?
   data(){
     return{
       info: {

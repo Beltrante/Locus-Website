@@ -19,7 +19,7 @@
 <script>
 export default {
   name: 'BigDeep',
-  // TODO this implemetation is really skethcy
+  // TODO this implemetation might rely too much on the urls ask the tutor
   async asyncData({ params, $axios }) {
     const type = params.type
     const { data } = await $axios.get('/api/' + type+'Type/'+params.id)
