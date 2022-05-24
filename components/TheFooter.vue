@@ -147,4 +147,7 @@ p {
 .space{
     margin: 20px;
 }
+hr{
+    margin: 10px;
+}
 </style>
