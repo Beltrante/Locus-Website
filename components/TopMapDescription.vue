@@ -16,7 +16,7 @@
       <h2 class="subtitle">{{ section.type }}-Photo</h2>
       <div class="col-md-6">
         
-        <IndexCard :section="section" />
+        <StaticCardComponent :section="section" />
       </div>
       <div class="col-md-6">
         <div class="op-hours-style">

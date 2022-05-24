@@ -53,11 +53,11 @@ export default {
         },
         {
           name: 'About-Us',
-          path: '/about-us',
+          path: 'about-us',
         },
         {
           name: 'Contact-Us',
-          path: '/contact-us',
+          path: 'contact-us',
         }
       ],
     }

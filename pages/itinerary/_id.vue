@@ -13,7 +13,7 @@
     </div>
     <hr />
     <div class="row">
-      <h2 class="subtitle">Involved points of interest</h2>
+      <h2 class="subtitle">You will go through the following stages</h2>
       <CardComponent
         v-for="poi in itinerary.pois"
         :key="poi.id"

@@ -2,7 +2,8 @@
   <div class="container mt-5">
     <TopMapDescription :section="poi" />
     <div class="row stacco-subtitle">
-      <h2 class="subtitle">Hosted events</h2>
+      <!-- Display this h2 only if there is content to be displayed -->
+      <h2 v-if="h_events.length != 0" class="subtitle">Event hosted in this Point of interest</h2>
       <CardComponent
         v-for="event in h_events"
         :key="event.id"
@@ -10,9 +11,11 @@
         :type="types.event"
         class="col-sm-3 p-2"
       />
+      
     </div>
     <div class="row stacco-subtitle">
-      <h2 class="subtitle">Involving Itineraries</h2>
+      <!-- Display this h2 only if there is content to be displayed -->
+      <h2 v-if="in_itin.length != 0" class="subtitle">Itineraries that pass through this point</h2>
       <CardComponent
         v-for="itinerary in in_itin"
         :key="itinerary.id"

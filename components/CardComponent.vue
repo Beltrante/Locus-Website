@@ -6,7 +6,7 @@ NuxtLink-->
   <NuxtLink :to="`/${type.name}/${cat.id}`" class="card-container">
 <!-- NB: il to="..." è variabile!!! ora è statico solo come esempio -->
     <div class="external">
-      <div class="image">
+      <div>
         <img :src="cat.image" class="card-image" alt="" />
       </div>
       <div class="description">{{cat.name}}</div>

@@ -26,12 +26,7 @@ export default {
 
 /* FINE CSS condiviso CardComponent.vue +++++++++ */
 .img-fluid {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  display: block;
   transition: 0.5s ease;
-  backface-visibility: hidden;
 }
 .menu {
   padding-bottom: 6px;

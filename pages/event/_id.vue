@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <IndexCard v-for="event in events" :key="event.id" :section="event" />
+        <StaticCardComponent v-for="event in events" :key="event.id" :section="event" class="noClick"/>
       </div>
       <div class="col-md-6">
         <h1 class="header">{{ events.ev1.name }}</h1>
@@ -13,7 +13,7 @@
     </div>
     <hr />
     <div class="row">
-      <h2 class="subtitle">Hosting Point of interest</h2>
+      <h2 class="subtitle">Where this event is hosted</h2>
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
       <CardComponent

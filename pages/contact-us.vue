@@ -1,12 +1,21 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric />
-    <div class="row">
-     <StaticCardComponent />
+    <!--     <TopPageGeneric /> -->
+    <h1 class="subtitle">Specific mail for specific issues</h1>
+    <div class="row center">
+      <StaticCardComponent
+        v-for="contact in contacts"
+        :key="contact.id"
+        :info="contact"
+        class="col-md-3"
+      />
     </div>
     <hr />
     <h1 class="subtitle">Share your doubts with us!</h1>
     <ContactForm />
+    <hr />
+    <h1 class="subtitle">General contacts</h1>
+    <TopPageGeneric :info="contacts.contact2" />
   </div>
 </template>
 
@@ -15,22 +24,11 @@ export default {
   name: 'ContactUsPage',
   data() {
     return {
-      // type definisce quando si clicca la card dove ti manda, ma queste carte non dovrebbero essere non cliccabili?
-      // per ora ho messo event giusto per non avere la pagina che da errore
-
-      type: { name: 'event' },
       contacts: {
-        contact1: {
-          id: 0,
-          name: 'Event info - event@live.com',
-          mail: '',
-          image:
-            'https://drive.google.com/uc?export=view&id=11Bx_5QjC5OTML7LYSkekCj_eWMjGkBvM',
-        },
         contact2: {
           id: 1,
-          name: 'Itineraries info - itineraries@live.com',
-          mail: '',
+          name: 'Itineraries info',
+          mail: 'itineraries@live.com',
           image:
             'https://drive.google.com/uc?export=view&id=1zax5f1MFQg06wlmYIENJgoJmdtloTdhI',
         },
@@ -41,19 +39,21 @@ export default {
           image:
             'https://drive.google.com/uc?export=view&id=1OEVTvggYTxVInZKYBvjbMqNriuw5N4S2',
         },
+        contact1: {
+          id: 0,
+          name: 'Event info',
+          mail: 'event@live.com',
+          image:
+            'https://drive.google.com/uc?export=view&id=11Bx_5QjC5OTML7LYSkekCj_eWMjGkBvM',
+        },
       },
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
-.external-static {
-    padding: 8px;
-    height: 400px;
-    border-radius: 10px;
-    background: rgba(60, 128, 125, 0.611);
-    border: 2px solid white;
-    margin: 5px;
-  }
+.center {
+  justify-content: center;
+}
 </style>
