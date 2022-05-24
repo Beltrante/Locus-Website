@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'TopMapDescription',
+  name: 'TopMapDescriptionComponent',
   // eslint-disable-next-line vue/require-prop-types
   props: ['section'],
 }

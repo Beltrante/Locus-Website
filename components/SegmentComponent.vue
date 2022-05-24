@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'MapComponent',
+  name: 'SegmentComponent',
   data() {
     return {
       segment:

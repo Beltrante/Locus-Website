@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'TopMainPage',
+  name: 'TopMainPageComponent',
 }
 </script>
 

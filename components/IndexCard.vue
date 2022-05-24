@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'IndexCard',
+  name: 'IndexCardComponent',
   // eslint-disable-next-line vue/require-prop-types
   props: ['section'],
 }

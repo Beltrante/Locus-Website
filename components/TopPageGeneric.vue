@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'TopPageGeneric',
+  name: 'TopPageGenericComponent',
 }
 </script>
 
