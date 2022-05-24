@@ -2,7 +2,6 @@
   <div class="container mt-5">
     <TopMapDescription :section="poi" />
     <div class="row stacco-subtitle">
-      <hr>
       <h2 class="subtitle">Hosted events</h2>
       <CardComponent
         v-for="event in h_events"

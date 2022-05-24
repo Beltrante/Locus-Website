@@ -46,4 +46,11 @@ export default {
 .icon {
   height: 50px;
 }
+
+@media screen and (max-width: 1100px) {
+  .default-image {
+    visibility: hidden;
+    display: none;
+  }
+}
 </style>
