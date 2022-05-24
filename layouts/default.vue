@@ -8,6 +8,17 @@
     />
     <the-header />
     <nuxt />
+    <div class="default-image">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        src="https://assets6.lottiefiles.com/private_files/lf30_tzxtv5wy.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+        class="icon"
+      ></lottie-player>
+    </div>
     <the-footer />
   </div>
 </template>
@@ -23,3 +34,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.default-image {
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.icon {
+  height: 50px;
+}
+</style>
