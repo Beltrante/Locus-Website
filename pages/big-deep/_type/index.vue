@@ -24,6 +24,7 @@ export default {
     return {
       // children can be all itineraries/serevicies/pois/events
       children: data,
+      // type can be: poi/itinerary/service/event
       childType: {name: type}
     }
   },

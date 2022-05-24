@@ -23,6 +23,7 @@ export default {
     const { data } = await $axios.get('/api/' + type+"Type")
     return {
       poiTypes: data,
+      // type can be poi/event intended as poiType/eventType
       type: {name: "big-deep/"+type}
     }
   },

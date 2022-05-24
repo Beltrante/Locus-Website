@@ -21,6 +21,7 @@ export default {
   name: 'BigDeep',
   // TODO this implemetation might rely too much on the urls ask the tutor
   async asyncData({ params, $axios }) {
+    // type can be poi/event intended as poiType/eventType
     const type = params.type
     const { data } = await $axios.get('/api/' + type+'Type/'+params.id)
     return {
