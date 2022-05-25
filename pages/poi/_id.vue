@@ -7,7 +7,7 @@
       <CardComponent
         v-for="event in h_events"
         :key="event.id"
-        :cat="event"
+        :card="event"
         :type="types.event"
         class="col-sm-3 p-2"
       />
@@ -19,7 +19,7 @@
       <CardComponent
         v-for="itinerary in in_itin"
         :key="itinerary.id"
-        :cat="itinerary"
+        :card="itinerary"
         :type="types.itinerary"
         class="col-sm-3 p-2"
       />

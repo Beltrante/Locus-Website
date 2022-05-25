@@ -7,7 +7,7 @@
       <CardComponent
         v-for="category in student"
         :key="category.id"
-        :cat="category"
+        :card="category"
         :type="type"
         class="col-sm-6 p-2"
       />

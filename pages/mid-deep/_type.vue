@@ -7,7 +7,7 @@
       <CardComponent
         v-for="poiType in poiTypes"
         :key="poiType.id"
-        :cat="poiType"
+        :card="poiType"
         :type="type"
         class="col-sm-6 p-2"
       />

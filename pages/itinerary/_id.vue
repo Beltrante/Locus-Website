@@ -17,7 +17,7 @@
       <CardComponent
         v-for="poi in itinerary.pois"
         :key="poi.id"
-        :cat="poi"
+        :card="poi"
         :type="type"
         class="col-sm-3 p-2"
       />

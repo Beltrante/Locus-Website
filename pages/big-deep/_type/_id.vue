@@ -8,7 +8,7 @@
       <CardComponent
         v-for="child in children"
         :key="child.id"
-        :cat="child"
+        :card="child"
         :type="childType"
         class="col-sm-3 p-2"
        />

@@ -17,7 +17,7 @@
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
       <CardComponent
-        :cat="events.ev1.HostingPoi"
+        :card="events.ev1.HostingPoi"
         :type="type"
         class="col-sm p-2"
       />
