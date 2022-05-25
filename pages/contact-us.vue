@@ -24,31 +24,29 @@
       </div>
       <div class="col-md-6">
         <div class="row">
-        <div class="col-md-5">
-        <span class="general-contact">City</span> : Bergamo
-        <br>
-        <span class="general-contact">Address</span> : Via Solata 10
-        <br>
-        <span class="general-contact">Postal code</span> : 24100
-        <br>
-        <span class="general-contact">Phone</span> : +39 1234567891
-        <br>
-        <span class="general-contact">Mail:</span> locus@live.com
+          <div class="col-md-5">
+            <span class="general-contact">City</span> : Bergamo
+            <br />
+            <span class="general-contact">Address</span> : Via Solata 10
+            <br />
+            <span class="general-contact">Postal code</span> : 24100
+            <br />
+            <span class="general-contact">Phone</span> : +39 1234567891
+            <br />
+            <span class="general-contact">Mail:</span> locus@live.com
+          </div>
+          <br />
+          <div class="col-md">
+            <p class="general-contact">Opening Hours:</p>
+            <p>Monday: 08:00 - 13:00 , 14:30 - 19:00</p>
+            <p>Tuesday: 08:00 - 13:00 , 14:30 - 19:00</p>
+            <p>Wednesday: 08:00 - 13:00 , 14:30 - 19:00</p>
+            <p>Thursday: 08:00 - 13:00 , 14:30 - 19:00</p>
+            <p>Friday: 08:00 - 13:00 , 14:30 - 19:00</p>
+            <p>Saturday: 08:00 - 13:00 , closed</p>
+            <p>Sunday: closed</p>
+          </div>
         </div>
-        <br>
-        <div class="col-md">
-        <p class="general-contact">Opening Hours:</p>
-        <p>Monday: 08:00 - 13:00 , 14:30 - 19:00</p>
-        <p>Tuesday: 08:00 - 13:00 , 14:30 - 19:00</p>
-        <p>Wednesday: 08:00 - 13:00 , 14:30 - 19:00</p>
-        <p>Thursday: 08:00 - 13:00 , 14:30 - 19:00</p>
-        <p>Friday: 08:00 - 13:00 , 14:30 - 19:00</p>
-        <p>Saturday: 08:00 - 13:00 , closed </p>
-        <p>Sunday: closed</p>
-        </div>
-        </div>
-
-
       </div>
     </div>
   </div>

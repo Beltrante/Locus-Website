@@ -17,7 +17,7 @@ export default {
         s1:{
           id: 0,
           name: "Points of interest",
-          img: "https://bonkaday.com/wp-content/uploads/2014/06/Immagini-casuali-del-giorno-22.jpg",
+          img: "https://images.placesonline.com/photos/424010103210244_Bergamo_209231990-min.jpeg?quality=80&w=700",
           col: 7,
           where: "mid-deep/poi"
           /* color: "#ff595e" */
@@ -33,7 +33,7 @@ export default {
         s3:{
           id: 2,
           name: "Events",
-          img: "https://thumbs.dreamstime.com/b/influenza-della-particella-effetti-luce-luminosi-137015117.jpg",
+          img: "https://storage.ecodibergamo.it/media/photologue/2019/4/10/photos/estivi-santagostino-apre-gia-il-1-maggiobando-della-trucca-va-deserto-d_6ec48678-5ba0-11e9-9a27-d6d04fdbc1c3_900_566.jpg",
           col: 5,
           where: "mid-deep/event"
           /* color: "#8ac926" */
