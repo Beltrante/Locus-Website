@@ -1,5 +1,5 @@
 export default {
-  // Middleware fro handling api calls 
+  // Middleware for handling api calls 
   serverMiddleware: [
     {
       path: "/api",
