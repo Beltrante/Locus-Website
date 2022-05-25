@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <SegmentComponent />
+        <SegmentComponent :link="itinerary.mapillaryLink" />
       </div>
       <div class="col-md-6">
         <h1 class="header">{{ itinerary.name }}</h1>

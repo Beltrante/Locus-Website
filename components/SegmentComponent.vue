@@ -1,18 +1,14 @@
 <template>
   <div>
-    <iframe class="mapillary" :src="`${segment}`" frameborder="0"></iframe>
+    <iframe class="mapillary" :src="`${link}`" frameborder="0"></iframe>
   </div>
 </template>
 
 <script>
 export default {
   name: 'SegmentComponent',
-  data() {
-    return {
-      segment:
-        'https://www.mapillary.com/embed?map_style=Mapillary%20streets&image_key=964988447597085&style=classic',
-    }
-  },
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['link']
 }
 </script>
 
