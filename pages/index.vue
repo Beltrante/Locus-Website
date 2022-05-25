@@ -25,7 +25,7 @@ export default {
         s2:{
           id: 1,
           name: "Itineraries",
-          img: "https://us.123rf.com/450wm/fisher4/fisher41908/fisher4190800168/127978666-sfere-luminose-al-neon-.jpg?ver=6",
+          img: "https://drive.google.com/uc?export=view&id=1qEiwWlkdnKB8fvn0TZObIF0Ddzo2GGV0",
           col: 5,
           where: "big-deep/itinerary"
           /* color: "#ffca3a" */
@@ -41,7 +41,7 @@ export default {
         s4:{
           id: 3,
           name: "Services",
-          img: "https://img.freepik.com/vektoren-kostenlos/spiel-visuelle-effekte-und-gluehendes-funkeln_22350-716.jpg",
+          img: "https://www.travelfar.it/wp-content/uploads/mercati-di-Palermo-gente-e-profumi.jpg",
           col: 7,
           where: "big-deep/service"
           /* color: "#1982c4" */
@@ -70,10 +70,5 @@ export default {
 </script>
 
 <style scoped>
-.row .menu:hover .img-fluid {
-  opacity: 0.3;
-}
-.row .menu:hover .middle {
-  opacity: 0.3;
-}
+
 </style>

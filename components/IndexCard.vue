@@ -36,7 +36,7 @@ export default {
   opacity: 0.3;
 }
 .row .menu:hover .middle {
-  opacity: 0.3;
+  opacity: 0.9;
 }
 .middle {
   transition: 0.5s ease;
