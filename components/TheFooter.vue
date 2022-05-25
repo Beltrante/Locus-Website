@@ -36,17 +36,17 @@
             </p>
           </div>
           <div class="col-md space">
-            <NuxtLink class="section" to="/poi">Itineraries</NuxtLink>
+            <NuxtLink class="section" to="/big-deep/itinerary">Itineraries</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/poi">Points of interest</NuxtLink>
+            <NuxtLink class="section" to="/big-deep/poi">Points of interest</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/poi">Events</NuxtLink>
+            <NuxtLink class="section" to="/big-deep/event">Events</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/poi">Services</NuxtLink>
+            <NuxtLink class="section" to="/">Services</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/poi">About-Us</NuxtLink>
+            <NuxtLink class="section" to="/about-the-town">About the town</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/poi">Contact-Us</NuxtLink>
+            <NuxtLink class="section" to="/contact-us">Contact-Us</NuxtLink>
           </div>
           <div class="col-lg space">
             <div class="row">

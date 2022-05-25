@@ -3,7 +3,7 @@
     <TopMapDescription :section="poi" />
     <div class="row stacco-subtitle">
       <!-- Display this h2 only if there is content to be displayed -->
-      <h2 v-if="h_events.length != 0" class="subtitle">Event hosted in this Point of interest</h2>
+      <h2 v-if="h_events.length != 0" class="subtitle">Events hosted in this Point of interest</h2>
       <CardComponent
         v-for="event in h_events"
         :key="event.id"
