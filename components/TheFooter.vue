@@ -3,7 +3,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md space">
+          <div class="col-lg space">
             <div class="logo">
               <img
                 class="logo-img"
@@ -16,8 +16,8 @@
               <br />
               <span class="subtitle-footer">Postal Code:</span> 24121-24129
               <br />
-              <span class="subtitle-footer">Coordinates:</span> 45°41′42″N ,
-              9°40′12″E
+              <span class="subtitle-footer">Coordinates:</span> 45°41′N ,
+              9°40′E
               <br>
               <span class="subtitle-footer">Neighboring municipalities:</span>
               Azzano San Paolo, Curno, Gorle, Lallio, Mozzo, Orio al Serio,
@@ -25,7 +25,7 @@
               Treviolo, Valbrembo
             </div>
           </div>
-          <div class="col-md space">
+          <div class="col-lg space">
             <h3 class="title-footer">Vision</h3>
             <p class="paragraph">
               The vision of Locus is to provide an immersive and wonderful
@@ -48,7 +48,7 @@
             <hr />
             <NuxtLink class="section" to="/poi">Contact-Us</NuxtLink>
           </div>
-          <div class="col-md space">
+          <div class="col-lg space">
             <div class="row">
               <div class="social col">
                 <a href="https://www.facebook.com"

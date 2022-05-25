@@ -1,12 +1,18 @@
 <template>
-  <div class="image">
-    <img
-      :src="`${section.img}`"
-      class="card-image img-fluid"
-      :style="`border: 2px solid ${section.color}`"
-      alt=""
-    />
-    <div class="middle"></div>
+  <div class="center">
+    <h3 class="bold">{{ section.title }}</h3>
+    <div
+      class="image center"
+      :style="`border: 2px solid ${section.color}; border-radius:10px; background: ${section.background};`"
+    >
+      <img :src="`${section.img}`" class="card-image img-fluid" alt="" />
+      <div class="middle"></div>
+    </div>
+    <h2>
+      <a class="mail" :href="`mailto: ${section.footer}`">{{
+        section.footer
+      }}</a>
+    </h2>
   </div>
 </template>
 
@@ -19,4 +25,13 @@ export default {
 </script>
 
 <style scoped>
+.center {
+  text-align: center;
+}
+.mail {
+  color: black;
+}
+.bold {
+  font-weight: 600;
+}
 </style>

@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <div class="container frame">
     <form class="needs-validation" novalidate>
       <div class="row">
@@ -104,6 +105,7 @@
       <br />
       <button class="btn btn-primary" type="submit">Submit form</button>
     </form>
+  </div>
   </div>
 </template>
 

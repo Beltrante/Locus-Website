@@ -1,21 +1,56 @@
 <template>
   <div class="container mt-5">
     <!--     <TopPageGeneric /> -->
-    <h1 class="subtitle">Specific mail for specific issues</h1>
+
     <div class="row center">
+      <h1 class="subtitle">Specific mail for specific issues</h1>
       <StaticCardComponent
         v-for="contact in contacts"
         :key="contact.id"
         :section="contact"
-        class="col-md-3"
+        class="col-md-3 margine"
       />
     </div>
     <hr />
-    <h1 class="subtitle">Share your doubts with us!</h1>
-    <ContactForm />
+    <div class="row">
+      <h1 class="subtitle">Share your doubts with us!</h1>
+      <ContactForm />
+    </div>
     <hr />
-    <h1 class="subtitle">General contacts</h1>
-     <StaticCardComponent :section="generic" class="col-md-6" />
+    <div class="row">
+      <h1 class="subtitle">General contacts - Our office</h1>
+      <div class="col-md-6">
+        <StaticCardComponent :section="generic" />
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+        <div class="col-md-5">
+        <span class="general-contact">City</span> : Bergamo
+        <br>
+        <span class="general-contact">Address</span> : Via Solata 10
+        <br>
+        <span class="general-contact">Postal code</span> : 24100
+        <br>
+        <span class="general-contact">Phone</span> : +39 1234567891
+        <br>
+        <span class="general-contact">Mail:</span> locus@live.com
+        </div>
+        <br>
+        <div class="col-md">
+        <p class="general-contact">Opening Hours:</p>
+        <p>Monday: 08:00 - 13:00 , 14:30 - 19:00</p>
+        <p>Tuesday: 08:00 - 13:00 , 14:30 - 19:00</p>
+        <p>Wednesday: 08:00 - 13:00 , 14:30 - 19:00</p>
+        <p>Thursday: 08:00 - 13:00 , 14:30 - 19:00</p>
+        <p>Friday: 08:00 - 13:00 , 14:30 - 19:00</p>
+        <p>Saturday: 08:00 - 13:00 , closed </p>
+        <p>Sunday: closed</p>
+        </div>
+        </div>
+
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,36 +62,43 @@ export default {
       contacts: {
         contact2: {
           id: 1,
-          name: 'Itineraries info',
-          mail: 'itineraries@live.com',
+          title: 'Itineraries info',
+          footer: 'itin@live.com',
           img: 'https://drive.google.com/uc?export=view&id=1zax5f1MFQg06wlmYIENJgoJmdtloTdhI',
-          color: "black"
+          color: 'black',
+          background: 'rgba(60, 128, 125, 0.611)',
         },
         contact3: {
           id: 2,
-          name: 'Points of interest info',
-          mail: 'poi@live.com',
+          title: 'Points of interest info',
+          footer: 'poi@live.com',
           img: 'https://drive.google.com/uc?export=view&id=1OEVTvggYTxVInZKYBvjbMqNriuw5N4S2',
-          color: "black"
+          color: 'black',
+          background: 'rgba(60, 128, 125, 0.611);',
         },
         contact1: {
           id: 0,
-          name: 'Event info',
-          mail: 'event@live.com',
+          title: 'Event info',
+          footer: 'event@live.com',
           img: 'https://drive.google.com/uc?export=view&id=11Bx_5QjC5OTML7LYSkekCj_eWMjGkBvM',
-          color: "black"
+          color: 'black',
+          background: 'rgba(60, 128, 125, 0.611);',
         },
       },
-      generic:{
-        img: "https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg"
+      generic: {
+        img: 'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
       },
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
 .center {
   justify-content: center;
+}
+.general-contact {
+  font-size: 25px;
+  font-weight: 600;
 }
 </style>
