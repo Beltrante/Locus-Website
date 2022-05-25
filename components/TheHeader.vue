@@ -52,8 +52,8 @@ export default {
           path: '/mid-deep/service',
         },
         {
-          name: 'About-Us',
-          path: '/about-us',
+          name: 'About the town',
+          path: '/about-the-town',
         },
         {
           name: 'Contact-Us',
