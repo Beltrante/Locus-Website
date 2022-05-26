@@ -27,6 +27,8 @@ body {
   text-align: justify;
 }
 
+
+
 /* INIZIO CSS condiviso Component.vue +++++++++ */
 .external {
   padding: 8px;
@@ -37,16 +39,13 @@ body {
   transition: all 0.5s ease-out;
   margin: 5px;
 }
-
 .external:hover {
   border: 2px solid black;
   background: transparent;
 }
-
 .external:hover .description {
   color: black;
 }
-
 .card-image {
   width: 100%;
   height: 350px;
@@ -54,19 +53,16 @@ body {
   object-position: center;
   border-radius: 10px;
 }
-
 .description {
   padding-right: 5px;
   padding-top: 5px;
   color: white;
   font-size: 1.1em;
 }
-
 a:link {
   text-decoration: none;
   color: white;
 }
-
 /* FINE CSS condiviso CardComponent.vue +++++++++ */
 
 
@@ -93,3 +89,25 @@ a:link {
   backface-visibility: hidden;
 }
 /* FINE CSS condiviso tra IndexCard.vue & StaticCardComponent.vue +++++++++ */
+
+
+
+/* INIZIO CSS condiviso tra all-event.vue.vue & all-poi.vue +++++++++ */
+/* --> stile snippet di fianco a category links */
+.snippet-categories {
+  font-size: 2.3em;
+  font-weight: 500;
+  text-align: right;
+}
+@media screen and (max-width: 992px) {
+  .snippet-categories {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.snippet-categories{
+    font-size: 1.93em;
+  }
+}
+/* FINE CSS condiviso tra all-event.vue.vue & all-poi.vue +++++++++ */

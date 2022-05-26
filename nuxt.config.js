@@ -1,5 +1,11 @@
 export default {
   // Middleware for handling api calls 
+
+  // uncomment to run the app on your local network
+    /* server: {
+      host: '0' // default: localhost
+    }, */
+  
   serverMiddleware: [
     {
       path: "/api",
