@@ -27,19 +27,12 @@ export default {
       type: {name: "big-deep/"+type}
     }
   },
-  // TODO getting all poiTypes/eventTypes does not give a description from db....what to do? 
-  // maybe use the store?
-  data(){
-    return{
-      info: {
-        name: "All-Of-Type Page",
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam
-          in, eos tempora, molestias modi voluptatem totam quidem deleniti
-          eveniet obcaecati, atque fugiat! Dolor incidunt excepturi, esse
-          doloremque repellat tempora?`
-      }
-    }
-  }
+   // TODO can store be used like this?
+  computed: {
+    info() {
+      return this.$store.getters.getAllOfType(this.$route.params.type)
+    },
+  },
 }
 </script>
 

@@ -10,7 +10,7 @@
         :card="child"
         :type="childType"
         class="col-sm-3 p-2"
-       />
+      />
     </div>
   </div>
 </template>
@@ -25,22 +25,15 @@ export default {
       // children can be all itineraries/serevicies/pois/events
       children: data,
       // type can be: poi/itinerary/service/event
-      childType: {name: type}
+      childType: { name: type },
     }
   },
-  // TODO all elements pages have no DB description...what to do?
-  // maybe use store?
-  data(){
-    return{
-      info: {
-        name: "All-Of Page",
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam
-          in, eos tempora, molestias modi voluptatem totam quidem deleniti
-          eveniet obcaecati, atque fugiat! Dolor incidunt excepturi, esse
-          doloremque repellat tempora?`
-      }
-    }
-  }
+  // TODO can store be used like this?
+  computed: {
+    info() {
+      return this.$store.getters.getAllOf(this.$route.params.type)
+    },
+  },
 }
 </script>
 
