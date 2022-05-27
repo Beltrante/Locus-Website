@@ -11,8 +11,11 @@
         <div class="row">
           <CategoryComponent
             v-for="category in categories"
+            :id="category.id"
             :key="category.id"
-            :category="category"
+            :name="category.name"
+            :image="category.image"
+            :path="categoryPath"
             class="col-md-6"
           />
         </div>
@@ -34,6 +37,14 @@
 <script>
 export default {
   name: 'AllPoiPage',
+  async asyncData({ route, $axios }) {
+    const { data } = await $axios.get('/api/all-pois')
+    return{
+      categories: data.categories,
+      pois: data.pois
+    }
+  },
+
   data() {
     return {
       header: {
@@ -41,6 +52,7 @@ export default {
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
+      /*
       categories: {
         churches: {
           id: 0,
@@ -92,10 +104,11 @@ export default {
           image:
             'https://storage.ecodibergamo.it/media/photologue/2017/6/11/photos/cache/i-rintocchi-del-campanone-di-citta-alta-sono-veramente-cento-li-avete-cont_b37148e0-4eac-11e7-ac63-8437cfd3f37a_512_512_new_square_large.jpg',
         },
-      },
+      }, */
       type: {
         name: 'poi',
       },
+      categoryPath: "poi-category"
     }
   },
 }

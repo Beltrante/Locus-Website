@@ -37,19 +37,19 @@ export default {
       headerList: [
         {
           name: 'Itineraries',
-          path: '/big-deep/itinerary',
+          path: '/all-itinerary',
         },
         {
           name: 'Points of interest',
-          path: '/big-deep/poi',
+          path: '/all-poi',
         },
         {
           name: 'Events',
-          path: '/big-deep/event',
+          path: '/all-event',
         },
         {
           name: 'Services',
-          path: '/mid-deep/service',
+          path: '/all-service',
         },
         {
           name: 'About the town',

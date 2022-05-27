@@ -11,8 +11,11 @@
         <div class="row">
           <CategoryComponent
             v-for="season in seasons"
+            :id="season.id"
             :key="season.id"
-            :category="season"
+            :name="season.name"
+            :image="season.image"
+            :path="seasonPath"
             class="col-md-6"
           />
         </div>
@@ -34,6 +37,15 @@
 <script>
 export default {
   name: 'AllEventPage',
+
+  async asyncData({ route, $axios }) {
+    const { data } = await $axios.get('/api/all-events')
+    return{
+      seasons: data.seasons,
+      events: data.events
+    }
+  },
+
   data() {
     return {
       header: {
@@ -41,6 +53,7 @@ export default {
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
+      /*
       seasons: {
         season1: {
           id: 0,
@@ -92,10 +105,11 @@ export default {
           image:
             'https://i0.wp.com/monstermovieitalia.com/wp-content/uploads/2019/03/capodoglio_museo_scienze_naturali_bergamo_monster_movie.jpg?resize=1000%2C563&ssl=1',
         },
-      },
+      }, */
       type: {
         name: 'event',
       },
+      seasonPath: "event-season"
     }
   },
 }

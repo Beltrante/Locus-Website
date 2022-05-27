@@ -1,11 +1,11 @@
 <template>
-  <NuxtLink :to="`/`" class="card-container">
+  <NuxtLink :to="`${path}/${id}`" class="card-container">
     <div class="external row">
       <div class="col-4">
-        <img :src="category.image" class="card-image" alt="" />
+        <img :src="image" class="card-image" alt="" />
       </div>
       <div class="description vertical col-8">
-        {{ category.name }}
+        {{ name }}
       </div>
     </div>
   </NuxtLink>
@@ -15,7 +15,26 @@
 export default {
   name: 'CategoryComponent',
   // eslint-disable-next-line vue/require-prop-types
-  props: ['category'],
+  props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    name:{
+      type:String,
+      required: true
+    },
+    image:{
+      type:String,
+      required: true
+    },
+    path:{
+      type:String,
+      // TODO change to true 
+      required: true
+    }
+    }
+  
 }
 </script>
 

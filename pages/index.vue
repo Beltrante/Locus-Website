@@ -19,7 +19,7 @@ export default {
           name: "Points of interest",
           img: "https://images.placesonline.com/photos/424010103210244_Bergamo_209231990-min.jpeg?quality=80&w=700",
           col: 7,
-          where: "mid-deep/poi"
+          where: "all-poi"
           /* color: "#ff595e" */
         },
         s2:{
@@ -27,7 +27,7 @@ export default {
           name: "Itineraries",
           img: "https://drive.google.com/uc?export=view&id=1qEiwWlkdnKB8fvn0TZObIF0Ddzo2GGV0",
           col: 5,
-          where: "big-deep/itinerary"
+          where: "all-itinerary"
           /* color: "#ffca3a" */
         },
         s3:{
@@ -35,7 +35,7 @@ export default {
           name: "Events",
           img: "https://storage.ecodibergamo.it/media/photologue/2019/4/10/photos/estivi-santagostino-apre-gia-il-1-maggiobando-della-trucca-va-deserto-d_6ec48678-5ba0-11e9-9a27-d6d04fdbc1c3_900_566.jpg",
           col: 5,
-          where: "mid-deep/event"
+          where: "all-event"
           /* color: "#8ac926" */
         },
         s4:{
@@ -43,7 +43,7 @@ export default {
           name: "Services",
           img: "https://www.travelfar.it/wp-content/uploads/mercati-di-Palermo-gente-e-profumi.jpg",
           col: 7,
-          where: "big-deep/service"
+          where: "all-service"
           /* color: "#1982c4" */
         },
       }
