@@ -5,9 +5,7 @@
         <StaticCardComponent 
         v-for="event in events" 
         :key="event.id" 
-        :title="event.name"
-        :image="event.image"
-        :section="event"/>
+        :image="event.image"/>
       </div>
       <div class="col-md-6">
         <h1 class="header">{{ events.ev1.name }}</h1>
