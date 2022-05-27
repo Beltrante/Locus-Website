@@ -4,7 +4,6 @@
       <img
         :src="`${image}`"
         class="card-image img-fluid"
-        :style="`border: 3px solid ${color}`"
         alt=""
       />
       <div class="middle">
