@@ -2,11 +2,11 @@
   <div class="containert">
     <div class="row">
       <div class="col-md">
-        <h1 class="header">{{info.name}}</h1>
+        <h1 class="header">{{ name }}</h1>
       </div>
       <div class="col-md">
         <p class="snippet">
-          {{info.description}}
+          {{ description }}
         </p>
         <p class="tags"># TagDinamici</p>
       </div>
@@ -17,8 +17,10 @@
 <script>
 export default {
   name: 'TopPageGeneric',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['info']
+  props: {
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+  },
 }
 </script>
 
@@ -28,7 +30,7 @@ export default {
   margin-bottom: 4rem;
 }
 .tags {
-    font-size: 1.8rem;
-    font-weight: 800;
+  font-size: 1.8rem;
+  font-weight: 800;
 }
 </style>

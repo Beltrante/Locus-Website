@@ -1,16 +1,16 @@
 <template>
   <div class="center">
-    <h3 class="bold">{{ section.title }}</h3>
+    <h3 class="bold">{{title}}</h3>
     <div
       class="image center"
-      :style="`border: 2px solid ${section.color}; border-radius:10px; background: ${section.background};`"
+      :style="`border: 2px solid ${color}; border-radius:10px; background: ${background};`"
     >
-      <img :src="`${section.img}`" class="card-image img-fluid" alt="" />
+      <img :src="`${image}`" class="card-image img-fluid" alt="" />
       <div class="middle"></div>
     </div>
     <h2>
-      <a class="mail" :href="`mailto: ${section.footer}`">{{
-        section.footer
+      <a class="mail" :href="`mailto: ${footer}`">{{
+        footer
       }}</a>
     </h2>
   </div>
@@ -19,8 +19,23 @@
 <script>
 export default {
   name: 'StaticCardComponent',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['section'],
+  props:{
+    title:{type: String,
+      required: false,
+      default: null},
+    color:{type: String,
+      required: false,
+      default: null},
+    background:{type: String,
+      required: false,
+      default: null},
+    image:{type: String,
+      required: true,},
+    footer:{type: String,
+      required: false,
+      default: null}
+  }
+
 }
 </script>
 

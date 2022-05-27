@@ -16,9 +16,11 @@
       <h2 class="subtitle">You will go through the following stages</h2>
       <CardComponent
         v-for="poi in itinerary.pois"
+        :id="poi.id"
         :key="poi.id"
-        :card="poi"
-        :type="type"
+        :name="poi.name"
+        :image="poi.image"
+        :path="pathToPoi"
         class="col-sm-3 p-2"
       />
     </div>
@@ -39,7 +41,7 @@ export default {
   },
   data() {
     return {
-      type: {name: "poi"},
+      pathToPoi:"poi",
       }
     }
   /*

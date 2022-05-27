@@ -6,9 +6,11 @@
       <h2 v-if="h_events.length != 0" class="subtitle">Events hosted in this Point of interest</h2>
       <CardComponent
         v-for="event in h_events"
+        :id="event.id"
         :key="event.id"
-        :card="event"
-        :type="types.event"
+        :name="event.name"
+        :image="event.image"
+        :path="pathToEvent"
         class="col-sm-3 p-2"
       />
       
@@ -18,9 +20,11 @@
       <h2 v-if="in_itin.length != 0" class="subtitle">Itineraries that pass through this point</h2>
       <CardComponent
         v-for="itinerary in in_itin"
+         :id="itinerary.id"
         :key="itinerary.id"
-        :card="itinerary"
-        :type="types.itinerary"
+        :name="itinerary.name"
+        :image="itinerary.image"
+        :path="pathToItinerary"
         class="col-sm-3 p-2"
       />
     </div>
@@ -48,7 +52,7 @@ export default {
       name: data.name,
       description: data.description,
       type: 'POI',
-      img: data.image,
+      image: data.image,
       map: {
           bbox: data.bbox,
           marker: data.marker
@@ -61,10 +65,8 @@ export default {
   },
   data() {
     return {
-      types: {
-        event: {name: "event"},
-        itinerary: {name: "itinerary"}
-      }
+      pathToItinerary:"itinerary",
+      pathToEvent:"event"
     }
   }
 }

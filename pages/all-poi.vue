@@ -1,6 +1,8 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric :info="header" />
+    <TopPageGeneric 
+    :name="header.name"
+    :description="header.description"  />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -25,9 +27,11 @@
     <div class="row mt-4 g-0">
       <CardComponent
         v-for="poi in pois"
+        :id="poi.id"
         :key="poi.id"
-        :card="poi"
-        :type="type"
+        :name="poi.name"
+        :image="poi.image"
+        :path="pathToPoi"
         class="col-xl-3 p-2"
       />
     </div>
@@ -105,9 +109,7 @@ export default {
             'https://storage.ecodibergamo.it/media/photologue/2017/6/11/photos/cache/i-rintocchi-del-campanone-di-citta-alta-sono-veramente-cento-li-avete-cont_b37148e0-4eac-11e7-ac63-8437cfd3f37a_512_512_new_square_large.jpg',
         },
       }, */
-      type: {
-        name: 'poi',
-      },
+      pathToPoi: "poi",
       categoryPath: "poi-category"
     }
   },

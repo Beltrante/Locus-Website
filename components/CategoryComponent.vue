@@ -19,20 +19,19 @@ export default {
       type: Number,
       required: true,
     },
-    name:{
-      type:String,
-      required: true
+    name: {
+      type: String,
+      required: true,
     },
-    image:{
-      type:String,
-      required: true
+    image: {
+      type: String,
+      required: true,
     },
-    path:{
-      type:String,
-      required: true
-    }
-    }
-  
+    path: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -49,10 +48,10 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.description{
-    font-size: 1.3em;
+.description {
+  font-size: 1.3em;
 }
-.card-container{
-    padding: 0;
+.card-container {
+  padding: 0;
 }
 </style>

@@ -7,8 +7,12 @@
 <script>
 export default {
   name: 'SegmentComponent',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['link']
+  props:{
+    link:{
+      type: String,
+      required: true,
+    }
+  }
 }
 </script>
 

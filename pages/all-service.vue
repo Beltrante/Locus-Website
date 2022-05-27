@@ -1,6 +1,9 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric :info="header" />
+    <TopPageGeneric 
+    :name="header.name"
+    :description="header.description" 
+    />
     <hr />
     <!-- row of category links -->
     <div class="row">

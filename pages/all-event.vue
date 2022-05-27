@@ -1,6 +1,8 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric :info="header" />
+    <TopPageGeneric 
+    :name="header.name"
+    :description="header.description"  />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -25,9 +27,11 @@
     <div class="row mt-4 g-0">
       <CardComponent
         v-for="event in events"
+        :id="event.id"
         :key="event.id"
-        :card="event"
-        :type="type"
+        :name="event.name"
+        :image="event.image"
+        :path="pathToEvent"
         class="col-xxl-3 p-2"
       />
     </div>
@@ -106,9 +110,7 @@ export default {
             'https://i0.wp.com/monstermovieitalia.com/wp-content/uploads/2019/03/capodoglio_museo_scienze_naturali_bergamo_monster_movie.jpg?resize=1000%2C563&ssl=1',
         },
       }, */
-      type: {
-        name: 'event',
-      },
+      pathToEvent: "event",
       seasonPath: "event-season"
     }
   },

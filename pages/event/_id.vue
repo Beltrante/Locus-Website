@@ -2,7 +2,12 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <StaticCardComponent v-for="event in events" :key="event.id" :section="event"/>
+        <StaticCardComponent 
+        v-for="event in events" 
+        :key="event.id" 
+        :title="event.name"
+        :image="event.image"
+        :section="event"/>
       </div>
       <div class="col-md-6">
         <h1 class="header">{{ events.ev1.name }}</h1>
@@ -17,8 +22,10 @@
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
       <CardComponent
-        :card="events.ev1.HostingPoi"
-        :type="type"
+        :id="events.ev1.HostingPoi.id"
+        :name="events.ev1.HostingPoi.name"
+        :image="events.ev1.HostingPoi.image"
+        :path="path"
         class="col-sm p-2"
       />
     </div>
@@ -37,7 +44,7 @@ export default {
         ev1: {
           id: data.id,
           name: data.name,
-          img: data.image,
+          image: data.image,
           description: data.description,
           HostingPoi: data.poi
         },
@@ -46,7 +53,7 @@ export default {
   },
   data() {
     return {
-      type: {name: "poi"}
+      path:"event"
     }
   }
 }

@@ -1,13 +1,17 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric :info="header" />
+    <TopPageGeneric 
+    :name="header.name"
+    :description="header.description"  />
     <!-- rows of poi cards -->
     <div class="row mt-4 g-0">
       <CardComponent
         v-for="itinerary in itineraries"
+        :id="itinerary.id"
         :key="itinerary.id"
-        :card="itinerary"
-        :type="type"
+        :name="itinerary.name"
+        :image="itinerary.image"
+        :path="pathToItinerary"
         class="col-lg-3 p-2"
       />
     </div>
@@ -32,9 +36,7 @@ export default {
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
-      type: {
-        name: 'itinerary',
-      },
+      pathToItinerary:"itinerary"
     }
   },
 }

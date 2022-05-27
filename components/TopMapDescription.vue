@@ -2,7 +2,9 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <MapComponent :coordinates="section.map" />
+        <MapComponent 
+        :bbox="section.map.bbox"
+        :marker="section.map.marker" />
       </div>
       <div class="col-md-6">
         <h1 class="header">{{ section.name }}</h1>
@@ -16,7 +18,9 @@
       <h2 class="subtitle">{{ section.type }}-Photo</h2>
       <div class="col-md-6">
         
-        <StaticCardComponent :section="section" />
+        <StaticCardComponent 
+          :image="section.image"
+         />
       </div>
       <div class="col-md-6">
         <div class="op-hours-style">

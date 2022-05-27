@@ -3,7 +3,7 @@
     <iframe
       id="inlineFrameExample"
       title="Inline Frame Example"
-      :src="`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.bbox}&amp;layer=mapnik&amp;marker=${coordinates.marker}`"
+      :src="`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&amp;layer=mapnik&amp;marker=${marker}`"
       
     ></iframe
     ><br /><small
@@ -18,8 +18,12 @@
 <script>
 export default {
   name: 'MapComponent',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['coordinates']
+  props:{
+    bbox:{type: String,
+      required: true,},
+    marker:{type: String,
+      required: true,}
+  }
 }
 </script>
 

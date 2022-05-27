@@ -7,7 +7,11 @@
       <StaticCardComponent
         v-for="contact in contacts"
         :key="contact.id"
-        :section="contact"
+        :title="contact.title"
+        :image="contact.image"
+        :footer="contact.footer"
+        :color="contact.color"
+        :background="contact.background"
         class="col-md-3 margine"
       />
     </div>
@@ -20,7 +24,9 @@
     <div class="row">
       <h1 class="subtitle">General contacts - Our office</h1>
       <div class="col-md-6">
-        <StaticCardComponent :section="generic" />
+        <StaticCardComponent 
+        :image="generic.image" 
+        />
       </div>
       <div class="col-md-6">
         <div class="row">
@@ -62,7 +68,7 @@ export default {
           id: 1,
           title: 'Itineraries info',
           footer: 'itin@live.com',
-          img: 'https://drive.google.com/uc?export=view&id=1zax5f1MFQg06wlmYIENJgoJmdtloTdhI',
+          image: 'https://drive.google.com/uc?export=view&id=1zax5f1MFQg06wlmYIENJgoJmdtloTdhI',
           color: 'black',
           background: 'rgba(60, 128, 125, 0.611)',
         },
@@ -70,7 +76,7 @@ export default {
           id: 2,
           title: 'Points of interest info',
           footer: 'poi@live.com',
-          img: 'https://drive.google.com/uc?export=view&id=1OEVTvggYTxVInZKYBvjbMqNriuw5N4S2',
+          image: 'https://drive.google.com/uc?export=view&id=1OEVTvggYTxVInZKYBvjbMqNriuw5N4S2',
           color: 'black',
           background: 'rgba(60, 128, 125, 0.611);',
         },
@@ -78,13 +84,13 @@ export default {
           id: 0,
           title: 'Event info',
           footer: 'event@live.com',
-          img: 'https://drive.google.com/uc?export=view&id=11Bx_5QjC5OTML7LYSkekCj_eWMjGkBvM',
+          image: 'https://drive.google.com/uc?export=view&id=11Bx_5QjC5OTML7LYSkekCj_eWMjGkBvM',
           color: 'black',
           background: 'rgba(60, 128, 125, 0.611);',
         },
       },
       generic: {
-        img: 'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
+        image: 'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
       },
     }
   },

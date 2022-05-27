@@ -1,15 +1,19 @@
 <template>
   <div class="page container mt-5">
     <TopPageGeneric 
-    :info="info"/>
+    :name="info.name"
+    :description="info.description"
+    />
     <div class="row mt-4 g-0">
       <!-- la classe di CardComponent detta la grandezza della stessa
       tramite il numero "3" -->
       <CardComponent
         v-for="event in events"
+         :id="event.id"
         :key="event.id"
-        :card="event"
-        :type="childType"
+        :name="event.name"
+        :image="event.image"
+        :path="pathToEvent"
         class="col-sm-3 p-2"
        />
     </div>
@@ -29,7 +33,7 @@ export default {
         description: data.description
       },
       events: data.events,
-      childType: {name: "event"}
+      pathToEvent: "event"
     }
   }
 }

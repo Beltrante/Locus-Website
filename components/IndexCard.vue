@@ -1,9 +1,14 @@
 <template>
-  <NuxtLink :to="`${section.where}`">
+  <NuxtLink :to="`${path}`">
     <div class="image">
-      <img :src="`${section.img}`" class="card-image img-fluid" :style="`border: 3px solid ${section.color}`" alt="" />
+      <img
+        :src="`${image}`"
+        class="card-image img-fluid"
+        :style="`border: 3px solid ${color}`"
+        alt=""
+      />
       <div class="middle">
-        <h1>{{ section.name }}</h1>
+        <h1>{{name}}</h1>
       </div>
     </div>
   </NuxtLink>
@@ -12,8 +17,20 @@
 <script>
 export default {
   name: 'IndexCardComponent',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['section'],
+  props: {
+    path: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    }
+  },
 }
 </script>
 
