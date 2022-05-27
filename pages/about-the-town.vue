@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-5">
-        <StaticCardComponent :section="sections.section1" />
+        <StaticCardComponent :image="sections.section1.image" />
       </div>
       <div class="col-md-7">
         <h2 class="subtitle">
@@ -45,13 +45,13 @@
         </p>
       </div>
       <div class="col-md-5">
-        <StaticCardComponent :section="sections.section2" />
+        <StaticCardComponent :image="sections.section2.image" />
       </div>
     </div>
     <hr>
     <div class="row">
       <div class="col-md-5">
-        <StaticCardComponent :section="sections.section3" />
+        <StaticCardComponent :image="sections.section3.image" />
       </div>
       <div class="col-md-7">
         <h2 class="subtitle">The Lombard-Venetian kingdom</h2>
@@ -86,7 +86,7 @@
         </p>
       </div>
       <div class="col-md-5">
-        <StaticCardComponent :section="sections.section4" />
+        <StaticCardComponent :image="sections.section4.image" />
       </div>
     </div>
     <div class="row"></div>
@@ -101,21 +101,21 @@ export default {
       sections: {
         section1: {
           id: 0,
-          img: 'https://static.miraheze.org/nonciclopediawiki/thumb/d/d1/Bergamo_in_una_tipica_giornata_primaverile.jpg/450px-Bergamo_in_una_tipica_giornata_primaverile.jpg',
+          image: 'https://static.miraheze.org/nonciclopediawiki/thumb/d/d1/Bergamo_in_una_tipica_giornata_primaverile.jpg/450px-Bergamo_in_una_tipica_giornata_primaverile.jpg',
         },
         section2: {
           id: 1,
-          img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Alexander-of-Bergamo-San_Alessandro.jpg/220px-Alexander-of-Bergamo-San_Alessandro.jpg',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Alexander-of-Bergamo-San_Alessandro.jpg/220px-Alexander-of-Bergamo-San_Alessandro.jpg',
           title: '',
         },
         section3: {
           id: 2,
-          img: 'https://www.arte2000.it/wp-content/uploads/2018/08/2018-09-leone-san-marco-porta-carta-marmo-1100x431.jpg',
+          image: 'https://www.arte2000.it/wp-content/uploads/2018/08/2018-09-leone-san-marco-porta-carta-marmo-1100x431.jpg',
           title: '',
         },
         section4: {
           id: 3,
-          img: 'https://www.eccolecco.it/wp-content/uploads/bergamo-citta-alta-centro-storico.jpg',
+          image: 'https://www.eccolecco.it/wp-content/uploads/bergamo-citta-alta-centro-storico.jpg',
           title: '',
         },
       },
