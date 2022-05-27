@@ -14,7 +14,6 @@
 <script>
 export default {
   name: 'CategoryComponent',
-  // eslint-disable-next-line vue/require-prop-types
   props: {
     id: {
       type: Number,
@@ -30,7 +29,6 @@ export default {
     },
     path:{
       type:String,
-      // TODO change to true 
       required: true
     }
     }
