@@ -2,15 +2,13 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <StaticCardComponent 
-        v-for="event in events" 
-        :key="event.id" 
+        <StaticCardComponent  
         :image="event.image"/>
       </div>
       <div class="col-md-6">
-        <h1 class="header">{{ events.ev1.name }}</h1>
+        <h1 class="header">{{ event.name }}</h1>
         <p class="snippet">
-          {{ events.ev1.description }}
+          {{ event.description }}
         </p>
       </div>
     </div>
@@ -20,9 +18,9 @@
       <!-- Display carta larga con tutto il container più informazioni
       dato che il point of interest da mostrare è uno solo -->
       <CardComponent
-        :id="events.ev1.HostingPoi.id"
-        :name="events.ev1.HostingPoi.name"
-        :image="events.ev1.HostingPoi.image"
+        :id="event.HostingPoi.id"
+        :name="event.HostingPoi.name"
+        :image="event.HostingPoi.image"
         :path="path"
         class="col-sm p-2"
       />
@@ -38,20 +36,20 @@ export default {
     const { id } = route.params
     const { data } = await $axios.get('/api/event/' + id)
     return {
-      events: {
-        ev1: {
+      
+        event: {
           id: data.id,
           name: data.name,
           image: data.image,
           description: data.description,
           HostingPoi: data.poi
         },
-      },
+      
     }
   },
   data() {
     return {
-      path:"event"
+      path:"poi"
     }
   }
 }
