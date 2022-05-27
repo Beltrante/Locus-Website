@@ -35,4 +35,7 @@ export default {
 .description{
     font-size: 1.3em;
 }
+.card-container{
+    padding: 0;
+}
 </style>
