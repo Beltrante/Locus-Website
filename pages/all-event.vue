@@ -42,7 +42,7 @@
 export default {
   name: 'AllEventPage',
 
-  async asyncData({ route, $axios }) {
+  async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/all-events')
     return{
       seasons: data.seasons,

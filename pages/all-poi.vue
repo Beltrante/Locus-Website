@@ -41,7 +41,7 @@
 <script>
 export default {
   name: 'AllPoiPage',
-  async asyncData({ route, $axios }) {
+  async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/all-pois')
     return{
       categories: data.categories,

@@ -22,7 +22,7 @@
 export default {
   name: 'AllItinerayPage',
 
-  async asyncData({ route, $axios }) {
+  async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/all-itineraries')
     return {
       itineraries: data,
