@@ -26,9 +26,15 @@ export default {
     const { data } = await $axios.get('/api/all-itineraries')
     return {
       itineraries: data,
+      header: {
+        name: 'All Itineraries',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
+      },
+      pathToItinerary:"itinerary"
     }
   },
-
+/*
   data() {
     return {
       header: {
@@ -39,6 +45,7 @@ export default {
       pathToItinerary:"itinerary"
     }
   },
+  */
 }
 </script>
 

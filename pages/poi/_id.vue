@@ -60,15 +60,19 @@ export default {
       op_hours: openingHours,
       },
       h_events: data.events,
-      in_itin: data.itineraries
+      in_itin: data.itineraries,
+      pathToItinerary:"itinerary",
+      pathToEvent:"event"
     }
   },
+  /*
   data() {
     return {
       pathToItinerary:"itinerary",
       pathToEvent:"event"
     }
   }
+  */
 }
 </script>
 
