@@ -44,14 +44,17 @@ export default {
           description: data.description,
           HostingPoi: data.poi
         },
+         path:"poi"
       
     }
   },
+  /*
   data() {
     return {
       path:"poi"
     }
   }
+  */
 }
 </script>
 
