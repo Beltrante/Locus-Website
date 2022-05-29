@@ -60,12 +60,16 @@ export default {
       },
       h_events: data.events,
       in_itin: data.itineraries,
-      // It's here as putting it in data sometimes generated this error: 
-      // Error generating route "/undefined/8": This page could not be found 
+    }
+  },
+  
+  data() {
+    return {
       pathToItinerary:"itinerary",
       pathToEvent:"event"
     }
-  },  
+  }
+  
 }
 </script>
 

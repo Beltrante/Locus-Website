@@ -47,10 +47,6 @@ export default {
     return{
       seasons: data.seasons,
       events: data.events,
-        // It's here as putting it in data sometimes generated this error: 
-        // Error generating route "/undefined/8": This page could not be found 
-        pathToEvent: "event",
-      seasonPath: "event-season"
     }
   },
 
@@ -61,6 +57,8 @@ export default {
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
+      pathToEvent: "event",
+      seasonPath: "event-season"
     }
   },
   

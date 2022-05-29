@@ -26,9 +26,6 @@ export default {
     const { data } = await $axios.get('/api/all-itineraries')
     return {
       itineraries: data,
-      // It's here as putting it in data sometimes generated this error: 
-      // Error generating route "/undefined/8": This page could not be found 
-      pathToItinerary: "itinerary"
     }
   },
   data() {
@@ -37,7 +34,8 @@ export default {
         name: 'All Itineraries',
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
-      }
+      },
+      pathToItinerary:"itinerary"
     }
   },
 }
