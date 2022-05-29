@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      pathToEvent:"event"
+      pathToEvent:"all-events"
     }
   }
 }

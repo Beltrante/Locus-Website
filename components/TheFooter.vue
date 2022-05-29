@@ -36,13 +36,13 @@
             </p>
           </div>
           <div class="col-md space">
-            <NuxtLink class="section" to="/all-itinerary">Itineraries</NuxtLink>
+            <NuxtLink class="section" to="/all-itineraries">Itineraries</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/all-poi">Points of interest</NuxtLink>
+            <NuxtLink class="section" to="/all-pois">Points of interest</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/all-event">Events</NuxtLink>
+            <NuxtLink class="section" to="/all-events">Events</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/all-service">Services</NuxtLink>
+            <NuxtLink class="section" to="/all-services">Services</NuxtLink>
             <hr />
             <NuxtLink class="section" to="/about-the-town">About the town</NuxtLink>
             <hr />

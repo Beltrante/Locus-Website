@@ -65,8 +65,8 @@ export default {
   
   data() {
     return {
-      pathToItinerary:"itinerary",
-      pathToEvent:"event"
+      pathToItinerary:"all-itineraries",
+      pathToEvent:"all-events"
     }
   }
   

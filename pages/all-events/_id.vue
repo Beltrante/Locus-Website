@@ -46,7 +46,7 @@ export default {
         },  
         // It's here as putting it in data sometimes generated this error: 
         // Error generating route "/undefined/8": This page could not be found 
-        path:"poi"
+        path:"all-pois"
     }
   },
   
