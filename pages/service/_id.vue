@@ -15,7 +15,7 @@ export default {
           name: 'Farmacia Rossi',
           description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque. corrupti odit, fuga veritatis ad saepe perferendis optio.',
           type: 'Service',
-          img: 'https://www.polimi.it/uploads/pics/Rettorato_1920x816_v03_11.jpg',
+          image: 'https://www.polimi.it/uploads/pics/Rettorato_1920x816_v03_11.jpg',
           where: '',
           op_hours: {
             lunedì: {

@@ -14,7 +14,11 @@
         <div class="row">
           <CategoryComponent
             v-for="serviceType in serviceTypes"
+            :id="serviceType.id"
             :key="serviceType.id"
+            :name="serviceType.name"
+            :image="serviceType.image"
+            :path="servicePath"
             :category="serviceType"
             class="col-md-6"
           />
@@ -62,6 +66,7 @@ export default {
             'https://drive.google.com/uc?export=view&id=1ntZ2Rhspga_iWn-RUTri-hyR5FvGF9Gf',
         },
       },
+      servicePath: "service"
     }
   },
 }
