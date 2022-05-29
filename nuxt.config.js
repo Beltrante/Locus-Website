@@ -6,7 +6,7 @@ export default {
       host: '0' // default: localhost
     }, */
   
-  /* ssr: true, */
+  ssr: true, 
   target: 'static', 
 
   serverMiddleware: [

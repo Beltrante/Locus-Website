@@ -51,7 +51,6 @@ export default {
       poi: {
       name: data.name,
       description: data.description,
-      type: 'POI',
       image: data.image,
       map: {
           bbox: data.bbox,
@@ -61,18 +60,12 @@ export default {
       },
       h_events: data.events,
       in_itin: data.itineraries,
+      // It's here as putting it in data sometimes generated this error: 
+      // Error generating route "/undefined/8": This page could not be found 
       pathToItinerary:"itinerary",
       pathToEvent:"event"
     }
-  },
-  /*
-  data() {
-    return {
-      pathToItinerary:"itinerary",
-      pathToEvent:"event"
-    }
-  }
-  */
+  },  
 }
 </script>
 

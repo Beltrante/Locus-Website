@@ -19,7 +19,6 @@
             :name="serviceType.name"
             :image="serviceType.image"
             :path="servicePath"
-            :category="serviceType"
             class="col-md-6"
           />
         </div>

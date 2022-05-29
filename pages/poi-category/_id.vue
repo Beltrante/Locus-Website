@@ -33,8 +33,9 @@ export default {
         description: data.description
       },
       pois: data.pois,
-      // TODO maybe move this to data and not async
-      pathToPoi:"poi"
+        // It's here as putting it in data sometimes generated this error: 
+        // Error generating route "/undefined/8": This page could not be found 
+        pathToPoi:"poi"
     }
   }
 }
