@@ -6,8 +6,9 @@ export default {
       host: '0' // default: localhost
     }, */
   
-  ssr: false,
-  /* target: 'static', */
+  target: 'static',
+  ssr: true,
+  
 
   serverMiddleware: [
     {
@@ -64,4 +65,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+
 }

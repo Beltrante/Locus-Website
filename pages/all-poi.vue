@@ -48,7 +48,6 @@ export default {
       pois: data.pois
     }
   },
-
   data() {
     return {
       header: {
@@ -113,6 +112,8 @@ export default {
       categoryPath: "poi-category"
     }
   },
+
+  
 }
 </script>
 
