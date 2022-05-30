@@ -5,7 +5,7 @@ app.use(express.json())
 
 // Development
 const database = new Sequelize("postgres://postgres:postgres@localhost:5432/locus", {
-    logging: false //do not log actions
+    logging: false //Set to true to log DB actions
 })
 
 // Production (use this code when deploying to production in Heroku)
@@ -131,7 +131,7 @@ async function runMainApi() {
             {
                 model: models.Poi_Type,
                 attributes:['name']
-            }]//leave only preview attributes
+            }]
         })
         return res.json(result)
     })
@@ -148,7 +148,7 @@ async function runMainApi() {
         {
             model: models.Event_Type,
             attributes:['name']
-        }]//leave only preview attributes
+        }]
         })
         return res.json(result)
     })
@@ -175,26 +175,12 @@ async function runMainApi() {
                 model: models.Poi,
                 attributes: ['id', 'name', 'image'],
                 through: { attributes: ['order'] }
-            }]//leave only preview attributes
+            }]
         })
         return res.json(result)
     })
 
-    /*
-    // 6 get all poi types previews
-    app.get('/poiType', async (req, res) => {
-        const result = await models.Poi_Type.findAll()
-        return res.json(result)
-    })
-
-    // 7 get all event types previews
-    app.get('/eventType', async (req, res) => {
-        const result = await models.Event_Type.findAll()
-        return res.json(result)
-    })
-    */
-   
-    // 8 get all itineraries previews
+    // 6 get all itineraries previews
     app.get('/all-itineraries', async (req, res) => {
         const result = await models.Itinerary.findAll({
             attributes:['id','name','image']
@@ -202,7 +188,7 @@ async function runMainApi() {
         return res.json(result)
     })
 
-    // 9 get all poi previews and categories preview
+    // 7 get all poi previews and categories preview
     app.get('/all-pois', async (req, res) => {
         const pois = await models.Poi.findAll({
             attributes: ['id','name','image']
@@ -217,7 +203,7 @@ async function runMainApi() {
         return res.json(result)
     })
 
-    // 10 get all event previews and categories preview
+    // 8 get all event previews and categories preview
     app.get('/all-events', async (req, res) => {
         const events = await models.Event.findAll({
             attributes: ['id','name','image']
@@ -232,8 +218,6 @@ async function runMainApi() {
         return res.json(result)
     })
 }
-
-
 
 runMainApi()
 

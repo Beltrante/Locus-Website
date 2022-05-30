@@ -10,7 +10,7 @@
 
 ## Project Description
 The project consists in the design and the implementation of a website for a tourist office of a cultural tourism destination. The requirements contain some constraints about the content and relationships of the main entities of the website.
-The project is divided into three main parts: Design, Backend, Frontend.
+The project is divided into three main parts: Design, Backend, Frontend. 
 
 ### Design
 Descrivere cosa abbiamo messo nel design document: C-idm wireframes ecc  
@@ -28,18 +28,21 @@ The design document is available [here](insert link here).
 + HTML/CSS are used to structure and style the different pages in the website 
 
 ### Frameworks 
-+ Vue.js
-+ Nuxt.js
++ NuxtJS is a framework which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
 
-### Final Comments and Decisions 
-- deploy statico
-- errori da url errati non necessarrio 
-- components
-- layout
-- altro se c'è 
+### Design Decisions 
++ Following reusability principles the web site was structured with multiple Dynamic Pages and shared components, like the CardComponent, in order to achieve the least possible amount of repeated code.
++ For the aformentioned principles and to obtain a more uniformed design across the site a default layout was added which included the Header, the Footer, and the BreadCrumbs component 
 
+### Deploy Decisions  
+We decided to deploy our project as a Static website using GitHub pages based on the idea that our Art Town's city council would be able to plan its Attractions in advance, allowing the site to be updated no more frequently than every 6 months.
+The Static deploy was chosen to guarantee the following benefits:
++ The site does not need a running backend with its corresponding costs.
++ The APIs are only called during the static generation of the site, thus no malicius or malformed request needs to be accounted for, making the site more secure.   
++ SEO ecc
++ Pages are loaded faster resulting in a better browsing experience for the user
 
-
+  
 ## Build Setup
 
 ```bash
