@@ -1,12 +1,18 @@
 # Locus
+<img align="right" src="static/favicon.ico" alt="logo" width="220">
 
 *Design and implementation of a website for a tourist office of a cultural tourism destination for the Hypermedia Applications course of Politecnico di Milano.*
 
 ## Authors
-  + [Alessandro Austoni](https://github.com/AlessandroAustoni)
-  + [Matteo Beltrante](https://github.com/Beltrante)
-  + [Francesco Bosso](https://github.com/FBosso)
-  + [Thomas Martinoli](https://github.com/ThomasMartinoli)
+  + [Alessandro Austoni](https://github.com/AlessandroAustoni) (alessandro.austoni@mail.polimi.it)
+  <br>Contributions...
+  + [Matteo Beltrante](https://github.com/Beltrante) (matteo.beltrante@mail.polimi.it)
+  <br>Contributions...
+  + [Francesco Bosso](https://github.com/FBosso) (francesco.bosso@mail.polimi.it)
+  <br>Contributions...
+  + [Thomas Martinoli](https://github.com/ThomasMartinoli) (thomas.martinoli@mail.polimi.it)
+  <br>Contributions...
+
 
 ## Project Description
 The project consists in the design and the implementation of a website for a tourist office of a cultural tourism destination. The requirements contain some constraints about the content and relationships of the main entities of the website.
@@ -17,18 +23,18 @@ Descrivere cosa abbiamo messo nel design document: C-idm wireframes ecc
 The design document is available [here](insert link here).
 
 ### Backend Technologies
-+ NPM is the Node Package Manager used in this project to download and manage the rquired modules.
-+ NodeJS is used in the implementation to create a fully working Web Server by using the Express module.
-+ Express is a module providing a flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
-+ PostgreSQL is an open source db used to store the data required to populate the HTML pages
-+ Sequelize is a promise-based Node.js Object–relational mapping tool used to make querying the database during API calls easier 
++ [NPM](https://docs.npmjs.com/) is the Node Package Manager used in this project to download and manage the rquired modules.
++ [NodeJS](https://nodejs.org/it/docs/) is used in the implementation to create a fully working Web Server by using the Express module.
++ [Express](https://expressjs.com/it/) is a module providing a flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
++ [PostgreSQL](https://www.postgresql.org/docs/) is an open source db used to store the data required to populate the HTML pages
++ [Sequelize](https://sequelize.org/) is a promise-based Node.js Object–relational mapping tool used to make querying the database during API calls easier 
 
 ### Frontend Technologies
-+ Axios is promise-based HTTP Client for node.js and is used to handle all the requests to the server's API
-+ HTML/CSS are used to structure and style the different pages in the website 
++ [Axios](https://axios-http.com/docs/intro) is promise-based HTTP Client for node.js and is used to handle all the requests to the server's API
++ [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML?retiredLocale=it)/[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=it) are used to structure and style the different pages in the website 
 
 ### Frameworks 
-+ NuxtJS is a framework which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
++ [NuxtJS](https://nuxtjs.org/) is a framework which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
 
 ### Design Decisions 
 + Following reusability principles the web site was structured with multiple Dynamic Pages and shared components, like the CardComponent, in order to achieve the least possible amount of repeated code.
