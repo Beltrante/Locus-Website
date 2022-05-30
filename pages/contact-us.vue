@@ -68,7 +68,7 @@ export default {
           id: 1,
           title: 'Itineraries info',
           footer: 'itin@live.com',
-          image: 'https://i.ibb.co/4sBy7GB/itinerary1.png',
+          image: 'https://i.ibb.co/gV2CX2h/itinerary.png',
           color: 'black',
           background: 'rgba(60, 128, 125, 0.611)',
         },

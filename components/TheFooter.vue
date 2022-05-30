@@ -54,32 +54,32 @@
                 <a href="https://www.facebook.com"
                   ><img
                     class="icons"
-                    src="https://drive.google.com/uc?export=view&id=1DFz6iLcU6q79bTsbQ2Sfz9ZTfNUGgWKu"
-                    alt=""
+                    src="https://i.ibb.co/s5yYc4F/5305154-fb-facebook-facebook-logo-icon.png"
+                    alt="facebook_icon"
                 /></a>
               </div>
               <div class="social col">
                 <a href="https://www.linkedin.com"
                   ><img
                     class="icons"
-                    src="https://drive.google.com/uc?export=view&id=1JUtjKlRA4WEWdVcDJiZxpQR43cOgtQps"
-                    alt=""
+                    src="https://i.ibb.co/rZjJsxZ/5305157-connection-linkedin-network-linkedin-logo-icon.png"
+                    alt="linkedin_icon"
                 /></a>
               </div>
               <div class="social col">
                 <a href="https://www.twitter.com"
                   ><img
                     class="icons"
-                    src="https://drive.google.com/uc?export=view&id=1FFqGAmS1aaeNUj19j9Vidm4K4f6gh0s_"
-                    alt=""
+                    src="https://i.ibb.co/HrfSGKT/104501-twitter-bird-icon.png"
+                    alt="twitter_icon"
                 /></a>
               </div>
               <div class="social col">
                 <a href="https://github.com/FBosso/Locus"
                   ><img
                     class="icons"
-                    src="https://drive.google.com/uc?export=view&id=1s5lYCBJdzd_whifexDB-tCsCFDvgjgLr"
-                    alt=""
+                    src="https://i.ibb.co/8XbDq3g/4747499-github-icon.png"
+                    alt="github_icon"
                 /></a>
               </div>
             </div>

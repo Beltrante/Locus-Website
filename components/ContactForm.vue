@@ -30,7 +30,7 @@
                 <span id="inputGroupPrepend" class="input-group-text"
                   ><img
                     style="height: 24px"
-                    src="https://drive.google.com/uc?export=view&id=1kqiYeAWDX-tsWTjppByvslIqwhCbsLtS"
+                    src="https://i.ibb.co/r60Qb0p/mail.png"
                     alt=""
                 /></span>
               </div>
