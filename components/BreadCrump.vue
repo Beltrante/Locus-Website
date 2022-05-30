@@ -1,7 +1,7 @@
 <template>
   <h6>
-    <span v-for="(item, index) in items" :key="index">
-      <NuxtLink :to="item.url" class="crumb">
+    <span v-for="(item, index) in items" :key="index" class="crumb">
+      <NuxtLink :to="item.url">
         <span>{{ item.label }}</span>
       </NuxtLink>
     </span>
@@ -28,12 +28,12 @@ export default {
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 5px;
+  padding-left: 15px;
   padding-right: 15px;
-  margin-right: 10px;
+  margin-right: 2px;
   background: rgb(60, 128, 125);
   opacity: 0.8;
-  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%,0% 100%);
+  clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%,0% 100%,8% 50%);
   /*transform: skew(-20deg);*/
   /*border-radius: 10px 50px 50px 10px;*/
 }
