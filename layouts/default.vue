@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <the-header />
+    <bread-crump />
     <nuxt />
     <div class="default-image">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -30,10 +31,12 @@
 <script>
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
+import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'DefaultLayout',
   components: {
     TheHeader,
+    BreadCrump,
     TheFooter,
   },
 }

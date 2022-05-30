@@ -127,6 +127,10 @@ async function runMainApi() {
             }, {
                 model: models.Event,
                 attributes: ['id', 'name', 'image'],
+            },
+            {
+                model: models.Poi_Type,
+                attributes:['name']
             }]//leave only preview attributes
         })
         return res.json(result)
@@ -140,7 +144,11 @@ async function runMainApi() {
             include: [{
                 model: models.Poi,
                 attributes: ['id', 'name', 'image'],
-            }]//leave only preview attributes
+            },
+        {
+            model: models.Event_Type,
+            attributes:['name']
+        }]//leave only preview attributes
         })
         return res.json(result)
     })

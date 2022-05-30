@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-5">
+    <BreadCrump :items="breadcrumps" />
     <TopMapDescription :section="poi" />
     <div class="row stacco-subtitle">
       <!-- Display this h2 only if there is content to be displayed -->
@@ -32,8 +33,12 @@
 </template>
 
 <script>
+import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'SinglePoi',
+   components: {
+    BreadCrump,
+  },
     async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('/api/poi/' + id)
@@ -50,6 +55,7 @@ export default {
     return {
       poi: {
       name: data.name,
+      category: data.poiTypeId,
       description: data.description,
       image: data.image,
       map: {
@@ -60,6 +66,8 @@ export default {
       },
       h_events: data.events,
       in_itin: data.itineraries,
+      PoiCat: data.poi_type.name,
+    
     }
   },
   
@@ -68,7 +76,21 @@ export default {
       pathToItinerary:"all-itineraries",
       pathToEvent:"all-events"
     }
-  }
+  },
+  computed: {
+    breadcrumps() {
+      return [
+        {
+          label: 'All Places',
+          url: '/all-pois',
+        },
+        {
+          label:this.PoiCat,
+          url:'/poi-category/'+this.poi.category,
+        }       
+      ]
+    },
+  },
   
 }
 </script>

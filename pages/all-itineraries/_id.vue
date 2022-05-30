@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-5">
+    <BreadCrump :items="breadcrumps" />
     <div class="row">
       <div class="col-md-6">
         <SegmentComponent :link="itinerary.mapillaryLink" />
@@ -30,8 +31,12 @@
 
 
 <script>
+import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'SingleItinerary',
+  components: {
+    BreadCrump,
+  },
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('/api/itinerary/' + id)
@@ -43,7 +48,18 @@ export default {
     return {
       pathToPoi:"all-pois",
       }
-    }
+    },
+    computed: {
+    breadcrumps() {
+      return [
+        {
+          label: 'All Itineraries',
+          url: '/all-itineraries',
+        },
+             
+      ]
+    },
+  },
 }
 </script>
 

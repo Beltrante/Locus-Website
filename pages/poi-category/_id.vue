@@ -1,5 +1,6 @@
 <template>
   <div class="page container mt-5">
+    <BreadCrump :items="breadcrumps" />
     <TopPageGeneric 
     :name="info.name"
     :description="info.description"
@@ -21,8 +22,12 @@
 </template>
 
 <script>
+import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'PoiCategory',
+  components: {
+    BreadCrump,
+  },
   async asyncData({ params, $axios }) {
     // type can be poi/event intended as poiType/eventType
     const id = params.id
@@ -39,7 +44,18 @@ export default {
     return {
       pathToPoi:"all-pois"
     }
-  }
+  },
+  computed: {
+    breadcrumps() {
+      return [
+        {
+          label: 'All Places',
+          url: '/all-pois',
+        },
+             
+      ]
+    },
+  },
 }
 </script>
 

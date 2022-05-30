@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-5">
+    <BreadCrump :items="breadcrumps" />
     <div class="row">
       <div class="col-md-6">
         <StaticCardComponent  
@@ -29,8 +30,12 @@
 </template>
 
 <script>
+import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'SingleEvent',
+  components: {
+    BreadCrump,
+  },
   
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -42,13 +47,30 @@ export default {
           name: data.name,
           image: data.image,
           description: data.description,
-          HostingPoi: data.poi
-        },  
+          HostingPoi: data.poi,
+          Season: data.eventTypeId
+        }, 
+        SeasonName: data.event_type.name, 
         // It's here as putting it in data sometimes generated this error: 
         // Error generating route "/undefined/8": This page could not be found 
         path:"all-pois"
     }
   },
+  computed: {
+    breadcrumps() {
+      return [
+        {
+          label: 'All Events',
+          url: '/all-events',
+        },
+        {
+          label: this.SeasonName,
+          url:'/event-season/'+this.event.Season ,
+        }       
+      ]
+    },
+  },
+
   
 }
 </script>
