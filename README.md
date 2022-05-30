@@ -1,5 +1,28 @@
 # Locus
 
+*Designand implementation of a website for a tourist office of a cultural tourism destination for the Hypermedia Applications course of Politecnico di Milano.*
+
+## Authors
+  + [Alessandro Austoni](https://github.com/AlessandroAustoni)
+  + [Matteo Beltrante](https://github.com/Beltrante)
+  + [Francesco Bosso](https://github.com/FBosso)
+  + [Thomas Martinoli](https://github.com/ThomasMartinoli)
+
+## Project Description
+The project consists in the design and the implementation of a website for a tourist office of a cultural tourism destination. The requirements contain some constraints about the content and relationships of the main entities of the website.
+The project is divided into three main parts: Design, Backend, Frontend.
+
+### Design
+Descrivere cosa abbiamo messo nel design document: C-idm wireframes ecc  
+The design document is available [here](insert link here).
+
+### Backend Technologies
+-NPM is the Node Package Manager we use in this project. It allows us to download modules and use it in our project.
+-NodeJS is used in the implementation to create a fully working Web Server and in order to do so we use a module called express.
+-Express is a module providing a flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
+-We use a SQL-based language to write queries, particularly, the DB implemented was PostgreSQL. Sequelize is a promise-based Node.js Object–relational mapping tool
+for Postgres and other Databases. This tool is imported in our project as a module to make simpler queries.
+
 ## Build Setup
 
 ```bash
