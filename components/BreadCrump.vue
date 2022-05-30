@@ -31,11 +31,11 @@ export default {
   padding-left: 5px;
   padding-right: 15px;
   margin-right: 10px;
-  background: rgb(60, 128, 125);
+  background: rgba(60, 128, 125, 0.642);
   opacity: 0.8;
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%,0% 100%);
   /*transform: skew(-20deg);*/
-  /*border-radius: 10px 50px 50px 10px;*/
+  border-radius: 10px 0px 0px 10px;
 }
 
 .crumb:hover {

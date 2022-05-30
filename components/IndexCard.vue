@@ -1,13 +1,9 @@
 <template>
   <NuxtLink :to="`${path}`">
     <div class="image">
-      <img
-        :src="`${image}`"
-        class="card-image img-fluid"
-        alt=""
-      />
+      <img :src="`${image}`" class="card-image img-fluid" alt="" />
       <div class="middle">
-        <h1>{{name}}</h1>
+        <h1>{{ name }}</h1>
       </div>
     </div>
   </NuxtLink>
@@ -28,7 +24,7 @@ export default {
     image: {
       type: String,
       required: true,
-    }
+    },
   },
 }
 </script>
@@ -63,5 +59,21 @@ export default {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .middle {
+    color: rgba(60, 128, 125, 0.973);;
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .img-fluid{
+    opacity: 0.40;
+  }
 }
 </style>
