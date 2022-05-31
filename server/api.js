@@ -58,22 +58,21 @@ async function initializeDatabaseConnection() {
     })
     const Service = database.define("service", {
         name: DataTypes.STRING,
+        address: DataTypes.STRING,
+        website: DataTypes.STRING,
         image: DataTypes.STRING,
-        description: DataTypes.TEXT
+        openingHours: DataTypes.TEXT,
+        
     })
     const Service_Type = database.define("service_type", {
         name: DataTypes.STRING,
         image: DataTypes.STRING,
         description: DataTypes.TEXT
     })
-    const Point_Category = database.define("point_category", {
-        category: DataTypes.STRING,
-    })
-
+   
     // define entities relationships
     Poi.belongsTo(Poi_Type)
     Poi_Type.hasMany(Poi)//needed to get poi_type and its associated pois preview
-    Poi.belongsTo(Point_Category)
     Event.belongsTo(Poi)
     Poi.hasMany(Event)//needed to get poi and its associated events previews
     Event.belongsTo(Event_Type)
@@ -81,7 +80,7 @@ async function initializeDatabaseConnection() {
     Poi.belongsToMany(Itinerary, { through: Stop })
     Itinerary.belongsToMany(Poi, { through: Stop })
     Service.belongsTo(Service_Type)
-    Service.belongsTo(Point_Category)
+    
     // careful force true will wipe out db data
     await database.sync({ force: false })
 
@@ -93,8 +92,7 @@ async function initializeDatabaseConnection() {
         Itinerary,
         Stop,
         Service,
-        Service_Type,
-        Point_Category
+        Service_Type
     }
 }
 
@@ -231,7 +229,7 @@ async function runMainApi() {
         return res.json(result)
     })
 
-    // 5 get serviceType full info
+    // 10 get serviceType full info
     app.get('/serviceType/:id', async (req, res) => {
         const id = +req.params.id
         const result = await models.Service_Type.findOne({
