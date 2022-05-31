@@ -7,28 +7,22 @@ body {
   font-weight: 900;
   font-size: 4.6em;
 }
-
 @media screen and (max-width: 1100px) {
   .header {
     font-size: 3em;
   }
 }
-
 @media screen and (max-width: 375px) {
   .header {
     font-size: 12vw;
   }
 }
-
 /* CSS snippet che sta sotto o di fianco al titolo  */
 .snippet {
   color: grey;
   font-size: 1.25rem;
   text-align: justify;
 }
-
-
-
 /* INIZIO CSS condiviso Component.vue +++++++++ */
 .external {
   padding: 8px;
