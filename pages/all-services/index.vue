@@ -13,11 +13,11 @@
       <div class="col-lg-8">
         <div class="row">
           <CategoryComponent
-            v-for="serviceType in serviceTypes"
-            :id="serviceType.id"
-            :key="serviceType.id"
-            :name="serviceType.name"
-            :image="serviceType.image"
+            v-for="service in serviceTypes"
+            :id="service.id"
+            :key="service.id"
+            :name="service.name"
+            :image="service.image"
             :path="servicePath"
             class="col-md-6"
           />
@@ -32,6 +32,16 @@
 <script>
 export default {
   name: 'AllServicePage',
+  /*
+  async asyncData({ $axios }) {
+    // Get all the service types previews data from server
+    const { data } = await $axios.get('/api/all-serviceTypes')
+    return {
+      //data has id/name/image
+      serviceTypes: data,
+    }
+  },
+  */
   data() {
     return {
       header: {
@@ -40,26 +50,26 @@ export default {
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
       serviceTypes: {
-        serviceType1: {
-          id: 0,
+        service1: {
+          id: 1,
           name: 'Pharmacies',
           image:
             'https://drive.google.com/uc?export=view&id=1cQFWMRKLRXg6VANH5y83IlumjGN5PS2t',
         },
-        serviceType2: {
-          id: 1,
+        service2: {
+          id: 2,
           name: 'Supermarkets',
           image:
             'https://drive.google.com/uc?export=view&id=1PXKIlrUhvI7JaZHv56EOU07H8TuFSTJS',
         },
-        serviceType3: {
-          id: 2,
+        service3: {
+          id: 3,
           name: 'Banks',
           image:
             'https://drive.google.com/uc?export=view&id=1MCc7SwU7hxQrmzrpX7IR9m8fW5zBLtaG',
         },
-        serviceType4: {
-          id: 3,
+        service4: {
+          id: 4,
           name: 'Restaurants',
           image:
             'https://drive.google.com/uc?export=view&id=1ntZ2Rhspga_iWn-RUTri-hyR5FvGF9Gf',

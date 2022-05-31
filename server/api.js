@@ -107,6 +107,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Poi_Type.findOne({
             where: { id },
+            attributes: {exclude:['createdAt','updateAt']},
             include: [{
                 model: models.Poi,
                 attributes: ['id','name','image']
@@ -120,6 +121,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Poi.findOne({
             where: { id },
+            attributes: {exclude:['createdAt','updateAt']},
             include: [{
                 model: models.Itinerary,
                 attributes: ['id', 'name', 'image'],
@@ -141,6 +143,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Event.findOne({
             where: { id },
+            attributes: {exclude:['createdAt','updateAt']},
             include: [{
                 model: models.Poi,
                 attributes: ['id', 'name', 'image'],
@@ -158,6 +161,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Event_Type.findOne({
             where: { id },
+            attributes: {exclude:['createdAt','updateAt']},
             include: [{
                 model: models.Event,
                 attributes: ['id', 'name', 'image'],
@@ -171,6 +175,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Itinerary.findOne({
             where: { id },
+            attributes: {exclude:['createdAt','updateAt']},
             include: [{
                 model: models.Poi,
                 attributes: ['id', 'name', 'image'],
@@ -217,6 +222,29 @@ async function runMainApi() {
         }
         return res.json(result)
     })
+
+    // 9 get all services previews 
+    app.get('/all-serviceTypes', async (req, res) => {
+        const result = await models.Service_Type.findAll({
+            attributes:['id','name','image']
+        })
+        return res.json(result)
+    })
+
+    // 5 get serviceType full info
+    app.get('/serviceType/:id', async (req, res) => {
+        const id = +req.params.id
+        const result = await models.Service_Type.findOne({
+            where: { id },
+            attributes: {exclude:['createdAt','updateAt']},
+            include: [{
+                model: models.Service,
+                attributes: ['id', 'name','address','website','image', 'openingHours'],
+            }]
+        })
+        return res.json(result)
+    })
+
 }
 
 runMainApi()

@@ -34,7 +34,7 @@ The design document is available [here](insert link here).
 + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML?retiredLocale=it)/[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=it) are used to structure and style the different pages in the website 
 
 ## Frameworks 
-+ [NuxtJS](https://nuxtjs.org/) is a framework which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
++ [NuxtJS](https://nuxtjs.org/) is the framework we used, which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
 
 
 
