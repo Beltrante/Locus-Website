@@ -32,7 +32,7 @@ export default {
         s2:{
           id: 1,
           name: "Itineraries",
-          image: "https://drive.google.com/uc?export=view&id=1qEiwWlkdnKB8fvn0TZObIF0Ddzo2GGV0",
+          image: "https://i.ibb.co/HKsJdTQ/itineraries.png",
           col: 5,
           path: "all-itineraries"
           /* color: "#ffca3a" */
