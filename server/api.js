@@ -62,6 +62,7 @@ async function initializeDatabaseConnection() {
         website: DataTypes.STRING,
         image: DataTypes.STRING,
         openingHours: DataTypes.TEXT,
+        rating: DataTypes.INTEGER
         
     })
     const Service_Type = database.define("service_type", {
@@ -79,6 +80,7 @@ async function initializeDatabaseConnection() {
     Event_Type.hasMany(Event)//needed to get event_type and its associated events preview
     Poi.belongsToMany(Itinerary, { through: Stop })
     Itinerary.belongsToMany(Poi, { through: Stop })
+    Service_Type.hasMany(Service)
     Service.belongsTo(Service_Type)
     
     // careful force true will wipe out db data
@@ -224,8 +226,15 @@ async function runMainApi() {
     // 9 get all services previews 
     app.get('/all-serviceTypes', async (req, res) => {
         const result = await models.Service_Type.findAll({
-            attributes:['id','name','image']
-        })
+            attributes:['id','name','image'],
+            include:[{
+                order: [['rating', 'DESC']],
+                limit:3,
+                model:models.Service,
+                // TODO: filter data
+                attributes: {exclude:['createdAt','updateAt']},
+            }]
+        })    
         return res.json(result)
     })
 

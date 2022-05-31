@@ -58,7 +58,7 @@ export default {
       header: {
         name: 'All Bergamo\'s events',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
+          'Bergamo and its inhabitants are always very active, energetic and friendly. These are the reasons why there is never a shortage of activities, events, opportunities to learn something new or simply to have fun with one\'s companions throughout the year. ',
       },
       // used to reroute when a preview is pressed
       pathToEvent: "all-events",

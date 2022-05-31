@@ -47,7 +47,7 @@ export default {
       header: {
         name: 'All Services',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
+          'The following page shows some of the services the city offers.',
       },
       servicePath: "all-services",
     }
