@@ -47,7 +47,7 @@ export default {
     }
   },
   computed: {
-    //define breadcrumbs route
+    // define breadcrumbs route
     breadcrumps() {
       return [
         {
