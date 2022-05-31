@@ -38,10 +38,12 @@ export default {
   },
   
   async asyncData({ route, $axios }) {
+    // Get the id of the event to show from route
     const { id } = route.params
+    // Make api call for data 
     const { data } = await $axios.get('/api/event/' + id)
     return {
-      
+      // parse received data (event data and season name for readable bredcrumbs)
         event: {
           id: data.id,
           name: data.name,
@@ -51,12 +53,16 @@ export default {
           Season: data.eventTypeId
         }, 
         SeasonName: data.event_type.name, 
-        // It's here as putting it in data sometimes generated this error: 
-        // Error generating route "/undefined/8": This page could not be found 
-        path:"all-pois"
     }
   },
+  data() {
+    return {
+        // its used to reroute when a card is pressed
+        path:"all-pois"
+      }
+    },
   computed: {
+    // define breadcrumbs routes
     breadcrumps() {
       return [
         {

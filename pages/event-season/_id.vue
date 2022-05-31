@@ -29,7 +29,7 @@ export default {
     BreadCrump,
   },
   async asyncData({ params, $axios }) {
-    // type can be poi/event intended as poiType/eventType
+    // get event-season full data based on route id and relative events preview
     const id = params.id
     const { data } = await $axios.get('/api/event-season/'+id)
     return {
@@ -41,11 +41,13 @@ export default {
     }
   },
   data() {
+    // used to reroute user when a card is pressed
     return {
       pathToEvent:"all-events"
     }
   },
   computed: {
+    //define breadcrumbs route
     breadcrumps() {
       return [
         {

@@ -38,6 +38,7 @@ export default {
     BreadCrump,
   },
   async asyncData({ route, $axios }) {
+    // Get the id of the itinerary to show from route
     const { id } = route.params
     const { data } = await $axios.get('/api/itinerary/' + id)
     return {
@@ -46,10 +47,12 @@ export default {
   },
   data() {
     return {
+      // its used to reroute when a card is pressed
       pathToPoi:"all-pois",
       }
     },
     computed: {
+    // define breadcrumbs route
     breadcrumps() {
       return [
         {

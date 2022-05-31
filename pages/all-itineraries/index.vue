@@ -23,12 +23,14 @@ export default {
   name: 'AllItinerayPage',
 
   async asyncData({ $axios }) {
+    // Get all the itineraries data from server
     const { data } = await $axios.get('/api/all-itineraries')
     return {
       itineraries: data,
     }
   },
   data() {
+    // static data that never changes
     return {
       header: {
         name: 'All Itineraries',

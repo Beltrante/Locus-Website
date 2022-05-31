@@ -29,7 +29,7 @@ export default {
     BreadCrump,
   },
   async asyncData({ params, $axios }) {
-    // type can be poi/event intended as poiType/eventType
+     // get poi-category full data based on route id and relative pois preview
     const id = params.id
     const { data } = await $axios.get('/api/poi-category/'+id)
     return {
@@ -41,11 +41,13 @@ export default {
     }
   },
   data() {
+    // used to reroute user when a card is pressed
     return {
       pathToPoi:"all-pois"
     }
   },
   computed: {
+    //define breadcrumbs route
     breadcrumps() {
       return [
         {

@@ -18,6 +18,7 @@
 export default {
   name: 'IndexPage',
   data(){
+    // Home Page data never changes 
     return{
       sections: {
         s1:{

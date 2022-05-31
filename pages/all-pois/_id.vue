@@ -40,6 +40,7 @@ export default {
     BreadCrump,
   },
     async asyncData({ route, $axios }) {
+    // Get the id of the poi to show from route
     const { id } = route.params
     const { data } = await $axios.get('/api/poi/' + id)
     // parsing of the opening hours string 
@@ -70,14 +71,15 @@ export default {
     
     }
   },
-  
   data() {
     return {
+      // they are used to reroute when a card is pressed
       pathToItinerary:"all-itineraries",
       pathToEvent:"all-events"
     }
   },
   computed: {
+    // define breadcrumbs routes
     breadcrumps() {
       return [
         {

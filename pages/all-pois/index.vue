@@ -42,6 +42,7 @@
 export default {
   name: 'AllPoiPage',
   async asyncData({ $axios }) {
+    // Get all the pois and categories preview data from server
     const { data } = await $axios.get('/api/all-pois')
     return{
       categories: data.categories,
@@ -50,12 +51,14 @@ export default {
   },
 
   data() {
+    // static data that never changes
     return {
       header: {
         name: 'All Points of interest',
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
+      // used to reroute when a preview is pressed
       pathToPoi: "all-pois",
       categoryPath: "poi-category"
     }
