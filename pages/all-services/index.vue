@@ -32,16 +32,16 @@
 <script>
 export default {
   name: 'AllServicePage',
-  /*
+  
   async asyncData({ $axios }) {
     // Get all the service types previews data from server
     const { data } = await $axios.get('/api/all-serviceTypes')
     return {
-      //data has id/name/image
-      serviceTypes: data,
+    // data has id/name/image
+    serviceTypes: data,
     }
   },
-  */
+  
   data() {
     return {
       header: {
@@ -49,35 +49,9 @@ export default {
         description:
           'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi veniam in, eos tempora, molestias modi voluptatem totam quidem delenitieveniet obcaecati, atque fugiat! Dolor incidunt excepturi, essedoloremque repellat tempora?',
       },
-      serviceTypes: {
-        service1: {
-          id: 1,
-          name: 'Pharmacies',
-          image:
-            'https://drive.google.com/uc?export=view&id=1cQFWMRKLRXg6VANH5y83IlumjGN5PS2t',
-        },
-        service2: {
-          id: 2,
-          name: 'Supermarkets',
-          image:
-            'https://drive.google.com/uc?export=view&id=1PXKIlrUhvI7JaZHv56EOU07H8TuFSTJS',
-        },
-        service3: {
-          id: 3,
-          name: 'Banks',
-          image:
-            'https://drive.google.com/uc?export=view&id=1MCc7SwU7hxQrmzrpX7IR9m8fW5zBLtaG',
-        },
-        service4: {
-          id: 4,
-          name: 'Restaurants',
-          image:
-            'https://drive.google.com/uc?export=view&id=1ntZ2Rhspga_iWn-RUTri-hyR5FvGF9Gf',
-        },
-      },
-      servicePath: "all-services"
+      servicePath: "all-services",
     }
-  },
+  }, 
 }
 </script>
 
