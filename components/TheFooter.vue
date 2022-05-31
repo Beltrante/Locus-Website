@@ -8,7 +8,7 @@
               <img
                 class="logo-img"
                 src="https://drive.google.com/uc?export=view&id=10PsHvYIL1H7_3zTNsNDPPCpW3XyZw2xa"
-                alt=""
+                alt="Logo"
               />
             </div>
             <div class="paragraph">

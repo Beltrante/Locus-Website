@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="`${path}`">
     <div class="image">
-      <img :src="`${image}`" class="card-image img-fluid" alt="" />
+      <img :src="`${image}`" class="card-image img-fluid" :alt="`${name}-image`" />
       <div class="middle">
         <h1>{{ name }}</h1>
       </div>

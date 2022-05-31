@@ -5,7 +5,7 @@
       class="image center"
       :style="`border: 2px solid ${color}; border-radius:10px; background: ${background};`"
     >
-      <img :src="`${image}`" class="card-image img-fluid" alt="" />
+      <img :src="`${image}`" class="card-image img-fluid" :alt="`${title}-img`" />
       <div class="middle"></div>
     </div>
     <h2>

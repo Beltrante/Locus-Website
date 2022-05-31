@@ -7,7 +7,7 @@ NuxtLink-->
 <!-- NB: il to="..." è variabile!!! ora è statico solo come esempio -->
     <div class="external">
       <div>
-        <img :src="image" class="card-image" alt="" />
+        <img :src="image" class="card-image" :alt="`${name}-image`" />
       </div>
       <div class="description">{{name}}</div>
     </div>

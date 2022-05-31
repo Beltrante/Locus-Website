@@ -31,7 +31,7 @@
                   ><img
                     style="height: 24px"
                     src="https://i.ibb.co/r60Qb0p/mail.png"
-                    alt=""
+                    alt="mail-image"
                 /></span>
               </div>
               <input

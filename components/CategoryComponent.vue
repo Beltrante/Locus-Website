@@ -2,7 +2,7 @@
   <NuxtLink :to="`${path}/${id}`" class="card-container">
     <div class="external row">
       <div class="col-4">
-        <img :src="image" class="card-image" alt="" />
+        <img :src="image" class="card-image" :alt="`${name}-image`" />
       </div>
       <div class="description vertical col-8">
         {{ name }}
