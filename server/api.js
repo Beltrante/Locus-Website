@@ -62,6 +62,7 @@ async function initializeDatabaseConnection() {
         website: DataTypes.STRING,
         image: DataTypes.STRING,
         openingHours: DataTypes.TEXT,
+        rating: DataTypes.INTEGER
         
     })
     const Service_Type = database.define("service_type", {
@@ -227,12 +228,13 @@ async function runMainApi() {
         const result = await models.Service_Type.findAll({
             attributes:['id','name','image'],
             include:[{
+                order: [['rating', 'DESC']],
                 limit:3,
                 model:models.Service,
                 // TODO: filter data
-                // attributes:['name']
+                attributes: {exclude:['createdAt','updateAt']},
             }]
-        })
+        })    
         return res.json(result)
     })
 
