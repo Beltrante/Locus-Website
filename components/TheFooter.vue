@@ -7,7 +7,7 @@
             <div class="logo">
               <img
                 class="logo-img"
-                src="https://drive.google.com/uc?export=view&id=10PsHvYIL1H7_3zTNsNDPPCpW3XyZw2xa"
+                src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png"
                 alt="Logo"
               />
             </div>
