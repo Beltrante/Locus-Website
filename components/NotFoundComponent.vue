@@ -1,16 +1,22 @@
 <template>
   <div class="container">
-    <p class="header">This page does not exist</p>
+    <div class="row">
+      <div class="col-md pack">
+        <p class="header">Ops! This page does not exist</p>
+      </div>
+      <div class="col-md pack">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player
           src="https://assets3.lottiefiles.com/packages/lf20_mk6o3c37.json"
           background="transparent"
           speed="1"
-          style="width: 1000px; height: 500px"
+          style="width: 500px; height: 500px"
           loop
           autoplay
-          class="animation"
+          class="animation col-md"
         ></lottie-player>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,14 +27,10 @@ export default {
 </script>
 
 <style scoped>
-div{
+.pack {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50rem;
-}
-.animation{
-  width: 15rem;
-  margin: 0 auto;
 }
 </style>
