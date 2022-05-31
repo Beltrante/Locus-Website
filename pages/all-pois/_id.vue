@@ -64,6 +64,8 @@ export default {
           marker: data.marker
         },
       op_hours: openingHours,
+      // used for top map description POI-Photo text
+      type: "POI"
       },
       h_events: data.events,
       in_itin: data.itineraries,
