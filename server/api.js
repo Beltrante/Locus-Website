@@ -79,6 +79,7 @@ async function initializeDatabaseConnection() {
     Event_Type.hasMany(Event)//needed to get event_type and its associated events preview
     Poi.belongsToMany(Itinerary, { through: Stop })
     Itinerary.belongsToMany(Poi, { through: Stop })
+    Service_Type.hasMany(Service)
     Service.belongsTo(Service_Type)
     
     // careful force true will wipe out db data
@@ -224,7 +225,13 @@ async function runMainApi() {
     // 9 get all services previews 
     app.get('/all-serviceTypes', async (req, res) => {
         const result = await models.Service_Type.findAll({
-            attributes:['id','name','image']
+            attributes:['id','name','image'],
+            include:[{
+                limit:3,
+                model:models.Service,
+                // TODO: filter data
+                // attributes:['name']
+            }]
         })
         return res.json(result)
     })
