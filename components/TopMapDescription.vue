@@ -17,7 +17,6 @@
     <div class="row">
       <h2 class="subtitle">{{ section.type }}-Photo</h2>
       <div class="col-md-6">
-        
         <StaticCardComponent 
           :image="section.image"
          />

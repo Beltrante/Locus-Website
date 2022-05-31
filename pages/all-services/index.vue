@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <!-- rows of poi cards -->
+    <!-- rows of service sections -->
     <div class="row mt-4 g-0">LISTA DI COSE</div>
   </div>
 </template>
