@@ -8,7 +8,7 @@
         <p class="snippet">
           {{ description }}
         </p>
-        <p class="tags"># TagDinamici</p>
+        <p class="tags"># {{dynTags[0]}}</p>
       </div>
     </div>
   </div>
@@ -20,7 +20,26 @@ export default {
   props: {
     name: { type: String, required: true },
     description: { type: String, required: true },
+    tags:{type: Array,required:true}
   },
+  data() {
+    return {
+      // props are unmodifiable and i want change order for animation
+      dynTags: this.tags
+    }
+  },
+  mounted(){
+    window.setInterval(()=>{
+      this.pollTag();
+    }, 500);
+
+  },
+  methods: {
+    pollTag(){
+      const first = this.dynTags.shift();
+      this.dynTags = this.dynTags.concat(first);
+    }
+  }
 }
 </script>
 

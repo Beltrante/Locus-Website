@@ -4,6 +4,7 @@
     <TopPageGeneric 
     :name="info.name"
     :description="info.description"
+    :tags="tags"
     />
     <div class="row mt-4 g-0">
       <!-- la classe di CardComponent detta la grandezza della stessa
@@ -32,12 +33,19 @@ export default {
      // get poi-category full data based on route id and relative pois preview
     const id = params.id
     const { data } = await $axios.get('/api/poi-category/'+id)
+
+    const tagList = []
+    data.pois.forEach((poi) => {
+      tagList.push(poi.name)
+    })
+
     return {
       info: {
         name: data.name,
         description: data.description
       },
       pois: data.pois,
+      tags: tagList
     }
   },
   data() {

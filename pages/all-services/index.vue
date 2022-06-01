@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric :name="header.name" :description="header.description" />
+    <TopPageGeneric :name="header.name" :description="header.description" :tags="tags" />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -39,9 +39,16 @@ export default {
   async asyncData({ $axios }) {
     // Get all the service types previews data from server
     const { data } = await $axios.get('/api/all-serviceTypes')
+
+    const tagList = []
+    data.forEach((type) => {
+      tagList.push(type.name)
+    })
+
     return {
       // data has id/name/image/services as a list of the top n rated
       serviceTypes: data,
+      tags: tagList
     }
   },
 

@@ -2,7 +2,8 @@
   <div class="container mt-5">
     <TopPageGeneric 
     :name="header.name"
-    :description="header.description"  />
+    :description="header.description" 
+     :tags="tags" />
     <!-- rows of poi cards -->
     <div class="row mt-4 g-0">
       <CardComponent
@@ -25,8 +26,15 @@ export default {
   async asyncData({ $axios }) {
     // Get all the itineraries previews data from server
     const { data } = await $axios.get('/api/all-itineraries')
+
+    const tagList = []
+    data.forEach((itinerary) => {
+      tagList.push(itinerary.name)
+    })
+
     return {
       itineraries: data,
+      tags: tagList
     }
   },
   data() {

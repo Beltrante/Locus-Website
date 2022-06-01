@@ -2,7 +2,8 @@
   <div class="container mt-5">
     <TopPageGeneric 
     :name="header.name"
-    :description="header.description"  />
+    :description="header.description" 
+    :tags="tags" />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -45,10 +46,17 @@ export default {
   async asyncData({ $axios }) {
     // Get all the events data from server
     const { data } = await $axios.get('/api/all-events')
+
+    const tagList = []
+    data.seasons.forEach((season) => {
+      tagList.push(season.name)
+    })
+
     return{
       // parse received data (data for season type preview and events preview)
       seasons: data.seasons,
       events: data.events,
+      tags: tagList
     }
   },
 

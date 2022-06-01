@@ -4,6 +4,7 @@
     <TopPageGeneric 
     :name="info.name"
     :description="info.description"
+    :tags="tags"
     />
     <div class="row mt-4 g-0">
       <!-- la classe di CardComponent detta la grandezza della stessa
@@ -32,12 +33,19 @@ export default {
     // get event-season full data based on route id and relative events preview
     const id = params.id
     const { data } = await $axios.get('/api/event-season/'+id)
+
+    const tagList = []
+    data.events.forEach((event) => {
+      tagList.push(event.name)
+    })
+
     return {
       info: {
         name: data.name,
         description: data.description
       },
       events: data.events,
+      tags: tagList
     }
   },
   data() {
