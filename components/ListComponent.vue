@@ -1,16 +1,16 @@
 <template>
   <div class="row">
     <div class="col-md-6">
-      <StaticCardComponent :image="section.image" />
+      <StaticCardComponent :image="image" />
     </div>
     <div class="col-md-6">
       <div class="op-hours-style">
         <h2>Opening Hours</h2>
-        <p >{{ section.op_hours }}</p>
+        <p >{{ hours }}</p>
       </div>
       <div class="info-style">
-      <p> <span class="attribute">Address:</span> {{section.address}}</p>
-      <p> <span class="attribute">Site:</span> <a :href="`${section.website}`">{{section.name}}</a></p>
+      <p> <span class="attribute">Address:</span> {{address}}</p>
+      <p> <span class="attribute">Site:</span> <a :href="`${website}`">{{name}}</a></p>
       </div>
     </div>
   </div>
@@ -19,13 +19,33 @@
 <script>
 export default {
   name: 'ListComponent',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['section'],
+  props:{
+    image:{
+      type:String,
+      required: true
+    },
+    hours:{
+      type:String,
+      required: true
+    },
+    address:{
+      type:String,
+      required: true
+    },
+    website:{
+      type:String,
+      required: true
+    },
+    name:{
+      type:String,
+      required: true
+    }
+  }
 }
 </script>
 
 <style scoped>
-/* DA METTERE IN CONDIVISIONE CON QUELLO DI TopMapDescription */
+/* TODO: DA METTERE IN CONDIVISIONE CON QUELLO DI TopMapDescription */
 .op-hours-style {
   background: rgb(224, 220, 220);
   border-radius: 10px;
