@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row mb-4">
     <div class="col-md-6">
       <StaticCardComponent :image="image" />
     </div>
@@ -11,7 +11,7 @@
       <div class="info-style">
       <p> <span class="attribute">Address:</span> {{address}}</p>
       <p> <span class="attribute">Site:</span> <a :href="`${website}`">{{name}}</a></p>
-      <p> <span class="attribute">Rating:</span>{{rating}}/5</p>
+      <p> <span class="attribute">Rating: </span>{{rating}}/5</p>
       </div>
     </div>
   </div>
