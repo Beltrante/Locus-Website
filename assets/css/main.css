@@ -23,6 +23,11 @@ body {
   font-size: 1.25rem;
   text-align: justify;
 }
+@media screen and (max-width: 576px) {
+  .snippet {
+    text-align: center;
+  }
+}
 /* INIZIO CSS condiviso Component.vue +++++++++ */
 .external {
   padding: 8px;

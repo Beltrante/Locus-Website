@@ -49,7 +49,7 @@ export default {
   justify-content: center;
 }
 .description {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .card-container {
   padding: 0;

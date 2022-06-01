@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light px-3 header">
+  <nav class="navbar navbar-expand-xl navbar-light px-3 header">
     <a class="navbar-brand" href="/"><img class="logo" src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png" alt="logo"></a>
     <button
       class="navbar-toggler"

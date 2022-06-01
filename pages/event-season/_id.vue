@@ -15,7 +15,7 @@
         :name="event.name"
         :image="event.image"
         :path="pathToEvent"
-        class="col-sm-3 p-2"
+        class="col-xl-3 p-2"
        />
     </div>
   </div>
