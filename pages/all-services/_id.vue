@@ -3,6 +3,7 @@
     <TopPageGeneric
       :name="serviceType.name"
       :description="serviceType.description"
+      :tags="tags"
     />
     <div class="mt-5">
       <ListComponent
@@ -26,8 +27,15 @@ export default {
     // Get the id of the poi to show from route
     const { id } = route.params
     const { data } = await $axios.get('/api/serviceType/' + id)
+
+    const tagList = []
+    data.services.forEach((service) => {
+      tagList.push(service.name)
+    })
+
     return {
       serviceType: data,
+      tags: tagList
     }
   },
 }
