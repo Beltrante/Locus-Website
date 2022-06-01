@@ -16,7 +16,7 @@
       </div>
       <div class="col-md-6">
         <div class="op-hours-style">
-          <h3 class="subtitle offset">Opening hours</h3>
+          <h3 class="subtitle center">Opening hours</h3>
           <p v-for="day in section.op_hours" :key="day.id">{{ day.str }}</p>
         </div>
       </div>
@@ -46,5 +46,8 @@ export default {
 }
 h3 {
   font-weight: 300;
+}
+.center{
+  text-align: center;
 }
 </style>

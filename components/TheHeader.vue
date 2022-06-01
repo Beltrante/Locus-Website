@@ -18,11 +18,13 @@
         <li
           v-for="(navItem, navItemIndex) of headerList"
           :key="`navItem${navItemIndex}`"
-          style="color:white;"
+          style="color:white;" 
         >
+        <div class="cont">
           <nuxt-link :to="navItem.path" style="color:white;" class="nav-link">
             {{ navItem.name }}
           </nuxt-link>
+        </div>
         </li>
       </ul>
     </div>
@@ -80,6 +82,12 @@ a {
 @media screen and (max-width: 992px) {
   .nav-link:hover {
     background: none;
+    color: black;
+  }
+  .cont:hover{
+    border-radius: 10px;
+    background:rgba(128, 60, 64, 0.5);
+    width: 40%;
   }
 }
 .header {
