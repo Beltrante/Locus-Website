@@ -1,21 +1,28 @@
 <template>
-  <div>
+  <div class="container mt-5">
+    <BreadCrump :items="breadcrumps" />
     <TopMapDescription :section="sections.section" />
   </div>
 </template>
 
 <script>
+import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'SingleService',
+  components: {
+    BreadCrump,
+  },
   data() {
     return {
       sections: {
         section: {
           id: 0,
           name: 'Farmacia Rossi',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque. corrupti odit, fuga veritatis ad saepe perferendis optio.',
+          description:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A rerum eos ipsam omnis voluptas nulla tempore cupiditate. Eveniet excepturi corrupti odit, fuga veritatis ad saepe perferendis optio. Id, dicta itaque. corrupti odit, fuga veritatis ad saepe perferendis optio.',
           type: 'Service',
-          image: 'https://www.polimi.it/uploads/pics/Rettorato_1920x816_v03_11.jpg',
+          image:
+            'https://www.polimi.it/uploads/pics/Rettorato_1920x816_v03_11.jpg',
           where: '',
           op_hours: {
             lunedì: {
@@ -46,6 +53,17 @@ export default {
         },
       },
     }
+  },
+  computed: {
+    // define breadcrumbs routes
+    breadcrumps() {
+      return [
+        {
+          label: 'All services',
+          url: '/all-services',
+        },
+      ]
+    },
   },
 }
 </script>
