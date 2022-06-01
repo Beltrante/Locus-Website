@@ -11,12 +11,14 @@
       <div class="info-style">
       <p> <span class="attribute">Address:</span> {{address}}</p>
       <p> <span class="attribute">Site:</span> <a :href="`${website}`">{{name}}</a></p>
+      <p> <span class="attribute">Rating:</span>{{rating}}/5</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { INTEGER } from 'sequelize/types'
 export default {
   name: 'ListComponent',
   props:{
@@ -38,6 +40,10 @@ export default {
     },
     name:{
       type:String,
+      required: true
+    },
+    rating:{
+      type:Number,
       required: true
     }
   }

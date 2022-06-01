@@ -11,7 +11,6 @@
       :class="`col-sm-${section.col} p-2 active position-relative menu`" />
     </div>
   </div>
-
 </template>
 
 <script>

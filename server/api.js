@@ -246,7 +246,7 @@ async function runMainApi() {
             attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Service,
-                attributes: ['id', 'name','address','website','image', 'openingHours'],
+                attributes: ['id', 'name','address','website','image', 'openingHours', 'rating'],
             }]
         })
         return res.json(result)
