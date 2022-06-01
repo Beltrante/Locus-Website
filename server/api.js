@@ -27,7 +27,7 @@ async function initializeDatabaseConnection() {
         name: DataTypes.STRING,
         image: DataTypes.STRING,
         description: DataTypes.TEXT,
-        openingHours: DataTypes.TEXT,
+        openingHours: DataTypes.ARRAY(DataTypes.STRING),
         bbox: DataTypes.STRING,
         marker: DataTypes.STRING,
     })
@@ -61,7 +61,7 @@ async function initializeDatabaseConnection() {
         address: DataTypes.STRING,
         website: DataTypes.STRING,
         image: DataTypes.STRING,
-        openingHours: DataTypes.TEXT,
+        openingHours: DataTypes.ARRAY(DataTypes.STRING),
         rating: DataTypes.INTEGER
         
     })

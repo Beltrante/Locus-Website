@@ -8,7 +8,7 @@
         <div class="col-xl-7">
           <div class="op-hours-style">
             <h2>Opening Hours</h2>
-            <p v-for="day in hours" :key="day.id">{{ day.str }}</p>
+            <p v-for="day in hours" :key="day">{{ day }}</p>
           </div>
         </div>
         <div class="col">

@@ -17,7 +17,7 @@
       <div class="col-md-6">
         <div class="op-hours-style">
           <h3 class="subtitle center">Opening hours</h3>
-          <p v-for="day in section.op_hours" :key="day.id">{{ day.str }}</p>
+          <p v-for="day in section.op_hours" :key="day">{{ day }}</p>
         </div>
       </div>
     </div>

@@ -43,16 +43,6 @@ export default {
     // Get the id of the poi to show from route
     const { id } = route.params
     const { data } = await $axios.get('/api/poi/' + id)
-    // parsing of the opening hours string 
-    const splitted = data.openingHours.split(';')
-    const openingHours = []
-    splitted.forEach((x, i) => {
-      const day = {}
-      day.id = i;
-      day.str = x
-      openingHours.push(day)
-      });
-    
     return {
       poi: {
       name: data.name,
@@ -63,7 +53,7 @@ export default {
           bbox: data.bbox,
           marker: data.marker
         },
-      op_hours: openingHours,
+      op_hours: data.openingHours,
       // used for top map description POI-Photo text
       type: "POI"
       },
