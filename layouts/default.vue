@@ -43,7 +43,7 @@ export default {
   right: 20px;
   bottom: 20px;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 .icon {
