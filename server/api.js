@@ -107,7 +107,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Poi_Type.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updateAt']},
+            attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Poi,
                 attributes: ['id','name','image']
@@ -121,7 +121,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Poi.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updateAt']},
+            attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Itinerary,
                 attributes: ['id', 'name', 'image'],
@@ -143,7 +143,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Event.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updateAt']},
+            attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Poi,
                 attributes: ['id', 'name', 'image', 'description'],
@@ -161,7 +161,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Event_Type.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updateAt']},
+            attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Event,
                 attributes: ['id', 'name', 'image'],
@@ -175,7 +175,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Itinerary.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updateAt']},
+            attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Poi,
                 attributes: ['id', 'name', 'image'],
@@ -232,7 +232,7 @@ async function runMainApi() {
                 limit:3,
                 model:models.Service,
                 // TODO: filter data
-                attributes: {exclude:['createdAt','updateAt']},
+                attributes: {exclude:['createdAt','updatedAt']},
             }]
         })    
         return res.json(result)
@@ -243,7 +243,7 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Service_Type.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updateAt']},
+            attributes: {exclude:['createdAt','updatedAt']},
             include: [{
                 model: models.Service,
                 attributes: ['id', 'name','address','website','image', 'openingHours'],
