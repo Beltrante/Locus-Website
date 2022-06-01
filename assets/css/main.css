@@ -78,7 +78,7 @@ a:link {
 /* INIZIO CSS condiviso tra IndexCard.vue & StaticCardComponent.vue +++++++++ */
 .image {
   padding: 8px;
-  height: 380px;
+  /* height: 380px; */
 }
 .img-fluid {
   width: 100%;

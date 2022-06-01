@@ -1,17 +1,26 @@
 <template>
-  <div class="row mb-4">
-    <div class="col-md-6">
-      <StaticCardComponent :image="image" />
+  <div class="row mb-5">
+    <div class="col-md-5">
+      <StaticCardComponent :image="image" :height="height" />
     </div>
-    <div class="col-md-6">
-      <div class="op-hours-style">
-        <h2>Opening Hours</h2>
-        <p v-for="day in hours" :key="day.id">{{ day.str }}</p>
-      </div>
-      <div class="info-style">
-      <p> <span class="attribute">Address:</span> {{address}}</p>
-      <p> <span class="attribute">Site:</span> <a :href="`${website}`">{{name}}</a></p>
-      <p> <span class="attribute">Rating: </span>{{rating}}/5</p>
+    <div class="col-md-7">
+      <div class="row">
+        <div class="col-xl-7">
+          <div class="op-hours-style">
+            <h2>Opening Hours</h2>
+            <p v-for="day in hours" :key="day.id">{{ day.str }}</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="info-style">
+            <p><span class="attribute">Address:</span> {{ address }}</p>
+            <p>
+              <span class="attribute">Site:</span>
+              <a :href="`${website}`">{{ name }}</a>
+            </p>
+            <p><span class="attribute">Rating: </span>{{ rating }}/5</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,30 +29,35 @@
 <script>
 export default {
   name: 'ListComponent',
-  props:{
-    image:{
-      type:String,
-      required: true
+  props: {
+    image: {
+      type: String,
+      required: true,
     },
-    hours:{
-      type:Array,
-      required: true
+    hours: {
+      type: Array,
+      required: true,
     },
-    address:{
-      type:String,
-      required: true
+    address: {
+      type: String,
+      required: true,
     },
-    website:{
-      type:String,
-      required: true
+    website: {
+      type: String,
+      required: true,
     },
-    name:{
-      type:String,
-      required: true
+    name: {
+      type: String,
+      required: true,
     },
-    rating:{
-      type:Number,
-      required: true
+    rating: {
+      type: Number,
+      required: true,
+    },
+  },
+  data(){
+    return{
+      height: '355px',
     }
   }
 }
@@ -60,8 +74,10 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
-.info-style{
+
+.info-style {
   background: rgba(128, 60, 65, 0.5);
   border-radius: 10px;
   padding: 10px;
@@ -69,7 +85,9 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.attribute{
+
+.attribute {
   font-weight: 600;
 }
+
 </style>

@@ -1,10 +1,8 @@
 <template>
   <div class="center">
     <h3 class="bold">{{title}}</h3>
-    <div
-      class="image center"
-      :style="`border: 2px solid ${color}; border-radius:10px; background: ${background};`"
-    >
+    <!-- if no height parameter is passed the defaul height of the image is used (380px) -->
+    <div class="image center" :style="`height:${height};`">
       <img :src="`${image}`" class="card-image img-fluid" :alt="`${title}-img`" />
       <div class="middle"></div>
     </div>
@@ -33,6 +31,9 @@ export default {
       required: true,},
     footer:{type: String,
       required: false,
+      default: null},
+    height:{type: String,
+      required: false,
       default: null}
   }
 
@@ -48,5 +49,8 @@ export default {
 }
 .bold {
   font-weight: 600;
+}
+.image{
+  height: 380px;
 }
 </style>
