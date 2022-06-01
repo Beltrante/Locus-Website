@@ -9,6 +9,7 @@
       :hours="service.openingHours"
       :website="service.website"
       :address="service.address"
+      :rating="service.rating"
     />
   </div>
 </template>
