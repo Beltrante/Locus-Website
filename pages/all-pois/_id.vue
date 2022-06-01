@@ -59,8 +59,7 @@ export default {
       },
       h_events: data.events,
       in_itin: data.itineraries,
-      PoiCat: data.poi_type.name,
-    
+      PoiTypeName: data.poi_type.name,
     }
   },
   data() {
@@ -79,7 +78,7 @@ export default {
           url: '/all-pois',
         },
         {
-          label:this.PoiCat,
+          label:this.PoiTypeName,
           url:'/poi-category/'+this.poi.category,
         }       
       ]
