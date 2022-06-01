@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-5">
     <h2 class="subtitle">{{ data.serviceType }}'s Top 3 rated</h2>
     <ListComponent
       v-for="service in data.services"
@@ -17,5 +17,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 </style>

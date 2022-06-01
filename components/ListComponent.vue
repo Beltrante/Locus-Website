@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-md-6">
-      <CardComponent :image="section.image" />
+      <StaticCardComponent :image="section.image" />
     </div>
     <div class="col-md-6">
       <div class="op-hours-style">
@@ -9,11 +9,9 @@
         <p >{{ section.op_hours }}</p>
       </div>
       <div class="info-style">
-      <p><span class="attribute"> Name: </span> {{section.name}} </p>
       <p> <span class="attribute">Address:</span> {{section.address}}</p>
       <p> <span class="attribute">Site:</span> <a :href="`${section.website}`">{{section.name}}</a></p>
       </div>
-
     </div>
   </div>
 </template>
