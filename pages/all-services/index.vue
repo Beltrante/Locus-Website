@@ -1,9 +1,6 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric 
-    :name="header.name"
-    :description="header.description" 
-    />
+    <TopPageGeneric :name="header.name" :description="header.description" />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -26,7 +23,11 @@
     </div>
     <!-- rows of service sections -->
     <div class="row mt-4 g-0">
-      <TopRatedService v-for="type in serviceTypes" :key="type.id" :data="type" />
+      <TopRatedService
+        v-for="type in serviceTypes"
+        :key="type.id"
+        :data="type"
+      />
     </div>
   </div>
 </template>
@@ -34,16 +35,33 @@
 <script>
 export default {
   name: 'AllServicePage',
-  
+
   async asyncData({ $axios }) {
     // Get all the service types previews data from server
     const { data } = await $axios.get('/api/all-serviceTypes')
+    // since we chose to deploy as STATIC we are not worried about client resources for this operation
+    // as it is not called every time but only during generate 
+    data.forEach((type) => {
+      type.services.forEach((service)=>{
+      // split hour string
+      const splitted = service.openingHours.split(';')
+      const openingHours = []
+      splitted.forEach((x, i) => {
+        const day = {}
+        day.id = i
+        day.str = x
+        openingHours.push(day)
+      })
+      service.openingHours = openingHours
+      })
+    })
+
     return {
-    // data has id/name/image/services as a list of the top n rated
-    serviceTypes: data,
+      // data has id/name/image/services as a list of the top n rated
+      serviceTypes: data,
     }
   },
-  
+
   data() {
     return {
       header: {
@@ -51,9 +69,9 @@ export default {
         description:
           'The following page shows some of the services the city offers.',
       },
-      servicePath: "all-services",
+      servicePath: 'all-services',
     }
-  }, 
+  },
 }
 </script>
 

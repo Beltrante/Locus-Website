@@ -6,7 +6,7 @@
     <div class="col-md-6">
       <div class="op-hours-style">
         <h2>Opening Hours</h2>
-        <p >{{ hours }}</p>
+        <p v-for="day in hours" :key="day.id">{{ day.str }}</p>
       </div>
       <div class="info-style">
       <p> <span class="attribute">Address:</span> {{address}}</p>
@@ -26,7 +26,7 @@ export default {
       required: true
     },
     hours:{
-      type:String,
+      type:Array,
       required: true
     },
     address:{

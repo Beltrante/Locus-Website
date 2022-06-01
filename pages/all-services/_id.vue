@@ -25,15 +25,27 @@ export default {
   async asyncData({ route, $axios }) {
     // Get the id of the poi to show from route
     const { id } = route.params
-    const { data } = await $axios.get('/api/serviceType/'+ id)
+    const { data } = await $axios.get('/api/serviceType/' + id)
+    // since we chose to deploy as STATIC we are not worried about client resources for this operation
+    // as it is not called every time but only during generate 
+    data.services.forEach((service) => {
+      // split hour string
+      const splitted = service.openingHours.split(';')
+      const openingHours = []
+      splitted.forEach((x, i) => {
+        const day = {}
+        day.id = i
+        day.str = x
+        openingHours.push(day)
+      })
+      service.openingHours = openingHours
+    })
     return {
-    serviceType: data,
+      serviceType: data,
     }
   },
-
 }
 </script>
 
 <style>
-
 </style>
