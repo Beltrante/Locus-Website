@@ -24,9 +24,6 @@ export default {
   async asyncData({ route, $axios }) {
     // Get the id of the poi to show from route
     const { id } = route.params
-    console.log("pippo")
-    console.log(route)
-    console.log(id)
     const { data } = await $axios.get('/api/serviceType/'+ id)
     return {
     serviceType: data,
