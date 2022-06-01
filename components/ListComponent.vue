@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import { INTEGER } from 'sequelize/types'
 export default {
   name: 'ListComponent',
   props:{
