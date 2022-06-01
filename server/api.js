@@ -146,7 +146,7 @@ async function runMainApi() {
             attributes: {exclude:['createdAt','updateAt']},
             include: [{
                 model: models.Poi,
-                attributes: ['id', 'name', 'image'],
+                attributes: ['id', 'name', 'image', 'description'],
             },
         {
             model: models.Event_Type,

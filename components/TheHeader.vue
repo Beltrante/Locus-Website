@@ -77,6 +77,11 @@ a {
 .nav-link:hover {
   background: rgba(128, 60, 64, 0.5);
 }
+@media screen and (max-width: 992px) {
+  .nav-link:hover {
+    background: none;
+  }
+}
 .header {
   background: rgb(60, 128, 125);
   

@@ -23,8 +23,15 @@
         :name="event.HostingPoi.name"
         :image="event.HostingPoi.image"
         :path="path"
-        class="col-sm p-2"
+        class="col-lg-7 p-2"
       />
+      <div class="col-lg-5 p-3">
+        <!-- Passare nome e descrizione relativi all'Hosting Poi.
+        avere solo una immagine lunga tutta la pagina senza dare nessuna
+        info all'utente sembra un po uno spreco di spazio -->
+        <h3 class="sub-sub-title">{{event.HostingPoi.name}}</h3>
+        <TitleDescription :description="event.HostingPoi.description"/>
+      </div>
     </div>
   </div>
 </template>
@@ -85,5 +92,8 @@ export default {
 .event-image {
   height: 100%;
   width: 100%;
+}
+.sub-sub-title{
+  font-weight: 600;
 }
 </style>

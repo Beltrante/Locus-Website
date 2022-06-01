@@ -12,7 +12,7 @@
         :footer="contact.footer"
         :color="contact.color"
         :background="contact.background"
-        class="col-md-3 margine"
+        class="col-lg-3 mb-4"
       />
     </div>
     <hr />
@@ -23,14 +23,14 @@
     <hr />
     <div class="row">
       <h1 class="subtitle">General contacts - Our office</h1>
-      <div class="col-md-6">
+      <div class="col-xxl-6">
         <StaticCardComponent 
         :image="generic.image" 
         />
       </div>
-      <div class="col-md-6">
+      <div class="col-xxl-6 p-3 alignment">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5 mb-5">
             <span class="general-contact">City</span> : Bergamo
             <br />
             <span class="general-contact">Address</span> : Via Solata 10
@@ -42,7 +42,7 @@
             <span class="general-contact">Mail:</span> locus@live.com
           </div>
           <br />
-          <div class="col-md">
+          <div class="col-md alignment">
             <p class="general-contact">Opening Hours:</p>
             <p>Monday: 08:00 - 13:00 , 14:30 - 19:00</p>
             <p>Tuesday: 08:00 - 13:00 , 14:30 - 19:00</p>
@@ -104,5 +104,13 @@ export default {
 .general-contact {
   font-size: 25px;
   font-weight: 600;
+}
+.alignment{
+  text-align: left;
+}
+@media screen and (max-width: 1285px) {
+  .alignment {
+    text-align: center;
+  }
 }
 </style>

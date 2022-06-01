@@ -3,7 +3,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg space">
+          <div class="col-xl space">
             <div class="logo">
               <img
                 class="logo-img"
@@ -11,7 +11,7 @@
                 alt="Logo"
               />
             </div>
-            <div class="paragraph">
+            <div class="paragraph-sx">
               <span class="subtitle-footer">Bergamo, Lombardia (IT)</span>
               <br />
               <span class="subtitle-footer">Postal Code:</span> 24121-24129
@@ -25,7 +25,7 @@
               Treviolo, Valbrembo
             </div>
           </div>
-          <div class="col-lg space">
+          <div class="col-xl space">
             <h3 class="title-footer">Vision</h3>
             <p class="paragraph">
               The vision of Locus is to provide an immersive and wonderful
@@ -35,7 +35,7 @@
               it accesible with our intercative website!
             </p>
           </div>
-          <div class="col-md space">
+          <div class="col-xl space">
             <NuxtLink class="section" to="/all-itineraries">Itineraries</NuxtLink>
             <hr />
             <NuxtLink class="section" to="/all-pois">Points of interest</NuxtLink>
@@ -48,7 +48,7 @@
             <hr />
             <NuxtLink class="section" to="/contact-us">Contact-Us</NuxtLink>
           </div>
-          <div class="col-lg space">
+          <div class="col-xl space">
             <div class="row">
               <div class="social col">
                 <a href="https://www.facebook.com"
@@ -142,6 +142,16 @@ export default {
 }
 .paragraph {
   text-align: justify;
+  font-size: 0.95rem;
+}
+@media screen and (max-width: 500px) {
+  .paragraph {
+    text-align: left;
+  }
+}
+.paragraph-sx{
+  text-align: left;
+  font-size: 0.95rem;
 }
 .space {
   padding: 40px;

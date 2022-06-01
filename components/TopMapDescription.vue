@@ -2,24 +2,17 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <MapComponent 
-        :bbox="section.map.bbox"
-        :marker="section.map.marker" />
+        <MapComponent :bbox="section.map.bbox" :marker="section.map.marker" />
       </div>
       <div class="col-md-6">
-        <h1 class="header">{{ section.name }}</h1>
-        <p class="snippet">
-          {{ section.description }}
-        </p>
+        <TitleDescription :name="section.name" :description="section.description" />
       </div>
     </div>
     <hr />
     <div class="row">
       <h2 class="subtitle">{{ section.type }}-Photo</h2>
       <div class="col-md-6">
-        <StaticCardComponent 
-          :image="section.image"
-         />
+        <StaticCardComponent :image="section.image" />
       </div>
       <div class="col-md-6">
         <div class="op-hours-style">
@@ -28,7 +21,7 @@
         </div>
       </div>
     </div>
-    <hr>
+    <hr />
   </div>
 </template>
 
@@ -50,7 +43,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 h3 {
   font-weight: 300;
