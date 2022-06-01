@@ -1,8 +1,6 @@
 <template>
   <div class="container mt-5">
-    <TopPageGeneric 
-    :name="header.name"
-    :description="header.description"  />
+    <TopPageGeneric :name="header.name" :description="header.description" />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -44,9 +42,16 @@ export default {
   async asyncData({ $axios }) {
     // Get all the pois and categories preview data from server
     const { data } = await $axios.get('/api/all-pois')
-    return{
+
+    const tagList = []
+    data.categories.forEach((category) => {
+      tagList.push(category.name)
+    })
+
+    return {
       categories: data.categories,
       pois: data.pois,
+      tags: tagList
     }
   },
 
@@ -59,11 +64,10 @@ export default {
           'Numerous, enchanting and wonderful are the places, the buildings that the city offers. Do not miss a single one during your stay, so let yourself be fascinated by the attractions along the streets of Bergamo.',
       },
       // used to reroute when a preview is pressed
-      pathToPoi: "all-pois",
-      categoryPath: "poi-category"
+      pathToPoi: 'all-pois',
+      categoryPath: 'poi-category',
     }
   },
-
 }
 </script>
 
