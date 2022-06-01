@@ -47,7 +47,6 @@ export default {
     return{
       categories: data.categories,
       pois: data.pois,
-      
     }
   },
 
