@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`${path}/${id}`" class="card-container">
+  <NuxtLink :to="`/${path}/${id}`" class="card-container">
     <div class="external row">
       <div class="col-4">
         <img :src="image" class="card-image" :alt="`${name}-image`" />
