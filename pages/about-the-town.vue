@@ -1,10 +1,21 @@
 <template>
+  <!-- this div contains the whole page that is divided in 4 row, one for each main period of the hystory of bergamo -->
+  <!-- I will comment on the first row, everything is also applied to the remaining 3 rows -->
   <div class="container mt-5">
+    <!-- First row - it contains an image (passed in StaticCard Component) and an explaination -->
     <div class="row">
-      <div class="col-md-5">
+      <!-- the breakpoint is set to lg to better increase responsiveness and UI quality -->
+
+      <!-- the classes order-lg-1 and order-1 are used to allow the alternate visualization of images and text while 
+      using desktop version and, at the same time, to allow the mobile versione to always stack the image on top of 
+      the explaination (in order to have an appealing and coherent visualization) -->
+      <div class="col-lg-5 order-lg-1 order-1">
+        <!-- The StaticCardComponent takes an image and, with it, produces a static card (i.e: a non clickable card) -->
         <StaticCardComponent :image="sections.section1.image" />
       </div>
-      <div class="col-md-7">
+      <!-- for the text, the ordering classes are order-lg-2 and order-2 beacuse this row, both in desktop and mobile,
+      visualization, will display first the image and than the text -->
+      <div class="col-lg-7 order-lg-2 order-2">
         <h2 class="subtitle">
           Name's origin
           <p class="snippet">
@@ -25,9 +36,13 @@
         </h2>
       </div>
     </div>
-    <hr>
+    <hr />
+    <!-- Second row -->
     <div class="row">
-      <div class="col-md-7">
+      <!-- here the ordering classes are alternated (order-lg-1 and order-2) because:
+      - in desktop the displaying order will be: Text, Image
+      - in mobile the displaiyng order will be (as always): Image, Text  -->
+      <div class="col-lg-7 order-lg-1 order-2">
         <h2 class="subtitle">The Lombard duchy</h2>
         <p class="snippet">
           With the invasion of 568 led by Alboino, Bergamo also fell under the
@@ -44,16 +59,17 @@
           consolidated.
         </p>
       </div>
-      <div class="col-md-5">
+      <div class="col-lg-5 order-lg-2 order-1">
         <StaticCardComponent :image="sections.section2.image" />
       </div>
     </div>
-    <hr>
+    <hr />
+    <!-- Third row -->
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-lg-5 order-lg-1 order-1">
         <StaticCardComponent :image="sections.section3.image" />
       </div>
-      <div class="col-md-7">
+      <div class="col-lg-7 order-lg-2 order-2">
         <h2 class="subtitle">The Lombard-Venetian kingdom</h2>
         <p class="snippet">
           The Congress of Vienna, in 1815, made Bergamo part of the Kingdom
@@ -69,9 +85,10 @@
         </p>
       </div>
     </div>
-    <hr>
+    <hr />
+    <!-- Fourth row -->
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-lg-7 order-lg-1 order-2">
         <h2 class="subtitle">Nowadays</h2>
         <p class="snippet">
           From 9 July 2017 the Venetian walls of Bergamo became part of UNESCO,
@@ -85,7 +102,7 @@
           development in Africa and ensure price transparency.
         </p>
       </div>
-      <div class="col-md-5">
+      <div class="col-lg-5 order-lg-2 order-1">
         <StaticCardComponent :image="sections.section4.image" />
       </div>
     </div>
@@ -101,21 +118,24 @@ export default {
       sections: {
         section1: {
           id: 0,
-          image: 'https://static.miraheze.org/nonciclopediawiki/thumb/d/d1/Bergamo_in_una_tipica_giornata_primaverile.jpg/450px-Bergamo_in_una_tipica_giornata_primaverile.jpg',
+          image:
+            'https://media.meer.com/attachments/007fd5ffb8cce02004b2a6c2171bddbee15c3e08/store/fill/1020/574/288e0badbcabaf1286daa7f26bcd98c52f102cebc6f960db9c0ceec7e31c/Bergamo-Alta.jpg',
         },
         section2: {
           id: 1,
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Alexander-of-Bergamo-San_Alessandro.jpg/220px-Alexander-of-Bergamo-San_Alessandro.jpg',
+          image: 'https://www.vivitelese.it/wp-content/uploads/2019/01/aa.jpg',
           title: '',
         },
         section3: {
           id: 2,
-          image: 'https://www.arte2000.it/wp-content/uploads/2018/08/2018-09-leone-san-marco-porta-carta-marmo-1100x431.jpg',
+          image:
+            'https://www.arte2000.it/wp-content/uploads/2018/08/2018-09-leone-san-marco-porta-carta-marmo-1100x431.jpg',
           title: '',
         },
         section4: {
           id: 3,
-          image: 'https://www.eccolecco.it/wp-content/uploads/bergamo-citta-alta-centro-storico.jpg',
+          image:
+            'https://www.eccolecco.it/wp-content/uploads/bergamo-citta-alta-centro-storico.jpg',
           title: '',
         },
       },

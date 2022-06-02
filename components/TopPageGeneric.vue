@@ -31,7 +31,7 @@ export default {
   mounted(){
     window.setInterval(()=>{
       this.pollTag();
-    }, 500);
+    }, 1000);
 
   },
   methods: {
