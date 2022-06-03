@@ -10,16 +10,12 @@
 
 <script>
 export default {
-  props: {
+props: {
     items: {
       type: Array,
-      required: false,
-      default: null,
+      required: true
     },
-  },
-  data() {
-    return {}
-  },
+  }
 }
 </script>
 

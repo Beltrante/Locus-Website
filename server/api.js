@@ -231,7 +231,6 @@ async function runMainApi() {
                 order: [['rating', 'DESC']],
                 limit:3,
                 model:models.Service,
-                // TODO: filter data
                 attributes: {exclude:['createdAt','updatedAt']},
             }]
         })    
@@ -243,10 +242,10 @@ async function runMainApi() {
         const id = +req.params.id
         const result = await models.Service_Type.findOne({
             where: { id },
-            attributes: {exclude:['createdAt','updatedAt']},
+            attributes: {exclude:['image','createdAt','updatedAt']},
             include: [{
                 model: models.Service,
-                attributes: ['id', 'name','address','website','image', 'openingHours', 'rating'],
+                attributes: {exclude:['createdAt','updatedAt']},
             }]
         })
         return res.json(result)
