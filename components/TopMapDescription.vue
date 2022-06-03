@@ -32,7 +32,12 @@
 export default {
   name: 'TopMapDescriptionComponent',
   // eslint-disable-next-line vue/require-prop-types
-  props: ['section'],
+  props:{
+    section:{
+      type:Object,
+      required:true
+    }
+  } 
 }
 </script>
 

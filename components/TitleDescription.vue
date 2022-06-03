@@ -10,8 +10,16 @@
 <script>
     export default {
         name: "TitleDescription",
-        // eslint-disable-next-line vue/require-prop-types
-        props: ['name','description']
+        props:{
+            name:{
+                type:String,
+                required:true
+            },
+            description:{
+                type:String,
+                required:true
+            }
+        } 
     }
 </script>
 

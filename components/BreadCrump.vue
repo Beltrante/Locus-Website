@@ -9,17 +9,16 @@
 </template>
 
 <script>
+// This component is not in layout as not all pages will use it
+// also while we could have implemented it thanks to the store it would be the only use of the store and not worth implementing 
+// just for breadcrumbs
 export default {
-  props: {
+props: {
     items: {
       type: Array,
-      required: false,
-      default: null,
+      required: true
     },
-  },
-  data() {
-    return {}
-  },
+  }
 }
 </script>
 
