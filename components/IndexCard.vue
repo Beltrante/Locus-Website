@@ -1,7 +1,20 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component will produce the clickable sections reported in the homepage (this component 
+differs from CardComponent.vue for several styling detaild). The required parameters are:
+    - the image describing (in a visual way) the content of the section;
+    - a name describing the content of the section;
+    - the parameters creating the path to be followed after clicking the section */
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <NuxtLink :to="`${path}`">
     <div class="image">
-      <img :src="`${image}`" class="card-image img-fluid" :alt="`${name}-image`" />
+      <img
+        :src="`${image}`"
+        class="card-image img-fluid"
+        :alt="`${name}-image`"
+      />
       <div class="middle">
         <h1>{{ name }}</h1>
       </div>
@@ -66,9 +79,9 @@ export default {
   color: rgba(0, 0, 255, 0.579);
 }
 
-/* @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .middle {
-    color: rgba(60, 128, 125, 0.973);;
+    color: rgba(60, 128, 125, 0.973);
     opacity: 0.9;
     position: absolute;
     top: 50%;
@@ -77,8 +90,8 @@ export default {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
-  .img-fluid{
-    opacity: 0.40;
+  .img-fluid {
+    opacity: 0.4;
   }
-} */
+}
 </style>
