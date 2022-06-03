@@ -1,15 +1,19 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component will produce some clickable cards with an embedded image. The required 
+parameters are:
+    - the image to be displayed;
+    - a name describing the content of the image;
+    - the parameters creating the path to be followed after clicking the card */
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
-<!-- per passare da small card a event/itinerary/poi un'idea
-potrebbe essere quella di usare i template literals per
-modificare dinamicamente il path passato a to="..." in 
-NuxtLink-->
   <NuxtLink :to="`/${path}/${id}`" class="card-container">
-<!-- NB: il to="..." è variabile!!! ora è statico solo come esempio -->
     <div class="external">
       <div>
         <img :src="image" class="card-image" :alt="`${name}-image`" />
       </div>
-      <div class="description">{{name}}</div>
+      <div class="description">{{ name }}</div>
     </div>
   </NuxtLink>
 </template>
@@ -17,28 +21,26 @@ NuxtLink-->
 <script>
 export default {
   name: 'CardComponent',
-  props:{
-    path:{
+  props: {
+    path: {
       type: String,
       required: true,
     },
-    id:{
+    id: {
       type: Number,
       required: true,
     },
-    name:{
+    name: {
       type: String,
       required: true,
     },
-    image:{
+    image: {
       type: String,
       required: true,
     },
-    
-  }
+  },
 }
 </script>
 
 <style scoped>
-
 </style>

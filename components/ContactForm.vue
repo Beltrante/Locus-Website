@@ -1,3 +1,9 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component will produce the form inserted in the contact-us.vue page (it represents one
+of the possible way in wich the user can reach us). No parameters are needed to be passed. 
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <div class="container">
     <div class="container frame">

@@ -38,6 +38,8 @@ export default {
 
 /* FINE CSS condiviso CardComponent.vue +++++++++ */
 .img-fluid {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 .menu {
@@ -51,6 +53,8 @@ export default {
   opacity: 0.9;
 }
 .middle {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -59,9 +63,10 @@ export default {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  color: rgba(0, 0, 255, 0.579);
 }
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .middle {
     color: rgba(60, 128, 125, 0.973);;
     opacity: 0.9;
@@ -75,5 +80,5 @@ export default {
   .img-fluid{
     opacity: 0.40;
   }
-}
+} */
 </style>

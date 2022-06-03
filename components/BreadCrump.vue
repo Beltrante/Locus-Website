@@ -1,3 +1,10 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component will produce clickable breadcrumbs for easier navigation of the user 
+through the website. The required parameters are:
+    - the path to be followed for the click of each specific crumb */
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <h6>
     <span v-for="(item, index) in items" :key="index" class="crumb">
@@ -10,15 +17,15 @@
 
 <script>
 // This component is not in layout as not all pages will use it
-// also while we could have implemented it thanks to the store it would be the only use of the store and not worth implementing 
+// also while we could have implemented it thanks to the store it would be the only use of the store and not worth implementing
 // just for breadcrumbs
 export default {
-props: {
+  props: {
     items: {
       type: Array,
-      required: true
+      required: true,
     },
-  }
+  },
 }
 </script>
 
@@ -31,13 +38,13 @@ props: {
   padding-right: 15px;
   margin-right: 2px;
   background: rgba(60, 128, 125, 0.642);
-  clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%,0% 100%,8% 50%);
+  clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%);
   /*transform: skew(-20deg);*/
   /*border-radius: 10px 0px 0px 10px;*/
 }
 
 .crumb:hover {
-    background: rgba(60, 128, 125, 1);
+  background: rgba(60, 128, 125, 1);
 }
 .crumb span {
   color: #fff;

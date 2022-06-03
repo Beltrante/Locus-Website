@@ -86,7 +86,7 @@ a:link {
   height: 100%;
   opacity: 1;
   display: block;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
 }
 /* FINE CSS condiviso tra IndexCard.vue & StaticCardComponent.vue +++++++++ */
 

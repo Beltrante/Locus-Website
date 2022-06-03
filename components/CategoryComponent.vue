@@ -1,3 +1,18 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component will produce some clickable "pseudo buttons" (they are not real buttons but
+NuxtLinks) in order to allow the access to differend category of elements defined in the site
+such as:
+  - for POIs : Churches, Monuments, Squares & Streest and Cultural services
+  - for Events : Summer Events, Autumn Events, Winter Events, Spring Events
+  - for Services: Pharmacy, Bank, Restaurant, Supermarket, Theater, GasStation
+
+The required parameters are:
+    - the path to be followed in order to reach the specific category;
+    - the icon representing the releted category
+    - the name of the category */
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <NuxtLink :to="`/${path}/${id}`" class="card-container">
     <div class="external row">
