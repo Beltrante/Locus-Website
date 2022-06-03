@@ -1,18 +1,11 @@
 <template>
   <div class="container mt-5">
     <BreadCrump :items="breadcrumps" />
-    <div class="row">
-      <div class="col-md-6">
-        <StaticCardComponent  
-        :image="event.image"/>
-      </div>
-      <div class="col-md-6">
-        <h1 class="header">{{ event.name }}</h1>
-        <p class="snippet">
-          {{ event.description }}
-        </p>
-      </div>
-    </div>
+    <TopEventDescription
+      :image="event.image"
+      :name="event.name"
+      :description="event.description"
+    />
     <hr />
     <div class="row">
       <h2 class="subtitle">Where this event is hosted</h2>
@@ -29,8 +22,8 @@
         <!-- Passare nome e descrizione relativi all'Hosting Poi.
         avere solo una immagine lunga tutta la pagina senza dare nessuna
         info all'utente sembra un po uno spreco di spazio -->
-        <h3 class="sub-sub-title">{{event.HostingPoi.name}}</h3>
-        <TitleDescription :description="event.HostingPoi.description"/>
+        <h3 class="sub-sub-title">{{ event.HostingPoi.name }}</h3>
+        <TitleDescription :description="event.HostingPoi.description" />
       </div>
     </div>
   </div>
@@ -43,31 +36,31 @@ export default {
   components: {
     BreadCrump,
   },
-  
+
   async asyncData({ route, $axios }) {
     // Get the id of the event to show from route
     const { id } = route.params
-    // Make api call for data 
+    // Make api call for data
     const { data } = await $axios.get('/api/event/' + id)
     return {
       // parse received data (event data and season name for readable bredcrumbs)
-        event: {
-          id: data.id,
-          name: data.name,
-          image: data.image,
-          description: data.description,
-          HostingPoi: data.poi,
-          Season: data.eventTypeId
-        }, 
-        SeasonName: data.event_type.name, 
+      event: {
+        id: data.id,
+        name: data.name,
+        image: data.image,
+        description: data.description,
+        HostingPoi: data.poi,
+        Season: data.eventTypeId,
+      },
+      SeasonName: data.event_type.name,
     }
   },
   data() {
     return {
-        // its used to reroute when a card is pressed
-        path:"all-pois"
-      }
-    },
+      // its used to reroute when a card is pressed
+      path: 'all-pois',
+    }
+  },
   computed: {
     // define breadcrumbs routes
     breadcrumps() {
@@ -78,13 +71,11 @@ export default {
         },
         {
           label: this.SeasonName,
-          url:'/event-season/'+this.event.Season ,
-        }       
+          url: '/event-season/' + this.event.Season,
+        },
       ]
     },
   },
-
-  
 }
 </script>
 
@@ -93,7 +84,7 @@ export default {
   height: 100%;
   width: 100%;
 }
-.sub-sub-title{
+.sub-sub-title {
   font-weight: 600;
 }
 </style>

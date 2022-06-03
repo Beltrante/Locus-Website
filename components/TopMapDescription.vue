@@ -5,7 +5,10 @@
         <MapComponent :bbox="section.map.bbox" :marker="section.map.marker" />
       </div>
       <div class="col-md-6">
-        <TitleDescription :name="section.name" :description="section.description" />
+        <TitleDescription
+          :name="section.name"
+          :description="section.description"
+        />
       </div>
     </div>
     <hr />
@@ -47,7 +50,7 @@ export default {
 h3 {
   font-weight: 300;
 }
-.center{
+.center {
   text-align: center;
 }
 </style>

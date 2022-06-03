@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <BreadCrump :items="breadcrumps" />
     <TopMapDescription :section="poi" />
-    <div class="row stacco-subtitle">
+    <div class="row">
       <!-- Display this h2 only if there is content to be displayed -->
       <h2 v-if="h_events.length != 0" class="subtitle">Events hosted in this Point of interest</h2>
       <CardComponent

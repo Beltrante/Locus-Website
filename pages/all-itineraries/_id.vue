@@ -1,17 +1,11 @@
 <template>
   <div class="container mt-5">
     <BreadCrump :items="breadcrumps" />
-    <div class="row">
-      <div class="col-md-6">
-        <SegmentComponent :link="itinerary.mapillaryLink" />
-      </div>
-      <div class="col-md-6">
-        <h1 class="header">{{ itinerary.name }}</h1>
-        <p class="snippet">
-          {{ itinerary.description }}
-        </p>
-      </div>
-    </div>
+    <TopSegmentDescription
+      :link="itinerary.mapillaryLink"
+      :name="itinerary.name"
+      :description="itinerary.description"
+    />
     <hr />
     <div class="row">
       <h2 class="subtitle">You will go through the following stages</h2>
@@ -48,10 +42,10 @@ export default {
   data() {
     return {
       // its used to reroute when a card is pressed
-      pathToPoi:"all-pois",
-      }
-    },
-    computed: {
+      pathToPoi: 'all-pois',
+    }
+  },
+  computed: {
     // define breadcrumbs route
     breadcrumps() {
       return [
@@ -59,7 +53,6 @@ export default {
           label: 'All Itineraries',
           url: '/all-itineraries',
         },
-             
       ]
     },
   },

@@ -5,7 +5,7 @@
     <!-- row of category links -->
     <div class="row">
       <div class="col-lg-4 snippet-categories">
-        Choose a category or scroll down to see all services
+        Choose a category or scroll down to see the top 3 services for each category
       </div>
       <div class="col-lg-8">
         <div class="row">
