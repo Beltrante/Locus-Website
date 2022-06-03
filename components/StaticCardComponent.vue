@@ -18,6 +18,8 @@
 export default {
   name: 'StaticCardComponent',
   props:{
+    image:{type: String,
+      required: true,},
     title:{type: String,
       required: false,
       default: null},
@@ -27,8 +29,6 @@ export default {
     background:{type: String,
       required: false,
       default: null},
-    image:{type: String,
-      required: true,},
     footer:{type: String,
       required: false,
       default: null},
