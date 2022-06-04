@@ -1,8 +1,18 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component is used to create the footer of the website. Even if this component is only 
+used in the default.vue layout we decided to implement it separately in order to maintain a 
+certain order and do not act directly on the layout for future modifications*/
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
+<!-- this footer is composed by 4 main columns -->
   <div class="footer">
     <footer>
       <div class="container">
+        <!-- this is the row containint all the 4 main columnes -->
         <div class="row">
+          <!-- Column 1 - It contains the logo of our website and some generic info -->
           <div class="col-xl space">
             <div class="logo">
               <img
@@ -16,8 +26,7 @@
               <br />
               <span class="subtitle-footer">Postal Code:</span> 24121-24129
               <br />
-              <span class="subtitle-footer">Coordinates:</span> 45°41′N ,
-              9°40′E
+              <span class="subtitle-footer">Coordinates:</span> 45°41′N ,9°40′E
               <br>
               <span class="subtitle-footer">Neighboring municipalities:</span>
               Azzano San Paolo, Curno, Gorle, Lallio, Mozzo, Orio al Serio,
@@ -25,6 +34,7 @@
               Treviolo, Valbrembo
             </div>
           </div>
+          <!-- Column 2 - It contains the vision that we want to accomplish with our website -->
           <div class="col-xl space">
             <h3 class="title-footer">Vision</h3>
             <p class="paragraph">
@@ -35,6 +45,7 @@
               it accesible with our intercative website!
             </p>
           </div>
+          <!-- Column 3 - It contains the links to all the sections of the website -->
           <div class="col-xl space">
             <NuxtLink class="section" to="/all-itineraries">Itineraries</NuxtLink>
             <hr />
@@ -48,6 +59,7 @@
             <hr />
             <NuxtLink class="section" to="/contact-us">Contact-Us</NuxtLink>
           </div>
+          <!-- Column 4 - It contains the icons of all social media pages of our site -->
           <div class="col-xl space">
             <div class="row">
               <div class="social col">

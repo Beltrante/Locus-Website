@@ -1,7 +1,7 @@
 /* ############################## START COMPONENT DESCRIPTION ############################## */
 
 /* this component is used for the creation of the all-services pages and will produce each item 
-of the list containing all the different selected services (the actual services, not the category).
+of the list containing all the different selected services (the actual services, not the categories).
 The required parameters are:
     - the image depicting how the specific service (bank, theater, ecc) looks like from the street;
     - the opening hours of the servie;
@@ -14,16 +14,15 @@ The required parameters are:
 <template>
   <!-- the clas row is used in order to crate the single list's item -->
 
-  <!-- the clas mb-4 provide a margin-bottom of 4 px in order to allow 
-mobile user to visually percieve when a service ends and the next one 
-starts (on desktop this problem is not evident because the services 
-are organized in rows) -->
+  <!-- the clas mb-4 provide a margin-bottom of 4 px in order to allow mobile user to visually 
+  percieve when a service ends and the next one starts (on desktop this problem is not evident 
+  because the services are organized in rows and it is more easy to distiguish them) -->
   <div class="row mb-4">
-    <!-- the class column will create the space for the image of the 
-    serice (displayed thanks to the StaticCardComponent) -->
+    <!-- the class column will create the space for the image of the serice (displayed thanks 
+    to the StaticCardComponent) -->
     <div class="col-md-5">
-      <!-- here the StaticCardComponent is passed inside this component 
-      in order to display the image of the service -->
+      <!-- here the StaticCardComponent is passed inside this component in order to display 
+      the image of the service -->
       <StaticCardComponent :image="image" :height="height" />
     </div>
     <!-- this second column will contain two elements:
@@ -33,16 +32,16 @@ are organized in rows) -->
       <div class="row">
         <!-- here is the column of the opening hours -->
         <div class="col-xl-7">
-          <OpeningHoursComponent :hours="hours"/>
+          <!-- here the OpeningHoursComponent is passed inside this component in order to display 
+          the opening hours block (the creation of a specific component was needed because it is 
+          also used in the TopMapDescription component ) -->
+          <OpeningHoursComponent :hours="hours" />
         </div>
         <!-- here is the columns of the general info -->
         <div class="col">
           <div class="info-style">
-            <p><span class="attribute">Address:</span> {{ address }}</p>
-            <p>
-              <span class="attribute">Site:</span>
-              <a :href="`${website}`">{{ name }}</a>
-            </p>
+            <p><span class="attribute">Address: </span>{{ address }}</p>
+            <p><span class="attribute">Site: </span><a :href="`${website}`">{{ name }}</a></p>
             <p><span class="attribute">Rating: </span>{{ rating }}/5</p>
           </div>
         </div>

@@ -18,6 +18,8 @@ body {
     font-size: 12vw;
   }
 }
+
+
 /* CSS snippet che sta sotto o di fianco al titolo  */
 .snippet {
   color: grey;
@@ -29,7 +31,9 @@ body {
     text-align: center;
   }
 }
-/* INIZIO CSS condiviso Component.vue +++++++++ */
+
+
+/* INIZIO CSS condiviso CardComponent.vue +++++++++ */
 .external {
   padding: 8px;
   height: 400px;
@@ -67,6 +71,7 @@ a:link {
 
 
 /* INIZIO stile sottotitoli per "hosting POI" & "involved POI" +++++ */
+
 /* --> stile sottotitoli */
 .subtitle {
   font-weight: 600;
@@ -79,20 +84,19 @@ a:link {
 /* INIZIO CSS condiviso tra IndexCard.vue & StaticCardComponent.vue +++++++++ */
 .image {
   padding: 8px;
- /*  height: 380px; */
 }
 .img-fluid {
   width: 100%;
   height: 100%;
   opacity: 1;
   display: block;
-  /* backface-visibility: hidden; */
 }
 /* FINE CSS condiviso tra IndexCard.vue & StaticCardComponent.vue +++++++++ */
 
 
 
 /* INIZIO CSS condiviso tra all-event.vue.vue & all-poi.vue +++++++++ */
+
 /* --> stile snippet di fianco a category links */
 .snippet-categories {
   font-size: 2.3em;

@@ -1,6 +1,18 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component is used to create the navbar of the website. Even if this component is only 
+used in the default.vue layout we decided to implement it separately in order to maintain a 
+certain order and do not act directly on the layout for future modifications*/
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <nav class="navbar navbar-expand-xl navbar-light px-3 header">
-    <a class="navbar-brand" href="/"><img class="logo" src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png" alt="logo"></a>
+    <a class="navbar-brand" href="/"
+      ><img
+        class="logo"
+        src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png"
+        alt="logo"
+    /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -18,13 +30,13 @@
         <li
           v-for="(navItem, navItemIndex) of headerList"
           :key="`navItem${navItemIndex}`"
-          style="color:white;" 
+          style="color: white"
         >
-        <div class="cont">
-          <nuxt-link :to="navItem.path" style="color:white;" class="nav-link">
-            {{ navItem.name }}
-          </nuxt-link>
-        </div>
+          <div class="cont">
+            <nuxt-link :to="navItem.path" style="color: white" class="nav-link">
+              {{ navItem.name }}
+            </nuxt-link>
+          </div>
         </li>
       </ul>
     </div>
@@ -60,7 +72,7 @@ export default {
         {
           name: 'Contact-Us',
           path: '/contact-us',
-        }
+        },
       ],
     }
   },
@@ -84,15 +96,14 @@ a {
     background: none;
     color: black;
   }
-  .cont:hover{
+  .cont:hover {
     border-radius: 10px;
-    background:rgba(128, 60, 64, 0.5);
+    background: rgba(128, 60, 64, 0.5);
     width: 40%;
   }
 }
 .header {
   background: rgb(60, 128, 125);
-  
 }
 .logo {
   height: 70px;

@@ -1,7 +1,18 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component is used for the creation of the top part of the Homepage. It aggregates two 
+different elements (considered too small, simple and poorly reusable to be synthesized in 2 
+actual ad hoc components). The purpose of this component is to crate a big row containing:
+    - An animation in order to make the UI more fun to watch;
+    - A "Title + Description" section, representative of the entire site 
+
+There are not required parameters*/
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md text-container">
+      <div class="col-md mt-5">
         <h1 class="header-index">Locus</h1>
         <p class="snippet">
           Want to visit Bergamo? Not sure where to go? and what to do? You are
@@ -32,9 +43,7 @@ export default {
 
 <!--la keyword "scoped" serve per applicare lo stile specificato in questo file solo a questo component-->
 <style scoped>
-.text-container {
-  margin-top: 4rem;
-}
+
 .header-index {
   font-weight: 900;
   font-size: 10vw;

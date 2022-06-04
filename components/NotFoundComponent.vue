@@ -1,3 +1,11 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component is used to render a message and an animation in case the user try to access 
+a page that does not exist. Even if this component is only used in the error.vue layout we 
+decided to implement it separately in order to maintain a certain order and do not act directly 
+on the layout for future modifications*/
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
   <div class="container">
     <div class="row">
