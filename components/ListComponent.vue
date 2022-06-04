@@ -88,17 +88,6 @@ export default {
 </script>
 
 <style scoped>
-/* TODO: DA METTERE IN CONDIVISIONE CON QUELLO DI TopMapDescription */
-.op-hours-style {
-  background: rgb(224, 220, 220);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .info-style {
   background: rgba(128, 60, 65, 0.5);
   border-radius: 10px;

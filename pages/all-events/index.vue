@@ -1,5 +1,8 @@
 <template>
+<!-- class container in order to center the contend -->
+<!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
+    <!-- the passed parameters are the name (for the title of the page), the descritpion (in order to describe the content) and the tags (in order to dynamically display ) -->
     <TopPageGeneric 
     :name="header.name"
     :description="header.description" 
