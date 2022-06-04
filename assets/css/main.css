@@ -79,7 +79,7 @@ a:link {
 /* INIZIO CSS condiviso tra IndexCard.vue & StaticCardComponent.vue +++++++++ */
 .image {
   padding: 8px;
-  /* height: 380px; */
+ /*  height: 380px; */
 }
 .img-fluid {
   width: 100%;
@@ -104,10 +104,11 @@ a:link {
     text-align: center;
   }
 }
-
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 	.snippet-categories{
     font-size: 1.93em;
   }
 }
 /* FINE CSS condiviso tra all-event.vue.vue & all-poi.vue +++++++++ */
+
+

@@ -1,16 +1,41 @@
+/* ############################## START COMPONENT DESCRIPTION ############################## */
+
+/* this component is used for the creation of the all-services pages and will produce each item 
+of the list containing all the different selected services (the actual services, not the category).
+The required parameters are:
+    - the image depicting how the specific service (bank, theater, ecc) looks like from the street;
+    - the opening hours of the servie;
+    - the address of the service;
+    - the website of the service;
+    - the name of the service;
+    - the rating of the service;*/
+    
+/* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
-  <div class="row mb-5">
+  <!-- the clas row is used in order to crate the single list's item -->
+
+  <!-- the clas mb-4 provide a margin-bottom of 4 px in order to allow 
+mobile user to visually percieve when a service ends and the next one 
+starts (on desktop this problem is not evident because the services 
+are organized in rows) -->
+  <div class="row mb-4">
+    <!-- the class column will create the space for the image of the 
+    serice (displayed thanks to the StaticCardComponent) -->
     <div class="col-md-5">
+      <!-- here the StaticCardComponent is passed inside this component 
+      in order to display the image of the service -->
       <StaticCardComponent :image="image" :height="height" />
     </div>
+    <!-- this second column will contain two elements:
+      - the opening hours of the service
+      - the general info of the service (address, site/name, rating) -->
     <div class="col-md-7">
       <div class="row">
+        <!-- here is the column of the opening hours -->
         <div class="col-xl-7">
-          <div class="op-hours-style">
-            <h2>Opening Hours</h2>
-            <p v-for="day in hours" :key="day">{{ day }}</p>
-          </div>
+          <OpeningHoursComponent :hours="hours"/>
         </div>
+        <!-- here is the columns of the general info -->
         <div class="col">
           <div class="info-style">
             <p><span class="attribute">Address:</span> {{ address }}</p>
@@ -55,11 +80,11 @@ export default {
       required: true,
     },
   },
-  data(){
-    return{
+  data() {
+    return {
       height: '355px',
     }
-  }
+  },
 }
 </script>
 
@@ -74,9 +99,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
-
 .info-style {
   background: rgba(128, 60, 65, 0.5);
   border-radius: 10px;
@@ -85,9 +108,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
 .attribute {
   font-weight: 600;
 }
-
 </style>

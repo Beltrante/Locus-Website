@@ -16,7 +16,7 @@
       />
       
     </div>
-    <div class="row stacco-subtitle">
+    <div class="row">
       <!-- Display this h2 only if there is content to be displayed -->
       <h2 v-if="in_itin.length != 0" class="subtitle">Itineraries that pass through this point</h2>
       <CardComponent

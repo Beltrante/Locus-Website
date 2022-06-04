@@ -15,13 +15,11 @@
     <div class="row">
       <h2 class="subtitle">{{ section.type }}-Photo</h2>
       <div class="col-md-6">
+        <!-- <div style="height:100%; background:gray; border-radius:10px; margin:10px; height:365.6px">ciao</div> -->
         <StaticCardComponent :image="section.image" />
       </div>
       <div class="col-md-6">
-        <div class="op-hours-style">
-          <h3 class="subtitle center">Opening hours</h3>
-          <p v-for="day in section.op_hours" :key="day">{{ day }}</p>
-        </div>
+        <OpeningHoursComponent :hours="section.op_hours" />
       </div>
     </div>
     <hr />
@@ -29,15 +27,16 @@
 </template>
 
 <script>
+import OpeningHoursComponent from './OpeningHoursComponent.vue'
 export default {
   name: 'TopMapDescriptionComponent',
-  // eslint-disable-next-line vue/require-prop-types
-  props:{
-    section:{
-      type:Object,
-      required:true
+  components: { OpeningHoursComponent },
+  props: {
+    section: {
+      type: Object,
+      required: true
     }
-  } 
+  }
 }
 </script>
 
@@ -51,6 +50,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 350px;
 }
 h3 {
   font-weight: 300;
