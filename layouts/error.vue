@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- this component will be the content of the 404.html of the static ste -->
     <NotFoundComponent />
   </div>
 </template>

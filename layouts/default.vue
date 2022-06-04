@@ -6,8 +6,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap"
       rel="stylesheet"
     />
-    <the-header />
-    <nuxt />
+    <!-- To include the navbar contained in TheHeader component inside all the pages -->
+    <TheHeader />
+    <!-- To include the content of the page between the Header and the Footer -->
+    <Nuxt />
+    <!-- To include the little animation at the bottom right corner in all the pages in order 
+    to make the UI more fun to watch -->
+    <NuxtLink to="/">
     <div class="default-image">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <lottie-player
@@ -19,7 +24,9 @@
         class="icon"
       ></lottie-player>
     </div>
-    <the-footer />
+    </NuxtLink>
+    <!-- To include the Footer component in all the pages -->
+    <TheFooter />
   </div>
 </template>
 
