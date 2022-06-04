@@ -17,8 +17,7 @@ The required parameters are:
     not passed, a small occupied (unused) space on top of the card -->
     <h3 v-if="title" class="bold-s">{{ title }}</h3>
 
-    <!-- if no height parameter is passed the defaul height of the image is used (380px) -->
-    <div class="image-s center marg">
+    <div class="image-s center marg" :style="`border: solid 2px ${color}; background: ${background};`">
       <!-- the classes specicied for that image are reported in the main.css file (since are also 
       used by IndexCard.vue and CardComponent.vue) and are needed to adapt the content to the 
       frame of the card without stetch the image itself -->
@@ -43,6 +42,8 @@ export default {
     image: { type: String, required: true },
     title: { type: String, required: false, default: null },
     footer: { type: String, required: false, default: null },
+    background: { type: String, required: false, default: null },
+    color: { type: String, required: false, default: null },
   },
 }
 </script>
@@ -59,6 +60,7 @@ export default {
 }
 .image-s {
   height: 380px;
+  border-radius: 10px;
 }
 .card-image {
   height: 350px;
