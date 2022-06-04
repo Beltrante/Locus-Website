@@ -1,10 +1,21 @@
+/* Page for the individual POI */
 <template>
+  <!-- class container in order to center the contend -->
+  <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
+    <!-- this component will include the breadcrumps in the page -->
     <BreadCrump :items="breadcrumps" />
+    <!-- this component creates the entire "first row" of the page 
+    composed of Title, Description, Map and opening hours related to 
+    the selected POI -->
     <TopMapDescription :section="poi" />
     <div class="row">
-      <!-- Display this h2 only if there is content to be displayed -->
-      <h2 v-if="h_events.length != 0" class="subtitle">Events hosted in this Point of interest</h2>
+      <!-- Display this h2 only if there is content to be displayed thanks to the "v-if" -->
+      <h2 v-if="h_events.length != 0" class="subtitle">
+        Events hosted in this Point of interest
+      </h2>
+      <!-- this component is used to display the cards of the Events hosted in the 
+      selected POI (the card is clickable and redirects to the depicted Event) -->
       <CardComponent
         v-for="event in h_events"
         :id="event.id"
@@ -14,14 +25,17 @@
         :path="pathToEvent"
         class="col-sm-3 p-2"
       />
-      
     </div>
     <div class="row">
-      <!-- Display this h2 only if there is content to be displayed -->
-      <h2 v-if="in_itin.length != 0" class="subtitle">Itineraries that pass through this point</h2>
+      <!-- Display this h2 only if there is content to be displayed thanks to the "v-if"-->
+      <h2 v-if="in_itin.length != 0" class="subtitle">
+        Itineraries that pass through this point
+      </h2>
+      <!-- this component is used to display the cards of the Itineraries passing through the 
+      selected POI (the card is clickable and redirects to the depicted Itinerary) -->
       <CardComponent
         v-for="itinerary in in_itin"
-         :id="itinerary.id"
+        :id="itinerary.id"
         :key="itinerary.id"
         :name="itinerary.name"
         :image="itinerary.image"
@@ -36,26 +50,26 @@
 import BreadCrump from '~/components/BreadCrump.vue'
 export default {
   name: 'SinglePoi',
-   components: {
+  components: {
     BreadCrump,
   },
-    async asyncData({ route, $axios }) {
+  async asyncData({ route, $axios }) {
     // Get the id of the poi to show from route
     const { id } = route.params
     const { data } = await $axios.get('/api/poi/' + id)
     return {
       poi: {
-      name: data.name,
-      category: data.poiTypeId,
-      description: data.description,
-      image: data.image,
-      map: {
+        name: data.name,
+        category: data.poiTypeId,
+        description: data.description,
+        image: data.image,
+        map: {
           bbox: data.bbox,
-          marker: data.marker
+          marker: data.marker,
         },
-      op_hours: data.openingHours,
-      // used for top map description POI-Photo text
-      type: "POI"
+        op_hours: data.openingHours,
+        // used for top map description POI-Photo text
+        type: 'POI',
       },
       h_events: data.events,
       in_itin: data.itineraries,
@@ -65,8 +79,8 @@ export default {
   data() {
     return {
       // they are used to reroute when a card is pressed
-      pathToItinerary:"all-itineraries",
-      pathToEvent:"all-events"
+      pathToItinerary: 'all-itineraries',
+      pathToEvent: 'all-events',
     }
   },
   computed: {
@@ -78,13 +92,12 @@ export default {
           url: '/all-pois',
         },
         {
-          label:this.PoiTypeName,
-          url:'/poi-category/'+this.poi.category,
-        }       
+          label: this.PoiTypeName,
+          url: '/poi-category/' + this.poi.category,
+        },
       ]
     },
   },
-  
 }
 </script>
 

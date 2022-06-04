@@ -1,9 +1,12 @@
 <template>
+  <!-- class container in order to center the contend -->
+  <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
-    <!--     <TopPageGeneric /> -->
-
     <div class="row center">
       <h1 class="subtitle">Specific mail for specific issues</h1>
+      <!-- this component will display three cards illustrating 
+      the three different mail in order to ask spefic doubts 
+      related to POIs, Events and Itineraries -->
       <StaticCardComponent
         v-for="contact in contacts"
         :key="contact.id"
@@ -18,15 +21,16 @@
     <hr />
     <div class="row">
       <h1 class="subtitle">Share your doubts with us!</h1>
+      <!-- this component is used to include the form in the contact-us page -->
       <ContactForm />
     </div>
     <hr />
     <div class="row">
       <h1 class="subtitle">General contacts - Our office</h1>
       <div class="col-xxl-6">
-        <StaticCardComponent 
-        :image="generic.image" 
-        />
+        <!-- this component is used to display the image of the office of the company 
+        responsable for the content of the page -->
+        <StaticCardComponent :image="generic.image" />
       </div>
       <div class="col-xxl-6 p-3 alignment">
         <div class="row">
@@ -90,7 +94,8 @@ export default {
         },
       },
       generic: {
-        image: 'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
+        image:
+          'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
       },
     }
   },
@@ -105,7 +110,7 @@ export default {
   font-size: 25px;
   font-weight: 600;
 }
-.alignment{
+.alignment {
   text-align: left;
 }
 @media screen and (max-width: 1285px) {

@@ -1,5 +1,5 @@
 <template>
-  <!-- this div contains the whole page that is divided in 4 row, one for each main period of the hystory of bergamo -->
+  <!-- this div contains the whole page that is divided in 4 row, one for each main period of the history of Bergamo -->
   <!-- I will comment on the first row, everything is also applied to the remaining 3 rows -->
   <div class="container mt-5">
     <!-- First row - it contains an image (passed in StaticCard Component) and an explaination -->

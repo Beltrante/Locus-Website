@@ -1,6 +1,12 @@
+/* Page for the individual EVENT */
 <template>
+<!-- class container in order to center the contend -->
+<!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
+    <!-- this component will include the breadcrumps in the page -->
     <BreadCrump :items="breadcrumps" />
+    <!-- this component creates the entire "first row" of the page 
+    composed of Title, Description and Image related to the selected event -->
     <TopEventDescription
       :image="event.image"
       :name="event.name"
@@ -9,8 +15,9 @@
     <hr />
     <div class="row">
       <h2 class="subtitle">Where this event is hosted</h2>
-      <!-- Display carta larga con tutto il container più informazioni
-      dato che il point of interest da mostrare è uno solo -->
+      <!-- this component is used to display the card of the point of interest 
+      that hosts the selected event (the card is clickable and redirects to the 
+      depicted point of interest) -->
       <CardComponent
         :id="event.HostingPoi.id"
         :name="event.HostingPoi.name"
@@ -19,9 +26,8 @@
         class="col-lg-7 p-2"
       />
       <div class="col-lg-5 p-3">
-        <!-- Passare nome e descrizione relativi all'Hosting Poi.
-        avere solo una immagine lunga tutta la pagina senza dare nessuna
-        info all'utente sembra un po uno spreco di spazio -->
+        <!-- this component is used to provide to the user some general info related 
+        to the point of interest that hosts the selected events -->
         <h3 class="sub-sub-title">{{ event.HostingPoi.name }}</h3>
         <TitleDescription :description="event.HostingPoi.description" />
       </div>

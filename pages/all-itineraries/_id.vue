@@ -1,6 +1,13 @@
+/* Page for the individual ITINERARY */
 <template>
+  <!-- class container in order to center the contend -->
+  <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
+    <!-- this component will include the breadcrumps in the page -->
     <BreadCrump :items="breadcrumps" />
+    <!-- this component creates the entire "first row" of the page 
+    composed of Title, Description and interactive map related to the 
+    selected itinerary -->
     <TopSegmentDescription
       :link="itinerary.mapillaryLink"
       :name="itinerary.name"
@@ -9,6 +16,9 @@
     <hr />
     <div class="row">
       <h2 class="subtitle">You will go through the following stages</h2>
+      <!-- this component is used to display the cards of the points of interest 
+      involved in the selected itinerary (the card is clickable and redirects to the 
+      depicted point of interest) -->
       <CardComponent
         v-for="poi in itinerary.pois"
         :id="poi.id"

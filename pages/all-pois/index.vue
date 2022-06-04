@@ -1,6 +1,17 @@
+/* Page for ALL POIs & POI CATEGORIES */
 <template>
+  <!-- class container in order to center the contend -->
+  <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
-    <TopPageGeneric :name="header.name" :description="header.description" :tags="tags" />
+    <!-- this component creates the top (first row) of the page. 
+    The passed parameters are the name (for the title of the page), 
+    the descritpion (in order to describe the content) and the tags 
+    (in order to dynamically display the hashtags) -->
+    <TopPageGeneric
+      :name="header.name"
+      :description="header.description"
+      :tags="tags"
+    />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -9,6 +20,8 @@
       </div>
       <div class="col-lg-8">
         <div class="row">
+          <!-- this component creates the "pseudo buttons" referred to 
+          each POI category -->
           <CategoryComponent
             v-for="category in categories"
             :id="category.id"
@@ -22,7 +35,11 @@
       </div>
     </div>
     <!-- rows of poi cards -->
-    <div class="row mt-4 g-0">
+    <div class="row mt-4">
+      <!-- this component creates a number of cards equal to the total 
+      number of POIs (because in this page a user can filter for specific 
+      category - thanks to the CategoryComponent - or look at all the available 
+      POIs displayed thanks to the CardComponent) -->
       <CardComponent
         v-for="poi in pois"
         :id="poi.id"
@@ -51,7 +68,7 @@ export default {
     return {
       categories: data.categories,
       pois: data.pois,
-      tags: tagList
+      tags: tagList,
     }
   },
 
