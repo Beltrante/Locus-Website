@@ -13,7 +13,7 @@ There are not required parameters*/
   <div class="container">
     <div class="row">
       <div class="col-md mt-5">
-        <h1 class="header-index">Locus</h1>
+        <h1 class="header-index">Bergamo</h1>
         <p class="snippet">
           Want to visit Bergamo? Not sure where to go? and what to do? You are
           in the right place to find out!
@@ -46,7 +46,7 @@ export default {
 
 .header-index {
   font-weight: 900;
-  font-size: 10vw;
+  font-size: 7vw;
 }
 .center-div {
   display: flex;

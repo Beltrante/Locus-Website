@@ -55,6 +55,23 @@ export default {
       pathToPoi: 'all-places',
     }
   },
+  head() {
+    return {
+      title: this.itinerary.name,
+      meta: [
+        {
+          hid: 'descriptionSingleItinerary',
+          name: 'description',
+          content: 'specific itineary and its related info',
+        },
+        {
+          hid: 'keywordsSingleItinerary',
+          name: 'keywords',
+          content: ["leisure"],
+        },
+      ],
+    }
+  },
   computed: {
     // define breadcrumbs route
     breadcrumps() {
@@ -65,6 +82,17 @@ export default {
         },
       ]
     },
+    /* getPoisList() {
+      const names = []
+      const stringa = ''
+      for (let i = 0; i < this.itinerary.pois.length; i++) {
+        names.push(this.itinerary.pois[i].name)
+      }
+      stringa = names.toString()
+      return{
+        stringa
+      }
+    } */
   },
 }
 </script>

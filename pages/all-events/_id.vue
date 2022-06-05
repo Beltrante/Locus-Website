@@ -1,7 +1,7 @@
 /* Page for the individual EVENT */
 <template>
-<!-- class container in order to center the contend -->
-<!-- class mt-5 in order to heva a margin top of 5 units -->
+  <!-- class container in order to center the contend -->
+  <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
     <!-- this component will include the breadcrumps in the page -->
     <BreadCrump :items="breadcrumps" />
@@ -65,6 +65,23 @@ export default {
     return {
       // its used to reroute when a card is pressed
       path: 'all-places',
+    }
+  },
+  head() {
+    return {
+      title: this.event.name,
+      meta: [
+        {
+          hid: 'descriptionSingleEvent',
+          name: 'description',
+          content: 'specific event and its related info',
+        },
+        {
+          hid: 'keywordsSingleEvent',
+          name: 'keywords',
+          content: [this.event.HostingPoi.name, this.SeasonName,"Party", "Event", "leisure"],
+        },
+      ],
     }
   },
   computed: {

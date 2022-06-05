@@ -21,9 +21,12 @@ a short description. The required parameters are:
 export default {
   name: 'TitleDescription',
   props: {
+    // eslint-disable-next-line vue/require-default-prop
     name: {
       type: String,
-      required: true,
+      /* the name is not always required since in th individual event page the 
+      title is displayed directly on the page with a different style */
+      required: false,
     },
     description: {
       type: String,

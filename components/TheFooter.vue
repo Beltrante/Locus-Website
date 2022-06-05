@@ -14,13 +14,15 @@ certain order and do not act directly on the layout for future modifications*/
         <div class="row">
           <!-- Column 1 - It contains the logo of our website and some generic info -->
           <div class="col-xl space">
+            <NuxtLink to="/">
             <div class="logo">
               <img
                 class="logo-img"
                 src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png"
                 alt="Logo"
               />
-            </div>
+              </div>
+            </NuxtLink>
             <div class="paragraph-sx">
               <span class="subtitle-footer">Bergamo, Lombardia (IT)</span>
               <br />
