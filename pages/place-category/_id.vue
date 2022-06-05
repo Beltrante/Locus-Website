@@ -60,7 +60,7 @@ export default {
   data() {
     // used to reroute user when a card is pressed
     return {
-      pathToPoi: 'all-pois',
+      pathToPoi: 'all-places',
     }
   },
   computed: {
@@ -69,7 +69,7 @@ export default {
       return [
         {
           label: 'All Places',
-          url: '/all-pois',
+          url: '/all-places',
         },
       ]
     },

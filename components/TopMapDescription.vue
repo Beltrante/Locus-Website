@@ -35,7 +35,7 @@ The required parameters are:
     </div>
     <hr />
     <div class="row">
-      <h2 class="subtitle">{{ section.type }}-Photo</h2>
+      <h2 class="subtitle">Useful Informations</h2>
       <div class="col-md-6">
         <!-- here the image is passed inside the StaticCardComponent in order to be displayed -->
         <StaticCardComponent :image="section.image" />

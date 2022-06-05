@@ -49,7 +49,7 @@ certain order and do not act directly on the layout for future modifications*/
           <div class="col-xl space">
             <NuxtLink class="section" to="/all-itineraries">Itineraries</NuxtLink>
             <hr />
-            <NuxtLink class="section" to="/all-pois">Points of interest</NuxtLink>
+            <NuxtLink class="section" to="/all-places">Places</NuxtLink>
             <hr />
             <NuxtLink class="section" to="/all-events">Events</NuxtLink>
             <hr />

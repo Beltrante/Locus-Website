@@ -15,7 +15,7 @@
     />
     <hr />
     <div class="row">
-      <h2 class="subtitle">You will go through the following stages</h2>
+      <h2 class="subtitle">You will go through the following places</h2>
       <!-- this component is used to display the cards of the points of interest 
       involved in the selected itinerary (the card is clickable and redirects to the 
       depicted point of interest) -->
@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       // its used to reroute when a card is pressed
-      pathToPoi: 'all-pois',
+      pathToPoi: 'all-places',
     }
   },
   computed: {

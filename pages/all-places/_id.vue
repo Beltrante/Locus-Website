@@ -12,7 +12,7 @@
     <div class="row">
       <!-- Display this h2 only if there is content to be displayed thanks to the "v-if" -->
       <h2 v-if="h_events.length != 0" class="subtitle">
-        Events hosted in this Point of interest
+        Events you will find in this place
       </h2>
       <!-- this component is used to display the cards of the Events hosted in the 
       selected POI (the card is clickable and redirects to the depicted Event) -->
@@ -29,7 +29,7 @@
     <div class="row">
       <!-- Display this h2 only if there is content to be displayed thanks to the "v-if"-->
       <h2 v-if="in_itin.length != 0" class="subtitle">
-        Itineraries that pass through this point
+        This place is involved in the following Itineraries
       </h2>
       <!-- this component is used to display the cards of the Itineraries passing through the 
       selected POI (the card is clickable and redirects to the depicted Itinerary) -->
@@ -68,8 +68,6 @@ export default {
           marker: data.marker,
         },
         op_hours: data.openingHours,
-        // used for top map description POI-Photo text
-        type: 'POI',
       },
       h_events: data.events,
       in_itin: data.itineraries,
@@ -89,11 +87,11 @@ export default {
       return [
         {
           label: 'All Places',
-          url: '/all-pois',
+          url: '/all-places',
         },
         {
           label: this.PoiTypeName,
-          url: '/poi-category/' + this.poi.category,
+          url: '/place-category/' + this.poi.category,
         },
       ]
     },
