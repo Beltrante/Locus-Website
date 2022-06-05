@@ -76,7 +76,7 @@ export default {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  color: rgba(0, 0, 255, 0.579);
+  color: rgba(0, 0, 0, 0.866);
 }
 
 @media screen and (max-width: 992px) {

@@ -120,19 +120,26 @@ export default {
 
 .section {
   text-decoration: none;
-  color: rgb(171, 171, 171);
+  color: rgb(255, 255, 255);
   font-size: 1em;
   transition: 0.2s ease;
+  padding: 5px;
+  border-radius: 10px;
 }
 .section:hover {
-  color: white;
+  color: black;
+  background: rgba(255, 255, 255, 0.728);
 }
 .icons {
   height: 50px;
   transition: 0.4s ease;
+  filter: invert();
+  padding: 5px;
+  border-radius: 10px;
 }
 .icons:hover {
-  filter: invert();
+  filter: none;
+  background: rgba(255, 255, 255, 0.728);
 }
 .social {
   padding: 0%;
@@ -141,6 +148,7 @@ export default {
 .title-footer {
   font-weight: 700;
   text-align: left;
+  color: white;
 }
 .logo {
   text-align: left;
@@ -155,6 +163,7 @@ export default {
 .paragraph {
   text-align: justify;
   font-size: 0.95rem;
+  color: white;
 }
 @media screen and (max-width: 500px) {
   .paragraph {
@@ -164,6 +173,7 @@ export default {
 .paragraph-sx{
   text-align: left;
   font-size: 0.95rem;
+  color: white;
 }
 .space {
   padding: 40px;
