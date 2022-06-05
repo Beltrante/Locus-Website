@@ -76,13 +76,13 @@ export default {
     // static data that never changes
     return {
       header: {
-        name: 'All Points of interest',
+        name: "All Bergamo's Places",
         description:
           'Numerous, enchanting and wonderful are the places, the buildings that the city offers. Do not miss a single one during your stay, so let yourself be fascinated by the attractions along the streets of Bergamo.',
       },
       // used to reroute when a preview is pressed
-      pathToPoi: 'all-pois',
-      categoryPath: 'poi-category',
+      pathToPoi: 'all-places',
+      categoryPath: 'place-category',
     }
   },
 }

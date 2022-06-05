@@ -29,7 +29,7 @@ export default {
           name: "Points of interest",
           image: "https://images.placesonline.com/photos/424010103210244_Bergamo_209231990-min.jpeg?quality=80&w=700",
           col: 7,
-          path: "all-pois"
+          path: "all-places"
         },
         s2:{
           id: 1,

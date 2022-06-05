@@ -54,8 +54,8 @@ export default {
           path: '/all-itineraries',
         },
         {
-          name: 'Points of interest',
-          path: '/all-pois',
+          name: 'Places',
+          path: '/all-places',
         },
         {
           name: 'Events',

@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       // its used to reroute when a card is pressed
-      path: 'all-pois',
+      path: 'all-places',
     }
   },
   computed: {
