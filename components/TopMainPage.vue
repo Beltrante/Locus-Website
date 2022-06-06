@@ -12,7 +12,7 @@ There are not required parameters*/
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md mt-5">
+      <div class="col-md  margin-top">
         <h1 class="header-index">Bergamo</h1>
         <p class="snippet">
           Want to visit Bergamo? Not sure where to go? and what to do? You are
@@ -43,7 +43,6 @@ export default {
 
 <!--la keyword "scoped" serve per applicare lo stile specificato in questo file solo a questo component-->
 <style scoped>
-
 .header-index {
   font-weight: 900;
   font-size: 7vw;
@@ -54,5 +53,23 @@ export default {
   justify-content: center;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
+}
+.margin-top{
+  margin-top: 80px;
+}
+@media screen and (max-width: 1100px) {
+  .header-index {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header-index {
+    font-size: 12vw;
+  }
+}
+@media screen and (max-width: 991px) {
+  .margin-top {
+    margin-top: 0;
+  }
 }
 </style>

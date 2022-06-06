@@ -1,73 +1,65 @@
 {
-    "id": 3,
-    "name": "Porte e Spazi",
-    "image": "https://i.ibb.co/4MssVM4/itinerary3.png",
-    "description": "An immersive path in the historical part of the city of Bergamo. The itinerary starts from themajestic Porta S.Agostino at the east extreme of Città Alta. You will then pass through the whole back of the city across places such as Piazzale S.Agostino, Fara's Park, Fara's Bulwark, Porta S.Lorenzo and Vàgine's Fountain. Finally, the itinerary terminates at Piazza della Cittadella from which it is possible to directly access to the civic museum of natural sciences.",
-    "duration": "2:10 h",
-    "mapillaryLink": "https://www.mapillary.com/embed?map_style=Esri%20navigation&image_key=236623848218534&style=classic",
+    "id": 1,
+    "name": "History of Bergamo",
+    "image": "https://i.ibb.co/4sBy7GB/itinerary1.png",
+    "description": "An immersive path in the historical part of the city of Bergamo. The itinerary starts from the suggestive funicular that will bring you almost in the center of Bergamo Alta. You will then pass through Piazza vecchia an admire all the beautiful monuments inside it: Campanone and S.Maria maggiore. Finally, after passing near to Palazzo Terzi, you will find the well known Mura Veneziane that will accompany you to Porta S.Giacomo",
+    "duration": "1:30 h",
+    "mapillaryLink": "https://www.mapillary.com/embed?map_style=Esri%20navigation&image_key=157265606331824&style=classic",
     "pois": [
         {
-            "id": 13,
-            "name": "Porta S.Agostino",
-            "image": "http://muraveneziane.bergamo.it/wp-content/uploads/2019/04/Bergamo-Porte-0059-Mazzoleni-Riproduzione_riservata-1024x681.jpg",
+            "id": 1,
+            "name": "Funicolare città alta",
+            "image": "https://www.visitbergamo.net/rimg/4lc/c/d/3/1/cd31e0d43c7b2c436bc0c8c520498e90_cda4a5ed.jpg",
             "stop": {
                 "order": 1
             }
         },
         {
-            "id": 14,
-            "name": "Piazzale S.Agostino",
-            "image": "https://www.unibg.it/sites/default/files/styles/paragrafo_grande/public/album_fotografico/unibg_sant_agostino_0161.jpg?itok=Dh9Zkid_",
+            "id": 2,
+            "name": "Piazza vecchia",
+            "image": "https://www.visitbergamo.net/rimg/4lc/3/5/f/b/35fbeefa6ee984a3b3d68ccac043954c_1ffca0eb.jpg",
             "stop": {
                 "order": 2
             }
         },
         {
-            "id": 15,
-            "name": "Parco della Fara",
-            "image": "https://i.pinimg.com/originals/be/f5/cc/bef5ccef194004ae83945edbd1a25dfd.jpg",
-            "stop": {
-                "order": 3
-            }
-        },
-        {
-            "id": 16,
-            "name": "Baluardo della Fara",
-            "image": "https://www.bergamodascoprire.it/wp-content/uploads/2021/06/10-Bal-S.-Agost.jpg",
+            "id": 3,
+            "name": "S.Maria Maggiore",
+            "image": "https://images.placesonline.com/photos/424010103210244_Bergamo_209231990-min.jpeg?quality=80&w=700",
             "stop": {
                 "order": 4
             }
         },
         {
-            "id": 17,
-            "name": "Porta S.Lorenzo",
-            "image": "https://www.bergamowalls.com/images/articoli/post/jpg/porta-san-lorenzo-bergamo.jpg",
+            "id": 4,
+            "name": "Campanone",
+            "image": "https://storage.ecodibergamo.it/media/photologue/2017/6/11/photos/cache/i-rintocchi-del-campanone-di-citta-alta-sono-veramente-cento-li-avete-cont_b37148e0-4eac-11e7-ac63-8437cfd3f37a_512_512_new_square_large.jpg",
+            "stop": {
+                "order": 3
+            }
+        },
+        {
+            "id": 5,
+            "name": "Palazzo terzi",
+            "image": "https://www.visitbergamo.net/rimg/4lc/5/8/2/1/582156492afd66b77ecd12abb5d791f6_374cc9d1.jpg",
             "stop": {
                 "order": 5
             }
         },
         {
-            "id": 18,
-            "name": "Fontana del Vàgine",
-            "image": "https://media-cdn.tripadvisor.com/media/photo-p/09/2c/80/b6/fontana-del-vagine.jpg",
+            "id": 6,
+            "name": "Mura Veneziane",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/BG_MuraVenete_05.JPG/1200px-BG_MuraVenete_05.JPG",
             "stop": {
                 "order": 6
             }
         },
         {
-            "id": 19,
-            "name": "Piazza della Cittadella",
-            "image": "https://images2-bergamo.corriereobjects.it/methode_image/2016/12/28/Bergamo/Foto%20Bergamo%20-%20Trattate/7239453-k4KC-U43270363425384gXC-1224x916@Corriere-Web-Bergamo-593x443.jpg?v=20161228143039",
+            "id": 7,
+            "name": "Porta S.Giacomo",
+            "image": "https://www.bergamonews.it/photogallery_new/images/2022/02/porta-san-giacomo-714182.large.jpg",
             "stop": {
                 "order": 7
-            }
-        },
-        {
-            "id": 20,
-            "name": "Museo di Scienze Naturali",
-            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/0b/07/29/museo-di-scienze-naturali.jpg?w=1200&h=-1&s=1",
-            "stop": {
-                "order": 8
             }
         }
     ]

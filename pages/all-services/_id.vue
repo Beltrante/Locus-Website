@@ -53,6 +53,23 @@ export default {
       tags: tagList,
     }
   },
+  head() {
+    return {
+      title: `${this.serviceType.name} | Services`,
+      meta: [
+        {
+          hid: 'descriptionServiceCategory',
+          name: 'description',
+          content: `available ${this.serviceType.name} and their related info`,
+        },
+        {
+          hid: 'keywordsServiceCategory',
+          name: 'keywords',
+          content: [this.serviceType.name, 'leisure', 'Services', 'Bergamo'],
+        },
+      ],
+    }
+  },
   computed: {
     // define breadcrumbs routes
     breadcrumps() {

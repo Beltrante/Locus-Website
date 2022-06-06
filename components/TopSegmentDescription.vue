@@ -16,12 +16,12 @@ The required parameters are:
 <template>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 order-lg-1 order-2">
         <!-- here the link or the specific itinerary is passed in order to create the 
         interactive map -->
         <SegmentComponent :link="link" />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 order-lg-2 order-1">
         <!-- here name and description of the itinerary are passed in order to create the 
         descriptive section -->
         <TitleDescription :name="name" :description="description" />
@@ -41,5 +41,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 </style>
