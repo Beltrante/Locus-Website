@@ -11,7 +11,10 @@
     <Nuxt />
     <!-- To include the little animation at the bottom right corner in all the pages in order 
     to make the UI more fun to watch -->
-    <NuxtLink to="/">
+
+    <!-- il fatto di mettere un nuxt link senza nulla scritto dentro abbasa l'accessibilità. capire se mantenere la bussola o meno -->
+    <!-- <NuxtLink to="/">
+
     <div class="default-image">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <lottie-player
@@ -23,7 +26,8 @@
         class="icon"
       ></lottie-player>
     </div>
-    </NuxtLink>
+    </NuxtLink> -->
+
     <!-- To include the Footer component in all the pages -->
     <TheFooter />
   </div>

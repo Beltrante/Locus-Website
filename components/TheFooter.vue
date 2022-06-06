@@ -38,7 +38,7 @@ certain order and do not act directly on the layout for future modifications*/
           </div>
           <!-- Column 2 - It contains the vision that we want to accomplish with our website -->
           <div class="col-xl space">
-            <h3 class="title-footer">Vision</h3>
+            <h1 class="title-footer">Vision</h1>
             <p class="paragraph">
               The vision of Locus is to provide an immersive and wonderful
               experience in visiting one of the most beautiful city of northern
@@ -149,6 +149,7 @@ export default {
 }
 .title-footer {
   font-weight: 700;
+  font-size: 180%;
   text-align: left;
   color: white;
 }

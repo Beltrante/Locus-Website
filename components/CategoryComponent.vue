@@ -54,9 +54,13 @@ export default {
 .external {
   height: 80px;
 }
+.external:hover .card-image{
+  filter: none;
+}
 .card-image {
   height: 60px;
   width: 60px;
+  filter: invert();
 }
 .vertical {
   display: flex;

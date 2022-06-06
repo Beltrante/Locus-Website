@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       header: {
-        name: 'All Services',
+        name: 'All Bergamo\'s Services',
         description:
           'A city is not only adventure but also relax and comfort. The following page shows some of the services the city of Bergamo offers',
       },
