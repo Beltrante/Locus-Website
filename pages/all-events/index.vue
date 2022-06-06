@@ -71,18 +71,34 @@ export default {
       tags: tagList
     }
   },
-
   data() {
     // static data that never changes
     return {
       header: {
         name: 'All Bergamo\'s events',
         description:
-          'Bergamo and its inhabitants are always very active, energetic and friendly. These are the reasons why there is never a shortage of activities, events, opportunities to learn something new or simply to have fun with one\'s companions throughout the year. ',
+          'Bergamo and its inhabitants are always very active, energetic and friendly. These are the reasons why there is never a shortage of activities, events, opportunities to learn something new or simply to have fun with one\'s companions throughout the year.',
       },
       // used to reroute when a preview is pressed
       pathToEvent: "all-events",
       seasonPath: "event-season"
+    }
+  },
+  head() {
+    return {
+      title: 'All events | Events',
+      meta: [
+        {
+          hid: 'descriptionServiceCategory',
+          name: 'description',
+          content: 'Available Events and Events Category',
+        },
+        {
+          hid: 'keywordsServiceCategory',
+          name: 'keywords',
+          content: [ 'leisure', 'Events', 'Bergamo'],
+        },
+      ],
     }
   },
   

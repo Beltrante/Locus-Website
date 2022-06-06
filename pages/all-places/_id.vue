@@ -81,6 +81,23 @@ export default {
       pathToEvent: 'all-events',
     }
   },
+  head() {
+    return {
+      title: `${this.poi.name} | Places`,
+      meta: [
+        {
+          hid: 'descriptionSinglePlace',
+          name: 'description',
+          content: 'specific place and its related info',
+        },
+        {
+          hid: 'keywordsSinglePlace',
+          name: 'keywords',
+          content: [this.PoiTypeName,"leisure", "Place", "Bergamo"],
+        },
+      ],
+    }
+  },
   computed: {
     // define breadcrumbs routes
     breadcrumps() {

@@ -60,7 +60,7 @@ export default {
   },
   head() {
     return {
-      title: this.itinerary.name,
+      title: `${this.itinerary.name} | Itineraries`,
       meta: [
         {
           hid: 'descriptionSingleItinerary',
@@ -70,7 +70,7 @@ export default {
         {
           hid: 'keywordsSingleItinerary',
           name: 'keywords',
-          content: ["leisure"],
+          content: ["leisure", "itineray", "Bergamo"],
         },
       ],
     }

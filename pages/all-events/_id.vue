@@ -69,7 +69,7 @@ export default {
   },
   head() {
     return {
-      title: this.event.name,
+      title: `${this.event.name} | Events`,
       meta: [
         {
           hid: 'descriptionSingleEvent',
@@ -79,7 +79,7 @@ export default {
         {
           hid: 'keywordsSingleEvent',
           name: 'keywords',
-          content: [this.event.HostingPoi.name, this.SeasonName,"Party", "Event", "leisure"],
+          content: [this.event.HostingPoi.name, this.SeasonName,"Party", "Event", "leisure", "Bergamo"],
         },
       ],
     }
