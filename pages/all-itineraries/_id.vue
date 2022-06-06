@@ -45,8 +45,11 @@ export default {
     // Get the id of the itinerary to show from route
     const { id } = route.params
     const { data } = await $axios.get('/api/itinerary/' + id)
+    // used for meta tags
+    const names = data.pois.map(a => a.name)
     return {
       itinerary: data,
+      involvedPlaces: names
     }
   },
   data() {
