@@ -51,6 +51,7 @@ export default {
 <style scoped>
 .center {
   text-align: center;
+  
 }
 .mail {
   color: black;
@@ -63,7 +64,7 @@ export default {
   border-radius: 10px;
 }
 .card-image {
-  height: 350px;
+  height: 365.9px;
 }
 .marg {
   margin: 10px;

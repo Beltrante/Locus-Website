@@ -23,7 +23,7 @@
         :name="event.name"
         :image="event.image"
         :path="pathToEvent"
-        class="col-sm-3 p-2"
+        class="col-lg-3 p-2"
       />
     </div>
     <div class="row">
@@ -40,7 +40,7 @@
         :name="itinerary.name"
         :image="itinerary.image"
         :path="pathToItinerary"
-        class="col-sm-3 p-2"
+        class="col-lg-3 p-2"
       />
     </div>
   </div>

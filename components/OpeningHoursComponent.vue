@@ -35,7 +35,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 350px;
+  /* height: 350px; */
 }
 h3 {
   font-weight: 300;

@@ -26,7 +26,7 @@
         :name="poi.name"
         :image="poi.image"
         :path="pathToPoi"
-        class="col-sm-3 p-2"
+        class="col-lg-3 p-2"
       />
     </div>
   </div>
@@ -82,17 +82,6 @@ export default {
         },
       ]
     },
-    /* getPoisList() {
-      const names = []
-      const stringa = ''
-      for (let i = 0; i < this.itinerary.pois.length; i++) {
-        names.push(this.itinerary.pois[i].name)
-      }
-      stringa = names.toString()
-      return{
-        stringa
-      }
-    } */
   },
 }
 </script>
