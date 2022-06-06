@@ -1,4 +1,4 @@
-# Locus
+# [Locus](https://fbosso.github.io/)
 <img align="right" src="static/favicon.ico" alt="logo" width="220">
 
 *Design and implementation of a website for a tourist office of a cultural tourism destination for the Hypermedia Applications course of Politecnico di Milano.*
