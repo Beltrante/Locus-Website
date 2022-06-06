@@ -70,7 +70,7 @@ export default {
         {
           hid: 'keywordsSingleItinerary',
           name: 'keywords',
-          content: ["leisure", "itineray", "Bergamo"],
+          content: [this.involvedPlaces.toString(), "leisure", "itineray", "Bergamo"],
         },
       ],
     }

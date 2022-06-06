@@ -61,6 +61,23 @@ export default {
       pathToItinerary: 'all-itineraries',
     }
   },
+  head() {
+    return {
+      title: 'All Itineraries | Itineraries',
+      meta: [
+        {
+          hid: 'descriptionItineraries',
+          name: 'description',
+          content: 'Available Itineraries',
+        },
+        {
+          hid: 'keywordsItineraries',
+          name: 'keywords',
+          content: [this.tags.toString(),'leisure', 'Itineraries', 'Bergamo'],
+        },
+      ],
+    }
+  },
 }
 </script>
 

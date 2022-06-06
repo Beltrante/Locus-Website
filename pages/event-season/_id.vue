@@ -63,6 +63,23 @@ export default {
       pathToEvent: 'all-events',
     }
   },
+  head() {
+    return {
+      title: `All ${this.info.name} | Events`,
+      meta: [
+        {
+          hid: 'descriptionEventCategory',
+          name: 'description',
+          content: `Available Events for the ${this.info.name} category`,
+        },
+        {
+          hid: 'keywordsEventCategory',
+          name: 'keywords',
+          content: [ this.info.name, 'leisure', 'Bergamo'],
+        },
+      ],
+    }
+  },
   computed: {
     // define breadcrumbs route
     breadcrumps() {

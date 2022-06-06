@@ -1,16 +1,17 @@
 /* Page for ALL EVENTS & EVENT CATEGORIES */
 <template>
-<!-- class container in order to center the contend -->
-<!-- class mt-5 in order to heva a margin top of 5 units -->
+  <!-- class container in order to center the contend -->
+  <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
     <!-- this component creates the top (first row) of the page. 
     The passed parameters are the name (for the title of the page), 
     the descritpion (in order to describe the content) and the tags 
     (in order to dynamically display the hashtags) -->
-    <TopPageGeneric 
-    :name="header.name"
-    :description="header.description" 
-    :tags="tags" />
+    <TopPageGeneric
+      :name="header.name"
+      :description="header.description"
+      :tags="tags"
+    />
     <hr />
     <!-- row of category links -->
     <div class="row">
@@ -64,24 +65,24 @@ export default {
       tagList.push(season.name)
     })
 
-    return{
+    return {
       // parse received data (data for season type preview and events preview)
       seasons: data.seasons,
       events: data.events,
-      tags: tagList
+      tags: tagList,
     }
   },
   data() {
     // static data that never changes
     return {
       header: {
-        name: 'All Bergamo\'s events',
+        name: "All Bergamo's events",
         description:
-          'Bergamo and its inhabitants are always very active, energetic and friendly. These are the reasons why there is never a shortage of activities, events, opportunities to learn something new or simply to have fun with one\'s companions throughout the year.',
+          "Bergamo and its inhabitants are always very active, energetic and friendly. These are the reasons why there is never a shortage of activities, events, opportunities to learn something new or simply to have fun with one's companions throughout the year.",
       },
       // used to reroute when a preview is pressed
-      pathToEvent: "all-events",
-      seasonPath: "event-season"
+      pathToEvent: 'all-events',
+      seasonPath: 'event-season',
     }
   },
   head() {
@@ -89,19 +90,18 @@ export default {
       title: 'All events | Events',
       meta: [
         {
-          hid: 'descriptionServiceCategory',
+          hid: 'descriptionEventCategories',
           name: 'description',
-          content: 'Available Events and Events Category',
+          content: 'Available Events and Event Categories',
         },
         {
-          hid: 'keywordsServiceCategory',
+          hid: 'keywordsEventCategories',
           name: 'keywords',
-          content: [ 'leisure', 'Events', 'Bergamo'],
+          content: [this.tags.toString(), 'leisure', 'Events', 'Bergamo'],
         },
       ],
     }
   },
-  
 }
 </script>
 

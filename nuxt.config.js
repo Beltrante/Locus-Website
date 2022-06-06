@@ -17,7 +17,7 @@ export default {
   ],
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Locus',
+    title: 'Bergamo | Locus',
     htmlAttrs: {
       lang: 'en',
     },

@@ -78,8 +78,8 @@ export default {
         },
         contact3: {
           id: 2,
-          title: 'Points of interest info',
-          footer: 'poi@live.com',
+          title: 'Places info',
+          footer: 'places@live.com',
           image: 'https://i.ibb.co/LZ9z921/poi.png',
           color: 'black',
           background: 'rgba(60, 128, 125, 0.611);',
@@ -97,6 +97,23 @@ export default {
         image:
           'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
       },
+    }
+  },
+  head() {
+    return {
+      title: `Contact us`,
+      meta: [
+        {
+          hid: 'descriptionContactUs',
+          name: 'description',
+          content: `All the existing ways to keep in touch with the Locus team`,
+        },
+        {
+          hid: 'keywordsContactUs',
+          name: 'keywords',
+          content: ['Contacts', `email - ${this.contacts.contact1.title}`, `email - ${this.contacts.contact2.title}`, `email - ${this.contacts.contact3.title}`, 'submit form', 'address', 'opening hours' ],
+        },
+      ],
     }
   },
 }

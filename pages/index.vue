@@ -55,6 +55,23 @@ export default {
       }
     }
   },
+  head() {
+    return {
+      title: `Bergamo | Locus`,
+      meta: [
+        {
+          hid: 'descriptionHomepage',
+          name: 'description',
+          content: `Homepage showing all possible sections of the site`,
+        },
+        {
+          hid: 'keywordsHomepage',
+          name: 'keywords',
+          content: ['Homepage', 'Itineraries', 'Places', 'Events', 'Services', 'About the town', 'Contact-us', 'Fun', 'Culture','Art Town', 'Bergamo'],
+        },
+      ],
+    }
+  },
 }
 
 

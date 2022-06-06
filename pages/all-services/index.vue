@@ -72,6 +72,23 @@ export default {
       servicePath: 'all-services',
     }
   },
+  head() {
+    return {
+      title: 'Service Caregories | Services',
+      meta: [
+        {
+          hid: 'descriptionServiceCategories',
+          name: 'description',
+          content: 'Service Categories and Top 3 rated services by category',
+        },
+        {
+          hid: 'keywordsServiceCategories',
+          name: 'keywords',
+          content: [this.tags.toString(), 'Services', 'Bergamo'],
+        },
+      ],
+    }
+  },
 }
 </script>
 

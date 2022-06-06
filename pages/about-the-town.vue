@@ -141,6 +141,23 @@ export default {
       },
     }
   },
+  head() {
+    return {
+      title: `About Bergamo`,
+      meta: [
+        {
+          hid: 'descriptionAboutTheTown',
+          name: 'description',
+          content: `The main stages of Bergamo's history`,
+        },
+        {
+          hid: 'keywordsAboutTheTown',
+          name: 'keywords',
+          content: ['Name\'s origin', 'The Lombard duchy', 'The Lombard-Venetian kingdom', 'Bergamo Nowadays' , 'history', 'culture', 'Bergamo'],
+        },
+      ],
+    }
+  },
 }
 </script>
 

@@ -71,7 +71,6 @@ export default {
       tags: tagList,
     }
   },
-
   data() {
     // static data that never changes
     return {
@@ -83,6 +82,23 @@ export default {
       // used to reroute when a preview is pressed
       pathToPoi: 'all-places',
       categoryPath: 'place-category',
+    }
+  },
+  head() {
+    return {
+      title: 'All Places | Places',
+      meta: [
+        {
+          hid: 'descriptionPlaceCategories',
+          name: 'description',
+          content: 'Available Places and Place Categories',
+        },
+        {
+          hid: 'keywordsPlaceCategories',
+          name: 'keywords',
+          content: [this.tags.toString(), 'leisure', 'Places', 'Bergamo'],
+        },
+      ],
     }
   },
 }

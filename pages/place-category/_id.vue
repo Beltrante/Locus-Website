@@ -63,6 +63,23 @@ export default {
       pathToPoi: 'all-places',
     }
   },
+  head() {
+    return {
+      title: `All ${this.info.name} | Places`,
+      meta: [
+        {
+          hid: 'descriptionPlaceCategory',
+          name: 'description',
+          content: `Available Places for the ${this.info.name} category`,
+        },
+        {
+          hid: 'keywordsPlaceCategory',
+          name: 'keywords',
+          content: [ this.info.name, 'leisure', 'Bergamo'],
+        },
+      ],
+    }
+  },
   computed: {
     // define breadcrumbs route
     breadcrumps() {
