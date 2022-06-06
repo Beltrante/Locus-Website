@@ -7,12 +7,18 @@ of the possible way in wich the user can reach us). No parameters are needed to 
 <template>
   <div class="container">
     <div class="container frame">
-      <form>
+      <!-- This comment is only for dev and would be removed if code is public
+      Form sends post to formSpree to be parsed and forwarded to locusgroup@libero.it, names are required to parse the form
+      user: locusgroup
+      psw: locusGroup+2022 
+      NOTE: On paid plan the redirect can be costumized a different page-->
+      <form action="https://formspree.io/f/xrgjdgjn" method="POST">
         <div class="row">
           <div class="col-md-4 mb-3">
             <label for="name">First name</label>
             <input
               id="name"
+              name="name"
               type="text"
               class="form-control"
               placeholder="First name"
@@ -23,6 +29,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
             <label for="surname">Last name</label>
             <input
               id="surname"
+              name="surname"
               type="text"
               class="form-control"
               placeholder="Last name"
@@ -42,6 +49,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
               </div>
               <input
                 id="mail"
+                name="mail"
                 type="email"
                 class="form-control"
                 placeholder="Mail"
@@ -56,6 +64,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
             <label for="city">City</label>
             <input
               id="city"
+              name="city"
               type="text"
               class="form-control"
               placeholder="City"
@@ -66,6 +75,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
             <label for="state">State</label>
             <input
               id="state"
+              name="state"
               type="text"
               class="form-control"
               placeholder="State"
@@ -76,6 +86,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
             <label for="CAP">Postal code</label>
             <input
               id="CAP"
+              name="CAP"
               type="number"
               class="form-control"
               placeholder="Postal code"
@@ -84,6 +95,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
           </div>
         </div>
         <textarea
+          name="message"
           placeholder="Message"
           class="form-control"
           rows="5"
