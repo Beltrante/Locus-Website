@@ -110,7 +110,7 @@ of the possible way in wich the user can reach us). No parameters are needed to 
               value=""
               required
             />
-            <label class="form-check-label">
+            <label for="invalidCheck" class="form-check-label">
               Agree to terms and conditions
             </label>
           </div>

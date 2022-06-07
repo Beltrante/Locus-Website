@@ -15,7 +15,7 @@ The required parameters are:
     <!-- this v-if is implemented in order to occupy the space of the following h3 only if the 
     parameter "title" is actually passed. Without the v-if there would be, even if the title is 
     not passed, a small occupied (unused) space on top of the card -->
-    <h3 v-if="title" class="bold-s">{{ title }}</h3>
+    <h2 v-if="title" class="bold">{{ title }}</h2>
 
     <div class="image-s center marg" :style="`border: solid 2px ${color}; background: ${background};`">
       <!-- the classes specicied for that image are reported in the main.css file (since are also 

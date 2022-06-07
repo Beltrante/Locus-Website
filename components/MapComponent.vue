@@ -12,7 +12,7 @@ to highlight the location of the selected point of interest. The required parame
     exploit openstreetmap for the creation of the actual map according to our directives -->
     <iframe
       id="inlineFrame"
-      title="Inline Frame"
+      title="Place's map"
       :src="`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&amp;layer=mapnik&amp;marker=${marker}`"
     ></iframe>
   </div>

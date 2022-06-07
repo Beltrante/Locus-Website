@@ -13,7 +13,7 @@ contribute and create his/her segments!). The required parameters are:
 <template>
   <div>
     <!-- inside the "src", the link of the segment is passed and the interactive map is created -->
-    <iframe class="mapillary" :src="`${link}`" frameborder="0"></iframe>
+    <iframe title="Itinerary player" class="mapillary" :src="`${link}`" frameborder="0"></iframe>
   </div>
 </template>
 

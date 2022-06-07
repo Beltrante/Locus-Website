@@ -37,14 +37,14 @@ export default {
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 2px;
-  background: rgba(60, 128, 125, 0.642);
+  background: rgb(60, 128, 125);
   clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%);
   /*transform: skew(-20deg);*/
   /*border-radius: 10px 0px 0px 10px;*/
 }
 
 .crumb:hover {
-  background: rgba(60, 128, 125, 1);
+  background: rgb(45, 95, 92);
 }
 .crumb span {
   color: #fff;

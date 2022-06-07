@@ -3,7 +3,7 @@
   <!-- class mt-5 in order to heva a margin top of 5 units -->
   <div class="container mt-5">
     <div class="row center">
-      <h1 class="subtitle">Specific mail for specific issues</h1>
+      <h1 class="subtitle mb-4">Specific mail for specific issues</h1>
       <!-- this component will display three cards illustrating 
       the three different mail in order to ask spefic doubts 
       related to POIs, Events and Itineraries -->
@@ -20,13 +20,13 @@
     </div>
     <hr />
     <div class="row">
-      <h1 class="subtitle">Share your doubts with us!</h1>
+      <h1 class="subtitle mb-4">Share your doubts with us!</h1>
       <!-- this component is used to include the form in the contact-us page -->
       <ContactForm />
     </div>
     <hr />
     <div class="row">
-      <h1 class="subtitle">General contacts - Our office</h1>
+      <h1 class="subtitle mb-4">General contacts - Our office</h1>
       <div class="col-xxl-6">
         <!-- this component is used to display the image of the office of the company 
         responsable for the content of the page -->
@@ -79,7 +79,7 @@ export default {
         contact3: {
           id: 2,
           title: 'Places info',
-          footer: 'places@live.com',
+          footer: 'place@live.com',
           image: 'https://i.ibb.co/LZ9z921/poi.png',
           color: 'black',
           background: 'rgba(60, 128, 125, 0.611);',
