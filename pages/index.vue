@@ -27,28 +27,28 @@ export default {
         s1:{
           id: 0,
           name: "Places",
-          image: "https://images.placesonline.com/photos/424010103210244_Bergamo_209231990-min.jpeg?quality=80&w=700",
+          image: "https://i.ibb.co/C8DbyQG/places-11zon.webp",
           col: 7,
           path: "all-places"
         },
         s2:{
           id: 1,
           name: "Itineraries",
-          image: "https://i.ibb.co/m4YC86w/itineraries.webp",
+          image: "https://i.ibb.co/b2VWkqJ/itineraries.webp",
           col: 5,
           path: "all-itineraries"
         },
         s3:{
           id: 2,
           name: "Events",
-          image: "https://i.ibb.co/JjxFwk2/s-Agostino-estivo.webp",
+          image: "https://i.ibb.co/ZTstZmp/events-11zon.webp",
           col: 5,
           path: "all-events"
         },
         s4:{
           id: 3,
           name: "Services",
-          image: "https://i.ibb.co/mX58LSP/services.webp",
+          image: "https://i.ibb.co/yqN68NL/services-11zon.webp",
           col: 7,
           path: "all-services"
         },
