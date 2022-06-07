@@ -12,6 +12,7 @@
       :link="itinerary.mapillaryLink"
       :name="itinerary.name"
       :description="itinerary.description"
+      :duration="itinerary.duration"
     />
     <hr />
     <div class="row">

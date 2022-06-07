@@ -25,6 +25,7 @@ The required parameters are:
         <!-- here name and description of the itinerary are passed in order to create the 
         descriptive section -->
         <TitleDescription :name="name" :description="description" />
+        <p>Duration: {{ duration }}</p>
       </div>
     </div>
   </div>
@@ -37,9 +38,14 @@ export default {
     link: { type: String, required: true },
     name: { type: String, required: true },
     description: { type: String, required: true },
+    duration: { type: String, required: true}
   },
 }
 </script>
 
 <style scoped>
+p{
+  font-weight: 600;
+  font-size: 150%;
+}
 </style>
