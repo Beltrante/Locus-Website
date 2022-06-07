@@ -10,7 +10,7 @@ certain order and do not act directly on the layout for future modifications*/
     <a class="navbar-brand" href="/"
       ><img
         class="logo"
-        src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png"
+        src="https://i.ibb.co/NspjQxV/logo.webp"
         alt="logo"
     /></a>
     <button

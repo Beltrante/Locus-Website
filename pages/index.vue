@@ -34,21 +34,21 @@ export default {
         s2:{
           id: 1,
           name: "Itineraries",
-          image: "https://i.ibb.co/HKsJdTQ/itineraries.png",
+          image: "https://i.ibb.co/m4YC86w/itineraries.webp",
           col: 5,
           path: "all-itineraries"
         },
         s3:{
           id: 2,
           name: "Events",
-          image: "https://i.ibb.co/JjxFwk2/s-Agostino-estivo.jpg",
+          image: "https://i.ibb.co/JjxFwk2/s-Agostino-estivo.webp",
           col: 5,
           path: "all-events"
         },
         s4:{
           id: 3,
           name: "Services",
-          image: "https://www.travelfar.it/wp-content/uploads/mercati-di-Palermo-gente-e-profumi.jpg",
+          image: "https://i.ibb.co/mX58LSP/services.webp",
           col: 7,
           path: "all-services"
         },

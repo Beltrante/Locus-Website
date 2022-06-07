@@ -95,7 +95,7 @@ export default {
       },
       generic: {
         image:
-          'https://www.ioriarredamenti.it/wp-content/uploads/2021/09/come-arredare-ufficio-moderno.jpeg',
+          'https://i.ibb.co/d2QtLvw/office-11zon.webp',
       },
     }
   },

@@ -18,7 +18,7 @@ certain order and do not act directly on the layout for future modifications*/
             <div class="logo">
               <img
                 class="logo-img"
-                src="https://i.ibb.co/VHwpzMq/Opera-senza-titolo-2-1.png"
+                src="https://i.ibb.co/NspjQxV/logo.webp"
                 alt="Logo"
               />
               </div>
@@ -68,7 +68,7 @@ certain order and do not act directly on the layout for future modifications*/
                 <a href="https://www.facebook.com"
                   ><img
                     class="icons"
-                    src="https://i.ibb.co/s5yYc4F/5305154-fb-facebook-facebook-logo-icon.png"
+                    src="https://i.ibb.co/PYKHqfs/facebook.webp"
                     alt="facebook_icon"
                 /></a>
               </div>
@@ -76,7 +76,7 @@ certain order and do not act directly on the layout for future modifications*/
                 <a href="https://www.linkedin.com"
                   ><img
                     class="icons"
-                    src="https://i.ibb.co/rZjJsxZ/5305157-connection-linkedin-network-linkedin-logo-icon.png"
+                    src="https://i.ibb.co/6tSw7GQ/linkedin.webp"
                     alt="linkedin_icon"
                 /></a>
               </div>
@@ -84,7 +84,7 @@ certain order and do not act directly on the layout for future modifications*/
                 <a href="https://www.twitter.com"
                   ><img
                     class="icons"
-                    src="https://i.ibb.co/HrfSGKT/104501-twitter-bird-icon.png"
+                    src="https://i.ibb.co/6WyDyMg/twitter.webp"
                     alt="twitter_icon"
                 /></a>
               </div>
@@ -92,7 +92,7 @@ certain order and do not act directly on the layout for future modifications*/
                 <a href="https://github.com/FBosso/Locus"
                   ><img
                     class="icons"
-                    src="https://i.ibb.co/8XbDq3g/4747499-github-icon.png"
+                    src="https://i.ibb.co/16mgKT5/github.webp"
                     alt="github_icon"
                 /></a>
               </div>
