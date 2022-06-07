@@ -41,7 +41,7 @@ export default {
         s3:{
           id: 2,
           name: "Events",
-          image: "https://storage.ecodibergamo.it/media/photologue/2019/4/10/photos/estivi-santagostino-apre-gia-il-1-maggiobando-della-trucca-va-deserto-d_6ec48678-5ba0-11e9-9a27-d6d04fdbc1c3_900_566.jpg",
+          image: "https://i.ibb.co/JjxFwk2/s-Agostino-estivo.jpg",
           col: 5,
           path: "all-events"
         },
