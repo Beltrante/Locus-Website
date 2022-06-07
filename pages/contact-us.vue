@@ -72,25 +72,22 @@ export default {
           id: 1,
           title: 'Itineraries info',
           footer: 'itin@live.com',
-          image: 'https://i.ibb.co/gV2CX2h/itinerary.png',
-          color: 'black',
-          background: 'rgba(60, 128, 125, 0.611)',
+          image: 'https://i.ibb.co/x1nJB46/itinerari-35.webp',
+          
         },
         contact3: {
           id: 2,
           title: 'Places info',
           footer: 'place@live.com',
-          image: 'https://i.ibb.co/LZ9z921/poi.png',
-          color: 'black',
-          background: 'rgba(60, 128, 125, 0.611);',
+          image: 'https://i.ibb.co/cbQXyK3/places-35.webp',
+          
         },
         contact1: {
           id: 0,
           title: 'Event info',
           footer: 'event@live.com',
-          image: 'https://i.ibb.co/1dyZgJV/events.png',
-          color: 'black',
-          background: 'rgba(60, 128, 125, 0.611);',
+          image: 'https://i.ibb.co/kH0Qy0W/events-11zon-2-40.webp',
+          
         },
       },
       generic: {

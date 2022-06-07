@@ -12,6 +12,8 @@ certain order and do not act directly on the layout for future modifications*/
         class="logo"
         src="https://i.ibb.co/NspjQxV/logo.webp"
         alt="logo"
+        width="70"
+        height="70"
     /></a>
     <button
       class="navbar-toggler"
@@ -104,8 +106,5 @@ a {
 }
 .header {
   background: rgb(60, 128, 125);
-}
-.logo {
-  height: 70px;
 }
 </style>
