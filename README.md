@@ -14,7 +14,7 @@
 - Frontend (Pages, Layout and Components structure), Graphic Design, SEO optimization
 
 [Thomas Martinoli](https://github.com/ThomasMartinoli) (thomas.martinoli@mail.polimi.it) - Geoinformatics Engineering<br>
-- Breadcrumbs implementation, Data Gathering, User Cases
+- Breadcrumbs implementation, Data Gathering, Interaction scenarios
 
 
 ## Project Description
@@ -47,7 +47,7 @@ Nuxt also offers special directories to handle different features, in this proje
 Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 
 
 ## Components Used 
-During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 20 different components which are used by multiple different pages.
+During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 20 different components which are used by multiple different pages,some of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue) are a collection of smaller ones for readability.
 Each component code is commented with a short description of their functions and a full list is available [here](https://github.com/FBosso/Locus/tree/main/components)   
 
 ## Deploy Decisions  
