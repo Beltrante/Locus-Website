@@ -29,14 +29,64 @@
     <div class="row mt-4 g-0">
       <!-- this component creates the 4 main sections in which the site is 
       structured (POIs, Itineraries, Events and Services) -->
-      <IndexCard
-        v-for="section in sections"
-        :key="section.id"
-        :path="section.path"
-        :name="section.name"
-        :image="section.image"
-        :class="`col-sm-${section.col} p-2 active position-relative menu`"
-      />
+
+      <div :class="`image col-sm-7 p-2 active position-relative menu`">
+        <NuxtLink :to="`${sections.s1.path}`">
+          <img
+            :src="`${sections.s1.image}`"
+            class="card-image img-fluid"
+            :alt="`${sections.s1.name}-image`"
+          />
+          <div class="middle">
+            <h1>{{ sections.s1.name }}</h1>
+          </div>
+        </NuxtLink>
+      </div>
+
+      <div
+        :class="`image col-sm-${sections.s2.col} p-2 active position-relative menu`"
+      >
+        <NuxtLink :to="`${sections.s2.path}`">
+          <img
+            :src="`${sections.s2.image}`"
+            class="card-image img-fluid"
+            :alt="`${sections.s2.name}-image`"
+          />
+          <div class="middle">
+            <h1>{{ sections.s2.name }}</h1>
+          </div>
+        </NuxtLink>
+      </div>
+
+      <div
+        :class="`image col-sm-${sections.s3.col} p-2 active position-relative menu`"
+      >
+        <NuxtLink :to="`${sections.s3.path}`">
+          <img
+            :src="`${sections.s3.image}`"
+            class="card-image img-fluid"
+            :alt="`${sections.s3.name}-image`"
+          />
+          <div class="middle">
+            <h1>{{ sections.s3.name }}</h1>
+          </div>
+        </NuxtLink>
+      </div>
+
+      <div
+        :class="`image col-sm-${sections.s4.col} p-2 active position-relative menu`"
+      >
+        <NuxtLink :to="`${sections.s4.path}`">
+          <img
+            :src="`${sections.s4.image}`"
+            class="card-image img-fluid"
+            :alt="`${sections.s4.name}-image`"
+          />
+          <div class="middle">
+            <h1>{{ sections.s4.name }}</h1>
+          </div>
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -112,6 +162,8 @@ export default {
 </script>
 
 <style scoped>
+/* START Styles for top part (title + description + animation) +++ */
+
 .header-index {
   font-weight: 900;
   font-size: 7vw;
@@ -141,4 +193,59 @@ export default {
     margin-top: 0;
   }
 }
+
+/* END Styles for top part (title + description + animation) +++ */
+
+/* START Styles for bottom part (4 cards) +++ */
+
+.image {
+  padding: 8px;
+  height: 400px;
+}
+.img-fluid {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.menu {
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+.row .menu:hover .img-fluid {
+  opacity: 0.3;
+}
+.row .menu:hover .middle {
+  opacity: 0.9;
+}
+.middle {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(0, 0, 0, 0.866);
+}
+
+@media screen and (max-width: 992px) {
+  .middle {
+    color: rgba(0, 0, 0, 0.866);
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .img-fluid {
+    opacity: 0.4;
+  }
+}
+
+/* END Styles for bottom part (4 cards) +++ */
 </style>
