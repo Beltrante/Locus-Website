@@ -17,7 +17,7 @@ The required parameters are:
     not passed, a small occupied (unused) space on top of the card -->
     <h2 v-if="title" class="bold">{{ title }}</h2>
 
-    <div class="image-s center marg" :style="`border: solid 2px ${color}; background: ${background};`">
+    <div class="image-s center marg">
       <!-- the classes specicied for that image are reported in the main.css file (since are also 
       used by IndexCard.vue and CardComponent.vue) and are needed to adapt the content to the 
       frame of the card without stetch the image itself -->
@@ -30,7 +30,7 @@ The required parameters are:
     <h2>
       <!-- this v-if is implemented in order to use the following "a" tag only if the parameter 
       "footer" is actually passed -->
-      <a v-if="footer" class="mail" :href="`mailto: ${footer}`">{{ footer }}</a>
+      <a v-if="footer" class="mail">{{ footer }}</a>
     </h2>
   </div>
 </template>
@@ -42,8 +42,6 @@ export default {
     image: { type: String, required: true },
     title: { type: String, required: false, default: null },
     footer: { type: String, required: false, default: null },
-    background: { type: String, required: false, default: null },
-    color: { type: String, required: false, default: null },
   },
 }
 </script>

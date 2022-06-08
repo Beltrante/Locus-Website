@@ -13,9 +13,7 @@
         :title="contact.title"
         :image="contact.image"
         :footer="contact.footer"
-        :color="contact.color"
-        :background="contact.background"
-        class="col-lg-3 mb-4"
+        class="col-xl-3 mb-5"
       />
     </div>
     <hr />

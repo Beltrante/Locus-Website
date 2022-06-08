@@ -35,9 +35,9 @@ certain order and do not act directly on the layout for future modifications*/
           style="color: white"
         >
           <div class="cont">
-            <nuxt-link :to="navItem.path" style="color: white" class="nav-link">
+            <NuxtLink :to="navItem.path" style="color: white" class="nav-link">
               {{ navItem.name }}
-            </nuxt-link>
+            </NuxtLink>
           </div>
         </li>
       </ul>

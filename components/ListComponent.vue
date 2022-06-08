@@ -20,10 +20,10 @@ The required parameters are:
   <div class="row mb-5">
     <!-- the class column will create the space for the image of the serice (displayed thanks 
     to the StaticCardComponent) -->
-    <div class="col-md-5 order-xl-1 order-2">
+    <div class="col-xl-5 order-xl-1 order-2">
       <!-- here the StaticCardComponent is passed inside this component in order to display 
       the image of the service -->
-      <StaticCardComponent :image="image" :height="height" />
+      <StaticCardComponent :image="image" />
     </div>
     <!-- this second column will contain two elements:
       - the opening hours of the service
