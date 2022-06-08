@@ -4,16 +4,16 @@
 *Design and implementation of a website for a tourist office of a cultural tourism destination for the Hypermedia Applications course of Politecnico di Milano.*
 
 ## Authors
-[Alessandro Austoni](https://github.com/AlessandroAustoni) (alessandro.austoni@mail.polimi.it) - Geoinformatics Engineering<br/>
+[Alessandro Austoni](https://github.com/AlessandroAustoni) - cod:10524152 (alessandro.austoni@mail.polimi.it) - Geoinformatics Engineering<br/>
 - Design Document, Supervision of Design and Implementation consistency, CSS Styling improvement  
 
-[Matteo Beltrante](https://github.com/Beltrante) 10575137 (matteo.beltrante@mail.polimi.it) - Computer Science<br>
+[Matteo Beltrante](https://github.com/Beltrante) - cod: 10575137 (matteo.beltrante@mail.polimi.it) - Computer Science<br>
 - Backend (Api endpoints and Database management), Dynamic Data handling, Website structure 
 
-[Francesco Bosso](https://github.com/FBosso) (francesco.bosso@mail.polimi.it) - Geoinformatics Engineering<br>
+[Francesco Bosso](https://github.com/FBosso) - cod: 10555965 (francesco.bosso@mail.polimi.it) - Geoinformatics Engineering<br>
 - Frontend (Pages, Layout and Components structure), Graphic Design, SEO optimization
 
-[Thomas Martinoli](https://github.com/ThomasMartinoli) (thomas.martinoli@mail.polimi.it) - Geoinformatics Engineering<br>
+[Thomas Martinoli](https://github.com/ThomasMartinoli) - cod: 10502028 (thomas.martinoli@mail.polimi.it) - Geoinformatics Engineering<br>
 - Breadcrumbs implementation, Data Gathering, Interaction scenarios
 
 
@@ -48,8 +48,13 @@ Nuxt also offers special directories to handle different features, in this proje
 Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 
 
 ## Components Used 
-During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 20 different components which are used by multiple different pages,some of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue) are a collection of smaller ones for readability.
-Each component code is commented with a short description of their functions and a full list is available [here](https://github.com/FBosso/Locus/tree/main/components)   
+During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 17 different components which are used by multiple different pages, three of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue), are an aggregate of smaller ones and were included after careful considerations **exclusively** to improve code readability. (This sub components are used in other places as well and could not be merged)
+<br>This *aggregate* components are:
+  [TopEventDescription](https://github.com/FBosso/Locus/blob/main/components/TopEventDescription.vue)
+, [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue)
+, [TopSegmentDescription](https://github.com/FBosso/Locus/blob/main/components/TopSegmentDescription.vue)
+<br>
+Each component code is also commented with a short description of their functions and a full list is available [here](https://github.com/FBosso/Locus/tree/main/components)   
 
 ## Deploy Decisions  
 Finally we decided to deploy our project as a **Static website** using GitHub pages based on the idea that our Art Town's city council would be able to plan its Attractions in advance, allowing the site to be updated no more frequently than every 6 months.
