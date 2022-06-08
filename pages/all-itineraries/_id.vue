@@ -66,7 +66,7 @@ export default {
         {
           hid: 'descriptionSingleItinerary',
           name: 'description',
-          content: 'specific itineary and its related info',
+          content: 'specific itineary and its related info: Name, description, duration, interactive map and involved places',
         },
         {
           hid: 'keywordsSingleItinerary',

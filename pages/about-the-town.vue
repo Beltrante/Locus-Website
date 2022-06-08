@@ -148,7 +148,7 @@ export default {
         {
           hid: 'descriptionAboutTheTown',
           name: 'description',
-          content: `The main stages of Bergamo's history`,
+          content: `The main stages of Bergamo's history from the origin of the name "Bergamo" to nowadays`,
         },
         {
           hid: 'keywordsAboutTheTown',

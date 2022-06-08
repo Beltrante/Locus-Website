@@ -74,7 +74,7 @@ export default {
         {
           hid: 'descriptionSingleEvent',
           name: 'description',
-          content: 'specific event and its related info',
+          content: 'specific event and its related info: Name, description, image and in which place it is hosted',
         },
         {
           hid: 'keywordsSingleEvent',

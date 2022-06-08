@@ -91,7 +91,7 @@ export default {
         {
           hid: 'descriptionPlaceCategories',
           name: 'description',
-          content: 'Available Places and Place Categories',
+          content: 'in the current page all the Available Places and Place Categories are showed. A brief introductory description of the page is also provided',
         },
         {
           hid: 'keywordsPlaceCategories',

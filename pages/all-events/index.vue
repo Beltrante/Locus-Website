@@ -92,7 +92,7 @@ export default {
         {
           hid: 'descriptionEventCategories',
           name: 'description',
-          content: 'Available Events and Event Categories',
+          content: 'in the current page all the available Events and Event Categories are showed. A brief introductory description of the page is also provided',
         },
         {
           hid: 'keywordsEventCategories',

@@ -101,7 +101,7 @@ export default {
         {
           hid: 'descriptionContactUs',
           name: 'description',
-          content: `All the existing ways to keep in touch with the Locus team`,
+          content: `All the ways to keep in touch with the Locus team: mails for specific issues (itinerary or events or places), form if the issue is more generic and contacts of the office`,
         },
         {
           hid: 'keywordsContactUs',

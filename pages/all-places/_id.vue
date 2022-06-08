@@ -88,7 +88,7 @@ export default {
         {
           hid: 'descriptionSinglePlace',
           name: 'description',
-          content: 'specific place and its related info',
+          content: 'specific place and its related info: Name, Description, Map, image, opening hours and the related events/itineraries',
         },
         {
           hid: 'keywordsSinglePlace',

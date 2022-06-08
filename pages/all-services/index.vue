@@ -79,7 +79,7 @@ export default {
         {
           hid: 'descriptionServiceCategories',
           name: 'description',
-          content: 'Service Categories and Top 3 rated services by category',
+          content: 'in the current page all the Service Categories and the Top 3 rated services by category are showed. A brief introductory description of the page is also provided ',
         },
         {
           hid: 'keywordsServiceCategories',

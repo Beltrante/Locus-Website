@@ -68,7 +68,7 @@ export default {
         {
           hid: 'descriptionItineraries',
           name: 'description',
-          content: 'Available Itineraries',
+          content: 'in the current page all the available itineraries are showed. A brief introductory description of the page is also provided',
         },
         {
           hid: 'keywordsItineraries',

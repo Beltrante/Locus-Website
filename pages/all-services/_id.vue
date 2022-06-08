@@ -60,7 +60,7 @@ export default {
         {
           hid: 'descriptionServiceCategory',
           name: 'description',
-          content: `available ${this.serviceType.name} and their related info`,
+          content: `available ${this.serviceType.name} and their related info: Name, image, opening hours, address, site and rating`,
         },
         {
           hid: 'keywordsServiceCategory',
