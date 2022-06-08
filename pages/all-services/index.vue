@@ -33,7 +33,7 @@
     <div class="row mt-4">
       <!-- this component will create six clusters (one for each category) displaying the top 3 
       rated services for each of them -->
-      <TopRatedService
+      <RatedService
         v-for="type in serviceTypes"
         :key="type.id"
         :data="type"

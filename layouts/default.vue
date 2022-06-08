@@ -1,3 +1,8 @@
+/* ############################## START LAYOUT DESCRIPTION ############################## */
+
+/* this layout is used to render the navbar and the footer in all the pages of the website */
+
+/* ############################## START LAYOUT DESCRIPTION ############################## */
 <template>
   <div class="main-page">
     <link rel="preconnect" href="https://fonts.googleapis.com" />

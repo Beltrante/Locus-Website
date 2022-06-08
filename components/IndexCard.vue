@@ -81,7 +81,7 @@ export default {
 
 @media screen and (max-width: 992px) {
   .middle {
-    color: rgba(60, 128, 125, 0.973);
+    color: rgba(0, 0, 0, 0.866);
     opacity: 0.9;
     position: absolute;
     top: 50%;
