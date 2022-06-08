@@ -4,16 +4,16 @@
 *Design and implementation of a website for a tourist office of a cultural tourism destination for the Hypermedia Applications course of Politecnico di Milano.*
 
 ## Authors
-[Alessandro Austoni](https://github.com/AlessandroAustoni) (alessandro.austoni@mail.polimi.it)<br/>
+[Alessandro Austoni](https://github.com/AlessandroAustoni) (alessandro.austoni@mail.polimi.it) - Geoinformatics Engineering<br/>
 - Design Document, Supervision of Design and Implementation consistency, CSS Styling improvement  
 
-[Matteo Beltrante](https://github.com/Beltrante) (matteo.beltrante@mail.polimi.it)<br>
+[Matteo Beltrante](https://github.com/Beltrante) (matteo.beltrante@mail.polimi.it) - Computer Science<br>
 - Backend (Api endpoints and Database management), Dynamic Data handling, Website structure 
 
-[Francesco Bosso](https://github.com/FBosso) (francesco.bosso@mail.polimi.it)<br>
+[Francesco Bosso](https://github.com/FBosso) (francesco.bosso@mail.polimi.it) - Geoinformatics Engineering<br>
 - Frontend (Pages, Layout and Components structure), Graphic Design, SEO optimization
 
-[Thomas Martinoli](https://github.com/ThomasMartinoli) (thomas.martinoli@mail.polimi.it)<br>
+[Thomas Martinoli](https://github.com/ThomasMartinoli) (thomas.martinoli@mail.polimi.it) - Geoinformatics Engineering<br>
 - Breadcrumbs implementation, Data Gathering, User Cases
 
 
