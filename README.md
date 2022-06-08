@@ -7,14 +7,14 @@
 [Alessandro Austoni](https://github.com/AlessandroAustoni) (alessandro.austoni@mail.polimi.it) - Geoinformatics Engineering<br/>
 - Design Document, Supervision of Design and Implementation consistency, CSS Styling improvement  
 
-[Matteo Beltrante](https://github.com/Beltrante) (matteo.beltrante@mail.polimi.it) - Computer Science<br>
+[Matteo Beltrante](https://github.com/Beltrante) 10575137 (matteo.beltrante@mail.polimi.it) - Computer Science<br>
 - Backend (Api endpoints and Database management), Dynamic Data handling, Website structure 
 
 [Francesco Bosso](https://github.com/FBosso) (francesco.bosso@mail.polimi.it) - Geoinformatics Engineering<br>
 - Frontend (Pages, Layout and Components structure), Graphic Design, SEO optimization
 
 [Thomas Martinoli](https://github.com/ThomasMartinoli) (thomas.martinoli@mail.polimi.it) - Geoinformatics Engineering<br>
-- Breadcrumbs implementation, Data Gathering, User Cases
+- Breadcrumbs implementation, Data Gathering, Interaction scenarios
 
 
 ## Project Description
@@ -36,16 +36,23 @@ The design document is available [here](insert link here).
 + [Axios](https://axios-http.com/docs/intro) is promise-based HTTP Client for node.js and is used to handle all the requests to the server's API
 + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML?retiredLocale=it)/[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=it) are used to structure and style the different pages in the website 
 
-## Frameworks 
-+ [NuxtJS](https://nuxtjs.org/) is the framework we used, which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
+## Framework and Key Ideas 
+[NuxtJS](https://nuxtjs.org/) is the framework we used, which allows to create web application utilizing the Vue.js single file component system, allowing for, among others, reduced time to interactivity and improved SEO.
+Nuxt also offers special directories to handle different features, in this project we utilized:
++ The **pages** directory to store our pages, and organize the routing structure.
++ The **components** directory to store our reusable components used in each page.
++ The **layouts** directory to define the default page layout with a header and a footer and the error page layout.
+<br> the Header and the Footer contain a list of landmarks with access to all the main pages of the site, the footer also has social media contacts and a small snippet about locus vision.
++ The **server** directory to save our backend implementation 
++ We also made extensive use of the routing nuxt provide, with the addition of index and underscored vue pages in key pages sub directories in order to obtain more readable urls for the user.
+Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 
 
-## Design Decisions 
-+ Following reusability principles the web site was structured with multiple Dynamic Pages and shared components, like the CardComponent, in order to achieve the least possible amount of repeated code.
-The Dynamic pages were implemented using the underscore based Nuxt routing functionality, using a unique id to distinguish what data to display and defaulting to the index page showing all the elements when the id is not given.
-+ For the aforementioned  principles and to obtain a more uniformed design across the site a default layout was added which included the Header, the Footer, and the Breadcrumbs component 
+## Components Used 
+During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 20 different components which are used by multiple different pages,some of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue) are a collection of smaller ones for readability.
+Each component code is commented with a short description of their functions and a full list is available [here](https://github.com/FBosso/Locus/tree/main/components)   
 
 ## Deploy Decisions  
-We decided to deploy our project as a **Static website** using GitHub pages based on the idea that our Art Town's city council would be able to plan its Attractions in advance, allowing the site to be updated no more frequently than every 6 months.
+Finally we decided to deploy our project as a **Static website** using GitHub pages based on the idea that our Art Town's city council would be able to plan its Attractions in advance, allowing the site to be updated no more frequently than every 6 months.
 The Static deploy was chosen to guarantee the following benefits:
 + The site does not need a running backend with its corresponding costs like in Server Side rendering 
 + The APIs are only called during the static generation of the site, thus no malicious  or malformed request needs to be accounted for, making the site more secure.   
