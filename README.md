@@ -7,7 +7,7 @@
 [Alessandro Austoni](https://github.com/AlessandroAustoni) (alessandro.austoni@mail.polimi.it) - Geoinformatics Engineering<br/>
 - Design Document, Supervision of Design and Implementation consistency, CSS Styling improvement  
 
-[Matteo Beltrante](https://github.com/Beltrante) (matteo.beltrante@mail.polimi.it) - Computer Science<br>
+[Matteo Beltrante](https://github.com/Beltrante) 10575137 (matteo.beltrante@mail.polimi.it) - Computer Science<br>
 - Backend (Api endpoints and Database management), Dynamic Data handling, Website structure 
 
 [Francesco Bosso](https://github.com/FBosso) (francesco.bosso@mail.polimi.it) - Geoinformatics Engineering<br>
@@ -42,6 +42,7 @@ Nuxt also offers special directories to handle different features, in this proje
 + The **pages** directory to store our pages, and organize the routing structure.
 + The **components** directory to store our reusable components used in each page.
 + The **layouts** directory to define the default page layout with a header and a footer and the error page layout.
+<br> the Header and the Footer contain a list of landmarks with access to all the main pages of the site, the footer also has social media contacts and a small snippet about locus vision.
 + The **server** directory to save our backend implementation 
 + We also made extensive use of the routing nuxt provide, with the addition of index and underscored vue pages in key pages sub directories in order to obtain more readable urls for the user.
 Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 

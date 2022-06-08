@@ -51,6 +51,8 @@ export default {
 
   },
   methods: {
+    // this function take the first tag element and move it to the last place
+    // the page display only the tag in the first position 
     pollTag(){
       const first = this.dynTags.shift();
       this.dynTags = this.dynTags.concat(first);
