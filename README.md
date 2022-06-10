@@ -49,9 +49,10 @@ Nuxt also offers special directories to handle different features, in this proje
 + The **pages** directory to store our pages, and organize the routing structure.
 + The **components** directory to store our reusable components used in each page.
 + The **layouts** directory to define the default page layout with a header and a footer and the error page layout.
-<br> the Header and the Footer contain a list of landmarks with access to all the main pages of the site, the footer also has social media contacts and a small snippet about locus vision.
+<br> The Header and the Footer contain a list of landmarks with access to all the main pages of the site, the footer also has social media contacts and a small snippet about locus vision.
 + The **server** directory to save our backend implementation 
-+ We also made extensive use of the routing nuxt provide, with the addition of index and underscored vue pages in key pages sub directories in order to obtain more readable urls for the user.
++ We also made extensive use of the routing nuxt provide, with the addition of index and underscored vue pages in key pages sub directories in order to obtain more readable urls for the user.</br>
+
 Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 
 
 ## Components Used 
