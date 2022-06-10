@@ -22,8 +22,15 @@ The project consists in the design and the implementation of a website for a tou
 The project is divided into three main parts: Design, Backend, Frontend. 
 
 ## Design
-Design in the large with C-IDM......descrivere cosa abbiamo messo nel design document: C-idm wireframes ecc  
-The design document is available [here](insert link here).
+Design Document contains the final output of our design process and contain the following sections:
+1. Table of Contents
+2. C-IDM Diagram
+3. Content-in-the small Tables
+4. Abstract Pages 
+5. Commented Wireframes
+6. Interaction Scenarios</br>
+
+The full design is available here [here](insert link here).
 
 ## Backend Technologies
 + [NPM](https://docs.npmjs.com/) is the Node Package Manager used in this project to download and manage the required modules.
