@@ -6,7 +6,9 @@ certain order and do not act directly on the layout for future modifications*/
     
 /* ############################## END COMPONENT DESCRIPTION ############################### */
 <template>
+
   <nav class="navbar navbar-expand-xl navbar-light px-3 header">
+    <!-- <div class="container"> -->
     <a class="navbar-brand" href="/"
       ><img
         class="logo"
@@ -42,6 +44,7 @@ certain order and do not act directly on the layout for future modifications*/
         </li>
       </ul>
     </div>
+    <!-- </div> -->
   </nav>
 </template>
 
