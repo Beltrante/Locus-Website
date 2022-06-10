@@ -48,7 +48,7 @@ Nuxt also offers special directories to handle different features, in this proje
 Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 
 
 ## Components Used 
-During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 17 different components which are used by multiple different pages, three of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue), are an aggregate of smaller ones and were included after careful considerations **exclusively** to improve code readability. (This sub components are used in other places as well and could not be merged)
+During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 17 different components which are used by multiple different pages, three of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue), are an aggregate of smaller ones and were included after careful considerations **exclusively** to improve code readability.
 <br>This *aggregate* components are:
   [TopEventDescription](https://github.com/FBosso/Locus/blob/main/components/TopEventDescription.vue)
 , [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue)
