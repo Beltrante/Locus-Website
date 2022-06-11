@@ -5,13 +5,18 @@
     and an animation -->
     <div class="row">
       <div class="col-md margin-top">
-        <h1 class="header-index mb-5">Bergamo</h1>
-        <p class="snippet">
+        <h1 class="header-index mb-4">Bergamo</h1>
+        <p class="snippet mb-4">
           Want to visit Bergamo? Not sure where to go? and what to do? You are
           in the right place to find out! Here there is all you need to enjoy
           places, itineraries, events and much more in one of the most beautiful
           city of Lombardy.
         </p>
+        <div class="center">
+        <NuxtLink to="about-the-town">
+        <div class="button btn" >Read more about Bergamo</div>
+        </NuxtLink>
+        </div>
       </div>
       <div class="col-md center-div">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -19,7 +24,7 @@
           src="https://assets5.lottiefiles.com/packages/lf20_rocodyl6.json"
           background="transparent"
           speed="1"
-          style="width: 600px; height: 500px"
+          style="width: 600px; height: 550px"
           loop
           autoplay
           class="image"
@@ -245,7 +250,21 @@ export default {
   .img-fluid {
     opacity: 0.4;
   }
+  .center{
+    text-align: center;
+  }
 }
-
 /* END Styles for bottom part (4 cards) +++ */
+.button {
+  padding: 1rem 4rem;
+  border-radius: 100rem;
+  background-color: rgb(128, 60, 65);
+  color: white;
+  width: 24rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.button:hover {
+  width: 25.5rem;
+}
 </style>
