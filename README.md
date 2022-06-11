@@ -22,8 +22,15 @@ The project consists in the design and the implementation of a website for a tou
 The project is divided into three main parts: Design, Backend, Frontend. 
 
 ## Design
-Design in the large with C-IDM......descrivere cosa abbiamo messo nel design document: C-idm wireframes ecc  
-The design document is available [here](insert link here).
+Design Document contains the final output of our design process and contain the following sections:
+1. Table of Contents
+2. C-IDM Diagram
+3. Content-in-the small Tables
+4. Abstract Pages 
+5. Commented Wireframes
+6. Interaction Scenarios</br>
+
+The full design is available here [here](insert link here).
 
 ## Backend Technologies
 + [NPM](https://docs.npmjs.com/) is the Node Package Manager used in this project to download and manage the required modules.
@@ -42,13 +49,14 @@ Nuxt also offers special directories to handle different features, in this proje
 + The **pages** directory to store our pages, and organize the routing structure.
 + The **components** directory to store our reusable components used in each page.
 + The **layouts** directory to define the default page layout with a header and a footer and the error page layout.
-<br> the Header and the Footer contain a list of landmarks with access to all the main pages of the site, the footer also has social media contacts and a small snippet about locus vision.
+<br> The Header and the Footer contain a list of landmarks with access to all the main pages of the site, the footer also has social media contacts and a small snippet about locus vision.
 + The **server** directory to save our backend implementation 
-+ We also made extensive use of the routing nuxt provide, with the addition of index and underscored vue pages in key pages sub directories in order to obtain more readable urls for the user.
++ We also made extensive use of the routing nuxt provide, with the addition of index and underscored vue pages in key pages sub directories in order to obtain more readable urls for the user.</br>
+
 Thanks to the use of this functionalities we believe we were able to stay true to the core concepts behind Vue and Nuxt developement and mantain our website source code as simple and easily scalable as possible 
 
 ## Components Used 
-During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 17 different components which are used by multiple different pages, three of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue), are an aggregate of smaller ones and were included after careful considerations **exclusively** to improve code readability. (This sub components are used in other places as well and could not be merged)
+During this project developement we tried to make as much use of components as possible, with code reusability and possible future additions in mind, we settled with the use of 17 different components which are used by multiple different pages, three of them, like the [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue), are an aggregate of smaller ones and were included after careful considerations **exclusively** to improve code readability.
 <br>This *aggregate* components are:
   [TopEventDescription](https://github.com/FBosso/Locus/blob/main/components/TopEventDescription.vue)
 , [TopMapDescription](https://github.com/FBosso/Locus/blob/main/components/TopMapDescription.vue)
