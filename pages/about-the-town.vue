@@ -3,9 +3,9 @@
   <!-- I will comment on the first row, everything is also applied to the remaining 3 rows -->
   <div class="container mt-5">
     <!-- First row - it contains an image (passed in StaticCard Component) and an explaination -->
+     <TopPageGeneric :name="info.name" :tags="info.dynTags" class="mb-4" />
     <div class="row">
       <!-- the breakpoint is set to lg to better increase responsiveness and UI quality -->
-
       <!-- the classes order-lg-1 and order-1 are used to allow the alternate visualization of images and text while 
       using desktop version and, at the same time, to allow the mobile versione to always stack the image on top of 
       the explaination (in order to have an appealing and coherent visualization) -->
@@ -139,6 +139,11 @@ export default {
           title: '',
         },
       },
+      info:{
+        name: "About The Town",
+        description: "Bergamo is a city with a very complex and fascinous history",
+        dynTags: ['Name\'s origin', 'The Lombard duchy', 'The Lombard-Venetian kingdom', 'Bergamo Nowadays']
+      }
     }
   },
   head() {
