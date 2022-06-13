@@ -28,7 +28,8 @@ Design Document contains the final output of our design process and contain the 
 3. Content-in-the small Tables
 4. Abstract Pages 
 5. Commented Wireframes
-6. Interaction Scenarios</br>
+6. Interaction Scenarios
+7. DB Design</br>
 
 The full design is available [here](https://drive.google.com/file/d/1igvHiHHEG3tIFEkNs_j8C7FKsVK_iRD7/view?usp=sharing).
 
