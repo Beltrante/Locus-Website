@@ -37,7 +37,9 @@ The full design is available [here](https://drive.google.com/file/d/1igvHiHHEG3t
 + [NodeJS](https://nodejs.org/it/docs/) is used in the implementation to create a fully working Web Server by using the Express module.
 + [Express](https://expressjs.com/it/) is a module providing a flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
 + [PostgreSQL](https://www.postgresql.org/docs/) is an open source DB used to store the data required to populate the HTML pages
-+ [Sequelize](https://sequelize.org/) is a promise-based Node.js Object–relational mapping tool used to make querying the database during API calls easier 
++ [Sequelize](https://sequelize.org/) is a promise-based Node.js Object–relational mapping tool used to make querying the database during API calls easier
+
+The database backup is available [here](https://drive.google.com/file/d/1ktBKGa7r7UF077R3ejQ9QqKskbXeDRht/view?usp=sharing).
 
 ## Frontend Technologies
 + [Axios](https://axios-http.com/docs/intro) is promise-based HTTP Client for node.js and is used to handle all the requests to the server's API
