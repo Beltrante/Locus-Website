@@ -30,7 +30,7 @@ Design Document contains the final output of our design process and contain the 
 5. Commented Wireframes
 6. Interaction Scenarios</br>
 
-The full design is available here [here](insert link here).
+The full design is available [here](https://drive.google.com/file/d/1igvHiHHEG3tIFEkNs_j8C7FKsVK_iRD7/view?usp=sharing).
 
 ## Backend Technologies
 + [NPM](https://docs.npmjs.com/) is the Node Package Manager used in this project to download and manage the required modules.
